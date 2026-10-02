@@ -121,10 +121,7 @@ h1,h2,h3{margin:0;line-height:1.2;text-wrap:balance;font-weight:700}
 .car:hover .nav{opacity:1}
 .car .nav .ico{width:16px;height:16px}
 .car .ctr{position:absolute;right:10px;bottom:10px;font-size:11px;font-weight:700;background:rgba(0,0,0,.55);color:#fff;padding:4px 8px;border-radius:999px}
-.badge{position:absolute;left:12px;top:12px;font-size:11px;font-weight:800;letter-spacing:.02em;padding:5px 10px;border-radius:999px;background:#fff;color:#1b1b1b;box-shadow:0 1px 3px rgba(0,0,0,.15)}
-.badge.ok{color:var(--ok)}.badge.warn{color:var(--warn)}.badge.no{color:var(--no)}
-:root[data-theme="dark"] .badge,:root:not([data-theme="light"]) .badge{background:#fff}
-.card .t{margin-top:12px;display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+:root[data-theme="dark"] .card .t{margin-top:12px;display:flex;justify-content:space-between;gap:12px;align-items:baseline}
 .card h3{font-size:16px;font-weight:700}
 .card .loc{font-size:14px;color:var(--text-2);margin-top:2px}
 .card .facts{font-size:14px;color:var(--text-2);margin-top:4px}
@@ -183,19 +180,13 @@ table.rates td.p{color:var(--text);font-weight:800;white-space:nowrap;font-size:
 table.rates td.p small{display:block;font-weight:500;color:var(--text-3);font-size:12px}
 table.rates td:last-child,table.rates th:last-child{text-align:right}
 .tblx{overflow-x:auto}
-.avail{display:flex;flex-direction:column;gap:8px}
-.avail .row{display:flex;align-items:center;gap:12px;padding:12px 14px;border:1px solid var(--border);border-radius:12px}
-.avail .row .d{font-weight:600}
-.avail .row .n{color:var(--text-3);font-size:13px}
-.avail .pill{margin-left:auto}
 .pill{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:700;padding:5px 10px;border-radius:999px;white-space:nowrap}
 .pill::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
 .pill.ok{background:var(--ok-bg);color:var(--ok)}.pill.warn{background:var(--warn-bg);color:var(--warn)}.pill.no{background:var(--no-bg);color:var(--no)}
 .side{position:sticky;top:92px;align-self:start;border:1px solid var(--border);border-radius:18px;padding:22px;box-shadow:var(--shadow);background:var(--bg)}
 .side .from{font-size:13px;color:var(--text-2)}
-.side .price{font-size:28px;font-weight:800;letter-spacing:-.02em;margin:2px 0 0}
+.side .price{font-size:28px;font-weight:800;letter-spacing:-.02em;margin:2px 0 18px}
 .side .price span{font-size:14px;font-weight:500;color:var(--text-2);letter-spacing:0}
-.side .st{margin:12px 0 18px}
 .side .acts{display:flex;flex-direction:column;gap:8px}
 .side .acts .btn{width:100%;padding:13px 16px}
 .side .note{font-size:12.5px;color:var(--text-3);margin-top:14px;line-height:1.5}
@@ -281,11 +272,11 @@ const UI = {
     group:{3:"Trois chambres",4:"Quatre chambres",5:"Cinq chambres",6:"Six chambres",7:"Sept chambres","8+":"Huit chambres <em>et plus</em>"},
     bedrooms:"chambres", bedroom:"chambre", guests:"personnes", bathrooms:"salles de bain", surface:"surface", from:"à partir de", night:"nuit", perNight:"/ nuit", minNights:"min.",
     back:"Retour au catalogue", share:"Partager sur WhatsApp", shareCatalogue:"Partager le catalogue", copy:"Copier le lien", copied:"Lien copié", linkLabel:"Lien de cette villa",
-    description:"Description", outdoor:"Extérieur & piscine", living:"Salon", kitchen:"Cuisine", amenities:"Équipements", rates:"Tarifs", availability:"Disponibilités", gallery:"Galerie", photos:"photos",
-    season:"Saison", period:"Période", price:"Prix par nuit", onRequest:"Sur demande", available:"Disponible", booked:"Réservée", partial:"Partiellement disponible",
-    sideNote:"Tarifs indicatifs, hors taxes de séjour. Personnel inclus sauf mention contraire.", enquire:"Demander une disponibilité", notFound:"Cette villa n'existe pas ou n'est plus disponible.", noVillas:"Aucune villa dans cette catégorie pour le moment.",
-    waVilla:(v,l)=>`🏡 *${v}*\n${l}`, waCat:(l)=>`🏡 Villas disponibles à Marrakech — catalogue complet :\n${l}`,
-    footNote:"Catalogue mis à jour régulièrement. Les photos, tarifs et disponibilités sont communiqués à titre indicatif et confirmés lors de la réservation.",
+    description:"Description", outdoor:"Extérieur & piscine", living:"Salon", kitchen:"Cuisine", amenities:"Équipements", rates:"Tarifs", gallery:"Galerie", photos:"photos",
+    season:"Saison", period:"Période", price:"Prix par nuit", onRequest:"Sur demande",
+    sideNote:"Tarifs indicatifs, hors taxes de séjour. Personnel inclus sauf mention contraire.", enquire:"Nous contacter", notFound:"Cette villa n'existe pas ou n'est plus disponible.", noVillas:"Aucune villa dans cette catégorie pour le moment.",
+    waVilla:(v,l)=>`🏡 *${v}*\n${l}`, waCat:(l)=>`🏡 Villas de luxe à Marrakech — catalogue complet :\n${l}`,
+    footNote:"Catalogue mis à jour régulièrement. Les photos et tarifs sont communiqués à titre indicatif et confirmés lors de la réservation.",
     demo:"Données d'exemple : les villas ci-dessous illustrent la présentation. Vos villas Notion prendront leur place.",
     cats:{exterior:"Extérieur & piscine",entrance:"Entrée",living:"Salon",dining:"Salle à manger",kitchen:"Cuisine",wellness:"Bien-être",other:"Autres espaces",bedroom:"Chambre",bathroom:"Salle de bain"},
     months:["janv.","févr.","mars","avr.","mai","juin","juil.","août","sept.","oct.","nov.","déc."] },
@@ -294,11 +285,11 @@ const UI = {
     group:{3:"Three bedrooms",4:"Four bedrooms",5:"Five bedrooms",6:"Six bedrooms",7:"Seven bedrooms","8+":"Eight bedrooms <em>and more</em>"},
     bedrooms:"bedrooms", bedroom:"bedroom", guests:"guests", bathrooms:"bathrooms", surface:"surface", from:"from", night:"night", perNight:"/ night", minNights:"min.",
     back:"Back to catalogue", share:"Share on WhatsApp", shareCatalogue:"Share the catalogue", copy:"Copy link", copied:"Link copied", linkLabel:"Link to this villa",
-    description:"Description", outdoor:"Outdoor & pool", living:"Living room", kitchen:"Kitchen", amenities:"Amenities", rates:"Rates", availability:"Availability", gallery:"Gallery", photos:"photos",
-    season:"Season", period:"Period", price:"Price per night", onRequest:"On request", available:"Available", booked:"Booked", partial:"Partly available",
-    sideNote:"Indicative rates, excluding tourist tax. Staff included unless stated otherwise.", enquire:"Ask for availability", notFound:"This villa does not exist or is no longer available.", noVillas:"No villa in this category at the moment.",
-    waVilla:(v,l)=>`🏡 *${v}*\n${l}`, waCat:(l)=>`🏡 Villas available in Marrakech — full catalogue:\n${l}`,
-    footNote:"Catalogue updated regularly. Photos, rates and availability are indicative and confirmed at booking.",
+    description:"Description", outdoor:"Outdoor & pool", living:"Living room", kitchen:"Kitchen", amenities:"Amenities", rates:"Rates", gallery:"Gallery", photos:"photos",
+    season:"Season", period:"Period", price:"Price per night", onRequest:"On request",
+    sideNote:"Indicative rates, excluding tourist tax. Staff included unless stated otherwise.", enquire:"Contact us", notFound:"This villa does not exist or is no longer available.", noVillas:"No villa in this category at the moment.",
+    waVilla:(v,l)=>`🏡 *${v}*\n${l}`, waCat:(l)=>`🏡 Luxury villas in Marrakech — full catalogue:\n${l}`,
+    footNote:"Catalogue updated regularly. Photos and rates are indicative and confirmed at booking.",
     demo:"Sample data: the villas below illustrate the layout. Your Notion villas will take their place.",
     cats:{exterior:"Outdoor & pool",entrance:"Entrance",living:"Living room",dining:"Dining room",kitchen:"Kitchen",wellness:"Wellness",other:"Other spaces",bedroom:"Bedroom",bathroom:"Bathroom"},
     months:["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"] },
@@ -307,11 +298,11 @@ const UI = {
     group:{3:"Drie slaapkamers",4:"Vier slaapkamers",5:"Vijf slaapkamers",6:"Zes slaapkamers",7:"Zeven slaapkamers","8+":"Acht slaapkamers <em>en meer</em>"},
     bedrooms:"slaapkamers", bedroom:"slaapkamer", guests:"gasten", bathrooms:"badkamers", surface:"oppervlakte", from:"vanaf", night:"nacht", perNight:"/ nacht", minNights:"min.",
     back:"Terug naar de catalogus", share:"Delen via WhatsApp", shareCatalogue:"Catalogus delen", copy:"Link kopiëren", copied:"Link gekopieerd", linkLabel:"Link naar deze villa",
-    description:"Beschrijving", outdoor:"Buiten & zwembad", living:"Woonkamer", kitchen:"Keuken", amenities:"Voorzieningen", rates:"Tarieven", availability:"Beschikbaarheid", gallery:"Galerij", photos:"foto's",
-    season:"Seizoen", period:"Periode", price:"Prijs per nacht", onRequest:"Op aanvraag", available:"Beschikbaar", booked:"Geboekt", partial:"Deels beschikbaar",
-    sideNote:"Indicatieve tarieven, exclusief toeristenbelasting. Personeel inbegrepen tenzij anders vermeld.", enquire:"Beschikbaarheid aanvragen", notFound:"Deze villa bestaat niet of is niet meer beschikbaar.", noVillas:"Momenteel geen villa in deze categorie.",
-    waVilla:(v,l)=>`🏡 *${v}*\n${l}`, waCat:(l)=>`🏡 Villa's beschikbaar in Marrakech — volledige catalogus:\n${l}`,
-    footNote:"Catalogus wordt regelmatig bijgewerkt. Foto's, tarieven en beschikbaarheid zijn indicatief en worden bij boeking bevestigd.",
+    description:"Beschrijving", outdoor:"Buiten & zwembad", living:"Woonkamer", kitchen:"Keuken", amenities:"Voorzieningen", rates:"Tarieven", gallery:"Galerij", photos:"foto's",
+    season:"Seizoen", period:"Periode", price:"Prijs per nacht", onRequest:"Op aanvraag",
+    sideNote:"Indicatieve tarieven, exclusief toeristenbelasting. Personeel inbegrepen tenzij anders vermeld.", enquire:"Contact opnemen", notFound:"Deze villa bestaat niet of is niet meer beschikbaar.", noVillas:"Momenteel geen villa in deze categorie.",
+    waVilla:(v,l)=>`🏡 *${v}*\n${l}`, waCat:(l)=>`🏡 Luxe villa's in Marrakech — volledige catalogus:\n${l}`,
+    footNote:"Catalogus wordt regelmatig bijgewerkt. Foto's en tarieven zijn indicatief en worden bij boeking bevestigd.",
     demo:"Voorbeeldgegevens: de villa's hieronder tonen de opmaak. Uw Notion-villa's nemen hun plaats in.",
     cats:{exterior:"Buiten & zwembad",entrance:"Entree",living:"Woonkamer",dining:"Eetkamer",kitchen:"Keuken",wellness:"Wellness",other:"Overige ruimtes",bedroom:"Slaapkamer",bathroom:"Badkamer"},
     months:["jan","feb","mrt","apr","mei","jun","jul","aug","sep","okt","nov","dec"] },
@@ -320,11 +311,11 @@ const UI = {
     group:{3:"Tres dormitorios",4:"Cuatro dormitorios",5:"Cinco dormitorios",6:"Seis dormitorios",7:"Siete dormitorios","8+":"Ocho dormitorios <em>o más</em>"},
     bedrooms:"dormitorios", bedroom:"dormitorio", guests:"personas", bathrooms:"baños", surface:"superficie", from:"desde", night:"noche", perNight:"/ noche", minNights:"mín.",
     back:"Volver al catálogo", share:"Compartir por WhatsApp", shareCatalogue:"Compartir el catálogo", copy:"Copiar enlace", copied:"Enlace copiado", linkLabel:"Enlace de esta villa",
-    description:"Descripción", outdoor:"Exterior y piscina", living:"Salón", kitchen:"Cocina", amenities:"Equipamiento", rates:"Tarifas", availability:"Disponibilidad", gallery:"Galería", photos:"fotos",
-    season:"Temporada", period:"Periodo", price:"Precio por noche", onRequest:"Bajo petición", available:"Disponible", booked:"Reservada", partial:"Parcialmente disponible",
-    sideNote:"Tarifas orientativas, sin tasa turística. Personal incluido salvo indicación contraria.", enquire:"Consultar disponibilidad", notFound:"Esta villa no existe o ya no está disponible.", noVillas:"Ninguna villa en esta categoría por el momento.",
-    waVilla:(v,l)=>`🏡 *${v}*\n${l}`, waCat:(l)=>`🏡 Villas disponibles en Marrakech — catálogo completo:\n${l}`,
-    footNote:"Catálogo actualizado con regularidad. Fotos, tarifas y disponibilidad son orientativas y se confirman al reservar.",
+    description:"Descripción", outdoor:"Exterior y piscina", living:"Salón", kitchen:"Cocina", amenities:"Equipamiento", rates:"Tarifas", gallery:"Galería", photos:"fotos",
+    season:"Temporada", period:"Periodo", price:"Precio por noche", onRequest:"Bajo petición",
+    sideNote:"Tarifas orientativas, sin tasa turística. Personal incluido salvo indicación contraria.", enquire:"Contactar", notFound:"Esta villa no existe o ya no está disponible.", noVillas:"Ninguna villa en esta categoría por el momento.",
+    waVilla:(v,l)=>`🏡 *${v}*\n${l}`, waCat:(l)=>`🏡 Villas de lujo en Marrakech — catálogo completo:\n${l}`,
+    footNote:"Catálogo actualizado con regularidad. Fotos y tarifas son orientativas y se confirman al reservar.",
     demo:"Datos de ejemplo: las villas siguientes ilustran la presentación. Sus villas de Notion ocuparán su lugar.",
     cats:{exterior:"Exterior y piscina",entrance:"Entrada",living:"Salón",dining:"Comedor",kitchen:"Cocina",wellness:"Bienestar",other:"Otros espacios",bedroom:"Dormitorio",bathroom:"Baño"},
     months:["ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic"] }
@@ -434,7 +425,6 @@ function photoSrc(p){ return p.src || (p.img && typeof PHOTO_SRC!=="undefined" &
 function imgTag(p, lang, attrs=""){ const s=photoSrc(p); return s ? `<img ${attrs} src="${s}" alt="${photoLabel(p,lang)}">` : `<div class="ph-empty">${ICONS.camera}<span>${photoLabel(p,lang)}</span></div>`; }
 </script>
 <script>
-/* Photos d'exemple (Unsplash, licence libre) encodées dans le fichier */
 /* Photos d'exemple (Unsplash, licence libre) dans le dossier photos/ */
 const PHOTO_SRC = Object.fromEntries(["bath-01", "bath-02", "bath-03", "bath-05", "bath-06", "bath-07", "bath-09", "bath-10", "bath-11", "bath-13", "bath-14", "bath-15", "bath-17", "bath-18", "bath-19", "bedroom-00", "bedroom-01", "bedroom-02", "bedroom-03", "bedroom-04", "bedroom-05", "bedroom-07", "bedroom-08", "bedroom-09", "bedroom-11", "bedroom-12", "bedroom-13", "bedroom-15", "bedroom-16", "bedroom-17", "bedroom-19", "court-01", "court-02", "court-09", "court-10", "court-13", "court-14", "court-16", "court-17", "kitchen-00", "kitchen-02", "kitchen-03", "kitchen-04", "kitchen-05", "kitchen-12", "kitchen-13", "kitchen-15", "living-00", "living-04", "living-05", "living-07", "living-08", "living-09", "living-11", "living-12", "living-13", "living-15", "living-16", "living-17", "living-19", "pool-01", "pool-02", "pool-03", "pool-06", "pool-07", "pool-09", "pool-10", "pool-11", "pool-13", "pool-15", "pool-17", "pool-18", "pool-19", "riad-00", "riad-01", "riad-02", "riad-05", "riad-06", "terrace-01", "terrace-02", "terrace-05", "terrace-06", "terrace-09", "terrace-10", "terrace-11", "terrace-13", "terrace-14", "terrace-15", "terrace-17", "terrace-19"].map(k=>[k,`photos/${k}.jpg`]));
 </script>
@@ -444,7 +434,7 @@ const PHOTO_SRC = Object.fromEntries(["bath-01", "bath-02", "bath-03", "bath-05"
    4. DONNÉES DES VILLAS
    Chaque villa : slug (lien), nom, localisation, chambres, capacité,
    textes (description / extérieur / salon / cuisine) en 4 langues,
-   équipements (clés de AMENITIES), tarifs, disponibilités, photos.
+   équipements (clés de AMENITIES), tarifs, photos.
    `photos[].file` sert au tri automatique ; `src` = URL ou data: URI.
    Les villas ci-dessous sont des EXEMPLES en attendant les données Notion.
    ===================================================================== */
@@ -473,8 +463,7 @@ const VILLAS = [
   rates:[{season:{fr:"Basse saison",en:"Low season",nl:"Laagseizoen",es:"Temporada baja"},from:"2026-11-01",to:"2027-02-28",night:650,min:3},
          {season:{fr:"Haute saison",en:"High season",nl:"Hoogseizoen",es:"Temporada alta"},from:"2027-03-01",to:"2027-06-15",night:890,min:4},
          {season:{fr:"Fêtes de fin d'année",en:"Festive season",nl:"Feestdagen",es:"Navidad y Año Nuevo"},from:"2026-12-20",to:"2027-01-05",night:1250,min:7}],
-  currency:"EUR", status:"available",
-  availability:[{from:"2026-10-05",to:"2026-12-19"},{from:"2027-01-06",to:"2027-03-28"},{from:"2027-04-12",to:"2027-06-30"}],
+  currency:"EUR",
   photos:[{file:"Piscine vue Atlas.jpg",img:"riad-05"},{file:"Piscine 2.jpg",img:"pool-18"},{file:"Terrasse dejeuner.jpg",img:"terrace-13"},{file:"Vue jardin.jpg",img:"terrace-19"},{file:"Entree.jpg",img:"court-16"},{file:"Salon 1.jpg",img:"living-15"},{file:"Salon 2.jpg",img:"living-19"},{file:"Cuisine.jpg",img:"kitchen-12"},{file:"Chambre 1 (a).jpg",img:"bedroom-05"},{file:"Chambre 1 (b).jpg",img:"bedroom-09"},{file:"Chambre 2.jpg",img:"bedroom-02"},{file:"Chambre 3.jpg",img:"bedroom-07"},{file:"SDB chambre 1.jpg",img:"bath-17"},{file:"SDB chambre 2.jpg",img:"bath-18"},{file:"SDB chambre 3.jpg",img:"bath-07"}] },
 
 { slug:"villa-amandine", name:"Villa Amandine", area:{fr:"Route de Fès",en:"Route de Fès",nl:"Route de Fès",es:"Route de Fès"},
@@ -500,8 +489,7 @@ const VILLAS = [
   rates:[{season:{fr:"Basse saison",en:"Low season",nl:"Laagseizoen",es:"Temporada baja"},from:"2026-11-01",to:"2027-02-28",night:1100,min:3},
          {season:{fr:"Haute saison",en:"High season",nl:"Hoogseizoen",es:"Temporada alta"},from:"2027-03-01",to:"2027-06-15",night:1450,min:4},
          {season:{fr:"Fêtes de fin d'année",en:"Festive season",nl:"Feestdagen",es:"Navidad y Año Nuevo"},from:"2026-12-20",to:"2027-01-05",night:2100,min:7}],
-  currency:"EUR", status:"partial",
-  availability:[{from:"2026-10-01",to:"2026-11-14"},{from:"2027-01-10",to:"2027-02-20"},{from:"2027-05-02",to:"2027-06-30"}],
+  currency:"EUR",
   photos:[{file:"Pool infinity Atlas.jpg",img:"pool-10"},{file:"Exterior facade.jpg",img:"terrace-05"},{file:"Pool terrace.jpg",img:"terrace-14"},{file:"Garden.jpg",img:"pool-19"},{file:"Living room 1.jpg",img:"living-04"},{file:"Living room 2.jpg",img:"living-09"},{file:"Dining.jpg",img:"terrace-17"},{file:"Kitchen.jpg",img:"kitchen-02"},{file:"Hammam.jpg",img:"bath-19"},{file:"Bedroom 1 - master.jpg",img:"bedroom-01"},{file:"Bedroom 2.jpg",img:"bedroom-13"},{file:"Bedroom 3.jpg",img:"bedroom-15"},{file:"Bedroom 4.jpg",img:"bedroom-12"},{file:"Bathroom master.jpg",img:"bath-02"},{file:"Bathroom 2.jpg",img:"bath-14"},{file:"Bathroom 3.jpg",img:"bath-13"},{file:"Bathroom 4.jpg",img:"bath-03"}] },
 
 { slug:"riad-al-hamra", name:"Riad Al Hamra", area:{fr:"Médina",en:"Medina",nl:"Medina",es:"Medina"},
@@ -526,8 +514,7 @@ const VILLAS = [
   amenities:["pool","staff","chef","breakfast","ac","heating","wifi","rooftop","fireplace","transfer"],
   rates:[{season:{fr:"Toute l'année",en:"All year",nl:"Hele jaar",es:"Todo el año"},from:"2026-10-01",to:"2027-09-30",night:780,min:2},
          {season:{fr:"Fêtes de fin d'année",en:"Festive season",nl:"Feestdagen",es:"Navidad y Año Nuevo"},from:"2026-12-20",to:"2027-01-05",night:1400,min:5}],
-  currency:"EUR", status:"available",
-  availability:[{from:"2026-10-01",to:"2027-06-30",note:{fr:"hors 24–31 déc.",en:"except 24–31 Dec",nl:"behalve 24–31 dec",es:"salvo 24–31 dic"}}],
+  currency:"EUR",
   photos:[{file:"Patio bassin.jpg",img:"riad-00"},{file:"Bassin vue haute.jpg",img:"riad-06"},{file:"Patio zellige.jpg",img:"riad-02"},{file:"Porte patio.jpg",img:"riad-01"},{file:"Rooftop.jpg",img:"court-17"},{file:"Entree porte.jpg",img:"court-13"},{file:"Salon marocain.jpg",img:"court-09"},{file:"Salle a manger patio.jpg",img:"court-10"},{file:"Chambre 1.jpg",img:"bedroom-16"},{file:"Chambre 2.jpg",img:"bedroom-11"},{file:"Chambre 3.jpg",img:"bedroom-08"},{file:"Chambre 4.jpg",img:"bedroom-04"},{file:"SDB 1.jpg",img:"bath-10"},{file:"SDB 2.jpg",img:"bath-11"},{file:"SDB 3.jpg",img:"bath-05"},{file:"SDB 4.jpg",img:"bath-01"}] },
 
 { slug:"villa-ourika", name:"Villa Ourika", area:{fr:"Route de l'Ourika",en:"Ourika road",nl:"Ourika-weg",es:"Carretera de Ourika"},
@@ -553,8 +540,7 @@ const VILLAS = [
   rates:[{season:{fr:"Basse saison",en:"Low season",nl:"Laagseizoen",es:"Temporada baja"},from:"2026-11-01",to:"2027-02-28",night:1350,min:3},
          {season:{fr:"Haute saison",en:"High season",nl:"Hoogseizoen",es:"Temporada alta"},from:"2027-03-01",to:"2027-06-15",night:1750,min:4},
          {season:{fr:"Fêtes de fin d'année",en:"Festive season",nl:"Feestdagen",es:"Navidad y Año Nuevo"},from:"2026-12-20",to:"2027-01-05",night:2600,min:7}],
-  currency:"EUR", status:"available",
-  availability:[{from:"2026-10-10",to:"2026-12-18"},{from:"2027-01-08",to:"2027-06-30"}],
+  currency:"EUR",
   photos:[{file:"Zwembad Atlas.jpg",img:"pool-13"},{file:"Terras.jpg",img:"terrace-11"},{file:"Tuin.jpg",img:"terrace-10"},{file:"Terras ontbijt.jpg",img:"terrace-15"},{file:"Drone.jpg",img:"pool-07"},{file:"Woonkamer haard.jpg",img:"living-16"},{file:"Woonkamer 2.jpg",img:"living-17"},{file:"Eetkamer.jpg",img:"terrace-02"},{file:"Keuken.jpg",img:"kitchen-03"},{file:"Slaapkamer 1.jpg",img:"bedroom-00"},{file:"Slaapkamer 2.jpg",img:"bedroom-03"},{file:"Slaapkamer 3.jpg",img:"bedroom-05"},{file:"Slaapkamer 4.jpg",img:"bedroom-09"},{file:"Slaapkamer 5.jpg",img:"bedroom-19"},{file:"Badkamer 1.jpg",img:"bath-03"},{file:"Badkamer 2.jpg",img:"bath-07"},{file:"Badkamer 3.jpg",img:"bath-17"},{file:"Badkamer 4.jpg",img:"bath-14"},{file:"Badkamer 5.jpg",img:"bath-02"}] },
 
 { slug:"villa-menara", name:"Villa Menara", area:{fr:"Route d'Amizmiz",en:"Amizmiz road",nl:"Amizmiz-weg",es:"Carretera de Amizmiz"},
@@ -579,8 +565,7 @@ const VILLAS = [
   amenities:["pool_heated","staff","chef","breakfast","ac","heating","wifi","hammam","gym","fireplace","bbq","kids","parking","security","transfer","ev"],
   rates:[{season:{fr:"Basse saison",en:"Low season",nl:"Laagseizoen",es:"Temporada baja"},from:"2026-11-01",to:"2027-02-28",night:1500,min:3},
          {season:{fr:"Haute saison",en:"High season",nl:"Hoogseizoen",es:"Temporada alta"},from:"2027-03-01",to:"2027-06-15",night:1950,min:4}],
-  currency:"EUR", status:"booked",
-  availability:[{from:"2027-03-15",to:"2027-06-30"}],
+  currency:"EUR",
   photos:[{file:"Fachada ocre.jpg",img:"court-16"},{file:"Piscina.jpg",img:"pool-01"},{file:"Piscina 2.jpg",img:"pool-02"},{file:"Jardin cactus.jpg",img:"court-14"},{file:"Entrada.jpg",img:"court-13"},{file:"Salon cupula.jpg",img:"living-00"},{file:"Salon 2.jpg",img:"living-08"},{file:"Comedor.jpg",img:"kitchen-05"},{file:"Cocina.jpg",img:"kitchen-15"},{file:"Hammam.jpg",img:"bath-06"},{file:"Dormitorio 1 principal.jpg",img:"bedroom-07"},{file:"Dormitorio 2.jpg",img:"bedroom-02"},{file:"Dormitorio 3.jpg",img:"bedroom-08"},{file:"Dormitorio 4.jpg",img:"bedroom-11"},{file:"Dormitorio 5.jpg",img:"bedroom-16"},{file:"Bano 1.jpg",img:"bath-09"},{file:"Bano 2.jpg",img:"bath-15"},{file:"Bano 3.jpg",img:"bath-19"},{file:"Bano 4.jpg",img:"bath-18"},{file:"Bano 5.jpg",img:"bath-10"}] },
 
 { slug:"palais-nour", name:"Palais Nour", area:{fr:"Palmeraie",en:"Palmeraie",nl:"Palmeraie",es:"Palmeraie"},
@@ -606,8 +591,7 @@ const VILLAS = [
   rates:[{season:{fr:"Basse saison",en:"Low season",nl:"Laagseizoen",es:"Temporada baja"},from:"2026-11-01",to:"2027-02-28",night:3200,min:3},
          {season:{fr:"Haute saison",en:"High season",nl:"Hoogseizoen",es:"Temporada alta"},from:"2027-03-01",to:"2027-06-15",night:4200,min:4},
          {season:{fr:"Fêtes de fin d'année",en:"Festive season",nl:"Feestdagen",es:"Navidad y Año Nuevo"},from:"2026-12-20",to:"2027-01-05",night:6500,min:7}],
-  currency:"EUR", status:"available",
-  availability:[{from:"2026-10-01",to:"2026-12-19"},{from:"2027-01-06",to:"2027-06-30"}],
+  currency:"EUR",
   photos:[{file:"Piscine daybeds.jpg",img:"pool-15"},{file:"Drone palmeraie.jpg",img:"pool-11"},{file:"Piscine 2.jpg",img:"pool-03"},{file:"Terrasse.jpg",img:"terrace-09"},{file:"Fontaine.jpg",img:"court-01"},{file:"Entree hall.jpg",img:"court-02"},{file:"Salon reception.jpg",img:"living-13"},{file:"Salon 2.jpg",img:"living-05"},{file:"Salon 3.jpg",img:"living-11"},{file:"Cinema.jpg",img:"living-12"},{file:"Salle a manger.jpg",img:"living-07"},{file:"Cuisine pro.jpg",img:"kitchen-13"},{file:"Spa hammam.jpg",img:"bath-06"},{file:"Suite 1 (a).jpg",img:"bedroom-01"},{file:"Suite 1 (b).jpg",img:"bedroom-15"},{file:"Suite 2.jpg",img:"bedroom-03"},{file:"Suite 3.jpg",img:"bedroom-04"},{file:"Suite 4.jpg",img:"bedroom-12"},{file:"Suite 5.jpg",img:"bedroom-13"},{file:"Suite 6.jpg",img:"bedroom-02"},{file:"Suite 1 sdb.jpg",img:"bath-02"},{file:"Suite 2 sdb.jpg",img:"bath-03"},{file:"Suite 3 sdb.jpg",img:"bath-11"},{file:"Suite 4 sdb.jpg",img:"bath-13"},{file:"Suite 5 sdb.jpg",img:"bath-14"},{file:"Suite 6 sdb.jpg",img:"bath-01"}] },
 
 { slug:"villa-tamarisk", name:"Villa Tamarisk", area:{fr:"Route de Fès",en:"Route de Fès",nl:"Route de Fès",es:"Route de Fès"},
@@ -632,8 +616,7 @@ const VILLAS = [
   amenities:["pool_heated","staff","chef","breakfast","ac","heating","wifi","hammam","gym","fireplace","bbq","kids","petanque","parking","security","transfer","events"],
   rates:[{season:{fr:"Basse saison",en:"Low season",nl:"Laagseizoen",es:"Temporada baja"},from:"2026-11-01",to:"2027-02-28",night:2800,min:3},
          {season:{fr:"Haute saison",en:"High season",nl:"Hoogseizoen",es:"Temporada alta"},from:"2027-03-01",to:"2027-06-15",night:3600,min:5}],
-  currency:"EUR", status:"partial",
-  availability:[{from:"2026-10-01",to:"2026-10-28"},{from:"2026-11-20",to:"2026-12-19"},{from:"2027-02-01",to:"2027-04-10"}],
+  currency:"EUR",
   photos:[{file:"Drone domaine.jpg",img:"pool-09"},{file:"Piscine principale.jpg",img:"pool-17"},{file:"Pavillon piscine.jpg",img:"pool-06"},{file:"Terrasse.jpg",img:"terrace-14"},{file:"Pavillon salon ete.jpg",img:"terrace-01"},{file:"Allee tamaris.jpg",img:"terrace-06"},{file:"Salon principal.jpg",img:"living-09"},{file:"Salon TV.jpg",img:"living-19"},{file:"Salle a manger.jpg",img:"terrace-17"},{file:"Cuisine.jpg",img:"kitchen-04"},{file:"Chambre 1.jpg",img:"bedroom-00"},{file:"Chambre 2.jpg",img:"bedroom-02"},{file:"Chambre 3.jpg",img:"bedroom-05"},{file:"Chambre 4.jpg",img:"bedroom-09"},{file:"Chambre 5.jpg",img:"bedroom-16"},{file:"Chambre 6 pavillon.jpg",img:"bedroom-17"},{file:"Chambre 7 pavillon.jpg",img:"bedroom-19"},{file:"Chambre 1 sdb.jpg",img:"bath-05"},{file:"Chambre 2 sdb.jpg",img:"bath-07"},{file:"Chambre 3 sdb.jpg",img:"bath-09"},{file:"Chambre 4 sdb.jpg",img:"bath-15"},{file:"Chambre 5 sdb.jpg",img:"bath-17"},{file:"Chambre 6 sdb.jpg",img:"bath-18"},{file:"Chambre 7 sdb.jpg",img:"bath-03"}] },
 
 { slug:"domaine-agafay", name:"Domaine Agafay", area:{fr:"Désert d'Agafay",en:"Agafay desert",nl:"Agafay-woestijn",es:"Desierto de Agafay"},
@@ -659,8 +642,7 @@ const VILLAS = [
   rates:[{season:{fr:"Basse saison",en:"Low season",nl:"Laagseizoen",es:"Temporada baja"},from:"2026-11-01",to:"2027-02-28",night:5500,min:3},
          {season:{fr:"Haute saison",en:"High season",nl:"Hoogseizoen",es:"Temporada alta"},from:"2027-03-01",to:"2027-06-15",night:7200,min:4},
          {season:{fr:"Événements",en:"Events",nl:"Evenementen",es:"Eventos"},from:null,to:null,night:null,min:2}],
-  currency:"EUR", status:"available",
-  availability:[{from:"2026-10-01",to:"2027-06-30",note:{fr:"sur demande pour les événements",en:"on request for events",nl:"op aanvraag voor evenementen",es:"bajo petición para eventos"}}],
+  currency:"EUR",
   photos:[{file:"Piscine debordement.jpg",img:"pool-10"},{file:"Vue Atlas.jpg",img:"terrace-19"},{file:"Piscine palmiers.jpg",img:"pool-13"},{file:"Facade.jpg",img:"terrace-05"},{file:"Allee ocre.jpg",img:"court-16"},{file:"Tente diner.jpg",img:"terrace-02"},{file:"Terrasse coucher de soleil.jpg",img:"terrace-13"},{file:"Salon panoramique.jpg",img:"living-04"},{file:"Salon lecture.jpg",img:"living-00"},{file:"Cinema.jpg",img:"living-12"},{file:"Cuisine feu de bois.jpg",img:"kitchen-00"},{file:"Spa.jpg",img:"bath-19"},{file:"Suite 1.jpg",img:"bedroom-01"},{file:"Suite 2.jpg",img:"bedroom-03"},{file:"Suite 3.jpg",img:"bedroom-04"},{file:"Suite 4.jpg",img:"bedroom-07"},{file:"Suite 5.jpg",img:"bedroom-08"},{file:"Suite 6 lodge.jpg",img:"bedroom-11"},{file:"Suite 7 lodge.jpg",img:"bedroom-12"},{file:"Suite 8 lodge.jpg",img:"bedroom-13"},{file:"Suite 9 lodge.jpg",img:"bedroom-15"},{file:"Suite 1 bathroom.jpg",img:"bath-01"},{file:"Suite 2 bathroom.jpg",img:"bath-02"},{file:"Suite 3 bathroom.jpg",img:"bath-03"},{file:"Suite 4 bathroom.jpg",img:"bath-05"},{file:"Suite 5 bathroom.jpg",img:"bath-09"},{file:"Suite 6 bathroom.jpg",img:"bath-10"},{file:"Suite 7 bathroom.jpg",img:"bath-11"},{file:"Suite 8 bathroom.jpg",img:"bath-14"},{file:"Suite 9 bathroom.jpg",img:"bath-17"}] }
 ];
 </script>
@@ -680,8 +662,6 @@ const LOCALE = {fr:"fr-FR",en:"en-GB",nl:"nl-NL",es:"es-ES"};
 const fmtMoney = (n,cur,l) => n==null ? null : new Intl.NumberFormat(LOCALE[l],{style:"currency",currency:cur||"EUR",maximumFractionDigits:0}).format(n);
 function fmtDate(iso,l){ if(!iso) return ""; const [y,m,d]=iso.split("-").map(Number); return `${d} ${UI[l].months[m-1]} ${y}`; }
 const minRate = v => Math.min(...v.rates.filter(r=>r.night!=null).map(r=>r.night));
-const statusCls = s => ({available:"ok",partial:"warn",booked:"no"}[s]||"warn");
-const statusTxt = (s,l) => ({available:UI[l].available,partial:UI[l].partial,booked:UI[l].booked}[s]||UI[l].onRequest);
 const ORDERED = () => [...VILLAS].sort((a,b)=>a.bedrooms-b.bedrooms||minRate(a)-minRate(b)||a.name.localeCompare(b.name));
 const plural = (n,one,many) => `${n} ${n===1?one:many}`;
 
@@ -732,7 +712,6 @@ function cardHTML(v,l){
   const T=UI[l]; const ph = sorted(v).slice(0,6);
   return `<a class="card" href="${linkVilla(l,v.slug)}">
     <div class="car"><div class="track" data-n="${ph.length}">${ph.map(p=>imgTag(p,l,'loading="lazy"')).join("")}</div>
-      <span class="badge ${statusCls(v.status)}">${statusTxt(v.status,l)}</span>
       <button class="nav l" data-car="-1" aria-label="Previous">${ICONS.left}</button><button class="nav r" data-car="1" aria-label="Next">${ICONS.right}</button>
       <span class="ctr num">1 / ${sorted(v).length}</span></div>
     <div class="t"><h3>${esc(v.name)}</h3></div>
@@ -753,7 +732,6 @@ function renderVilla(v){
   window.__lb = photos.map(p=>({src:photoSrc(p), cap:photoLabel(p,l)}));
   const mosaic = photos.slice(0,5);
   const ratesHTML = v.rates.map(r=>`<tr><td>${esc(tx(r.season,l))}</td><td class="num">${r.from?`${fmtDate(r.from,l)} – ${fmtDate(r.to,l)}`:"—"}</td><td class="p num">${r.night!=null?fmtMoney(r.night,v.currency,l)+` ${T.perNight}`:T.onRequest}${r.min?`<small class="num">${r.min} ${r.min>1?T.nights:T.night} ${T.minNights}</small>`:""}</td></tr>`).join("");
-  const availHTML = v.availability.length ? v.availability.map(a=>`<div class="row"><div><div class="d num">${fmtDate(a.from,l)} – ${fmtDate(a.to,l)}</div>${a.note?`<div class="n">${esc(tx(a.note,l))}</div>`:""}</div><span class="pill ok">${T.available}</span></div>`).join("") : `<div class="row"><div class="d">${T.onRequest}</div><span class="pill warn">${T.onRequest}</span></div>`;
   const ord = ORDERED(); const i = ord.findIndex(x=>x.slug===v.slug); const prev = ord[(i-1+ord.length)%ord.length], next = ord[(i+1)%ord.length];
   const spaces = [["pool",T.outdoor,v.outdoor],["sofa",T.living,v.living],["chef",T.kitchen,v.kitchen]];
   return `
@@ -761,7 +739,7 @@ function renderVilla(v){
     <nav class="crumbs"><a href="${linkCat(l)}">${T.catalogue}</a><span class="sep">›</span><a href="${linkCat(l,groupOf(v))}">${T.groupTitle(groupOf(v))}</a><span class="sep">›</span><span>${esc(v.name)}</span></nav>
     <div class="title-row">
       <div><h1>${esc(v.name)}</h1>
-        <div class="meta"><span>${esc(tx(v.location,l))}</span><i class="dot"></i><span class="num">${v.bedrooms} ${T.bedrooms}</span><i class="dot"></i><span class="num">${v.capacity} ${T.guests}</span><i class="dot"></i><span class="pill ${statusCls(v.status)}">${statusTxt(v.status,l)}</span></div></div>
+        <div class="meta"><span>${esc(tx(v.location,l))}</span><i class="dot"></i><span class="num">${v.bedrooms} ${T.bedrooms}</span><i class="dot"></i><span class="num">${v.capacity} ${T.guests}</span></div></div>
       <div class="acts"><a class="btn wa-o sm" href="${wa}" target="_blank" rel="noopener">${ICONS.wa}<span>${T.share}</span></a><button class="btn sm" data-copy="${esc(link)}">${ICONS.copy}<span>${T.copy}</span></button></div>
     </div>
     <div class="mosaic">${mosaic.map((p,k)=>`<button data-lb="${k}" aria-label="${esc(photoLabel(p,l))}">${imgTag(p,l)}</button>`).join("")}<button class="btn sm all" data-lb="0">${ICONS.grid}<span>${T.seeAll(photos.length)}</span></button></div>
@@ -776,13 +754,11 @@ function renderVilla(v){
         <section class="sec"><h2>${T.description}</h2><p class="lead">${esc(tx(v.description,l))}</p></section>
         <section class="sec"><h2>${T.spaces}</h2>${spaces.map(([ic,h,t])=>`<div class="space"><div class="ic">${ICONS[ic]}</div><div><h3>${h}</h3><p>${esc(tx(t,l))}</p></div></div>`).join("")}</section>
         <section class="sec"><h2>${T.amenities}</h2><ul class="amen">${v.amenities.map(k=>`<li>${ICONS.check}${esc(tx(AMENITIES[k]||{fr:k},l))}</li>`).join("")}</ul></section>
-        <section class="sec"><h2>${T.rates}</h2><div class="tbl tblx"><table class="rates"><thead><tr><th>${T.season}</th><th>${T.period}</th><th>${T.price}</th></tr></thead><tbody>${ratesHTML}</tbody></table></div><p style="font-size:13px;color:var(--text-3);margin-top:10px">${T.sideNote}</p></section>
-        <section class="sec" style="border-bottom:0"><h2>${T.availability}</h2><div class="avail">${availHTML}</div></section>
+        <section class="sec" style="border-bottom:0"><h2>${T.rates}</h2><div class="tbl tblx"><table class="rates"><thead><tr><th>${T.season}</th><th>${T.period}</th><th>${T.price}</th></tr></thead><tbody>${ratesHTML}</tbody></table></div><p style="font-size:13px;color:var(--text-3);margin-top:10px">${T.sideNote}</p></section>
       </div>
       <aside class="side">
         <div class="from">${T.from}</div>
         <div class="price num">${fmtMoney(minRate(v),v.currency,l)} <span>${T.perNight}</span></div>
-        <div class="st"><span class="pill ${statusCls(v.status)}">${statusTxt(v.status,l)}</span></div>
         <div class="acts">
           <a class="btn wa" href="${wa}" target="_blank" rel="noopener">${ICONS.wa}${T.share}</a>
           <button class="btn" data-copy="${esc(link)}">${ICONS.copy}${T.copy}</button>

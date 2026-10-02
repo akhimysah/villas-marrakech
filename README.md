@@ -35,8 +35,6 @@ Dans `index.html`, section `4. DONNÉES DES VILLAS`, chaque villa est un objet :
   amenities:["pool_heated","staff","wifi"],           // clés de la liste AMENITIES
   rates:[{season:{fr:"Basse saison",…},from:"2026-11-01",to:"2027-02-28",night:650,min:3}],
   currency:"EUR",
-  status:"available",                                 // available | partial | booked
-  availability:[{from:"2026-10-05",to:"2026-12-19",note:{fr:"…"}}],
   photos:[{file:"piscine 1.jpg",src:"https://…/piscine-1.jpg"}, …]   // ou img:"clé" vers PHOTO_SRC
 }
 ```
