@@ -1,0 +1,604 @@
+# Villas transcrites depuis la base Notion « Propriétés » (bloc ✨ de chaque fiche).
+# Prix, disponibilités et conditions discriminatoires retirés.
+# Format :  == Nom | chambres | capacité | salles de bain | surface habitable (m²)   (- = inconnu)
+#   L  localisation        D  caractéristiques (description)
+#   S+ services inclus     S? services sur demande
+#   X  Titre | éléments    (bloc complémentaire de la description)
+#   I  autres informations importantes
+# Éléments séparés par « • ».
+
+== Villa Alya | 5 | 10 | - | -
+L Route d'Amizmiz • Face à l'hôtel Eden Andalou • Résidence sécurisée
+D 5 suites • Double séjour • Cuisine équipée • Jardin • Piscine privée 15 m
+S+ Femme de ménage • Jardinier 2×/semaine • Pisciniste 2 à 3×/semaine
+S? Cuisinière (petit-déjeuner & déjeuner) • Chauffage de la piscine (à démarrer 2 à 3 jours avant l'arrivée)
+I Accès exclusif à toute la villa • Animaux non acceptés
+
+== Villa Cassie | 4 | 8 | 4 | 300
+L Route de l'Ourika • Centre-ville 15 min • Aéroport 15 min • Résidence sécurisée 24/7
+D Terrain 600 m² • 4 suites avec SDB privatives • Piscine privée sans vis-à-vis • Grand salon avec accès piscine • Cuisine équipée • Climatisation • Wi-Fi haut débit
+S+ Ménage quotidien • Linge de maison
+I Accès exclusif à toute la villa
+
+== Villa Lina | 4 | 8 | - | -
+L KM 10, Route de l'Ourika • Centre-ville 20 min • Proche des golfs
+D 4 suites parentales • Piscine chauffée • Jardin • Trampoline • 2 salons • Cuisine équipée • TV & IPTV • Wi-Fi
+
+== Villa Monoï | 4 | 8 | 4 | -
+L Résidence Akenza • Résidence calme & sécurisée
+D 4 suites avec SDB • Grand salon • Cuisine équipée • Jardin privé • Piscine privée • Wi-Fi
+
+== Villa Jana | 3 | 6 | - | -
+L Route de Fès • Centre-ville 15 min • Résidence fermée & sécurisée
+D 3 chambres • Belle piscine privée • Cadre calme & intimiste • Environnement paisible
+S+ Ménage • Préparation du petit-déjeuner (hors courses)
+S? Piscine chauffée
+I Accès exclusif à toute la villa • Idéale pour familles, couples & groupes d'amis
+
+== Villa Ines | 3 | 6 | - | -
+L Route de Fès • Centre-ville 15 min • Résidence fermée & sécurisée
+D 3 chambres • Belle piscine privée • Cadre calme & intimiste • Environnement paisible
+S+ Ménage • Préparation du petit-déjeuner (hors courses)
+S? Piscine chauffée
+I Accès exclusif à toute la villa • Idéale pour familles, couples & groupes d'amis
+
+== Villa Kaya | 6 | 12 | 6 | -
+L Marrakech • À quelques minutes du centre-ville • Cadre calme & raffiné
+D Terrain 4 000 m² • 6 suites avec SDB privatives • Suite enfants • Piscine privée • Jardin paysager • Balcons privés • Salon contemporain • Smart TV • Cuisine américaine équipée • Salle à manger avec cheminée • Espaces extérieurs aménagés
+S+ Gouvernante • Majordome • Femme de ménage • Agent de sécurité • Chef cuisinier
+I Accès exclusif à toute la villa • Idéale pour familles & groupes à la recherche de confort, d'intimité & de prestations haut de gamme
+
+== Villa Corail | 4 | 8 | 4 | 300
+L Route de l'Ourika • Centre-ville 15 min • Aéroport 15 min • Résidence sécurisée 24/7
+D Terrain 600 m² • 4 suites avec SDB privatives • Piscine privée sans vis-à-vis • Grand salon avec accès piscine • Cuisine équipée • Climatisation • Wi-Fi haut débit
+S+ Ménage quotidien • Linge de maison
+I Accès exclusif à toute la villa
+
+== Villa Stella | 4 | 8 | - | -
+L Route de Ouarzazate • Centre-ville 20 min • Résidence privée • Sans vis-à-vis • Vue Atlas
+D Villa de plain-pied • Piscine privée chauffée hors été • Pool house avec frigo extérieur • Jardin • Terrasse • Cuisine moderne équipée • Chambres climatisées • Espaces de vie lumineux • Terrain de foot
+S? Cuisinière • Petits-déjeuners & repas à la carte • Transferts aéroport • Location de voiture
+I Accès exclusif à toute la villa • Aucun visiteur extérieur • Animaux non acceptés
+
+== Villa Dakota | 4 | 8 | - | -
+L Route de Ouarzazate • Centre-ville 20 min • Résidence privée • Sans vis-à-vis • Vue Atlas
+D Villa de plain-pied • Piscine privée chauffée hors été • Jardin • Terrasse • Cuisine moderne équipée • Chambres climatisées • Espaces de vie lumineux
+S? Cuisinière • Petits-déjeuners & repas à la carte • Transferts aéroport • Location de voiture
+I Accès exclusif à toute la villa • Aucun visiteur extérieur • Animaux non acceptés
+
+== Villa Scarlett | 4 | 8 | - | -
+L Route de Ouarzazate • Centre-ville 20 min • Résidence privée • Sans vis-à-vis • Vue Atlas
+D Villa de plain-pied • Piscine privée chauffée hors été • Salle de sport • Jardin • Terrasse • Cuisine moderne équipée • Chambres climatisées • Espaces de vie lumineux
+S? Cuisinière • Petits-déjeuners & repas à la carte • Transferts aéroport • Location de voiture
+I Accès exclusif à toute la villa • Aucun visiteur extérieur • Animaux non acceptés
+
+== Villa Zayna | 6 | 13 | - | -
+L Marrakech • À quelques minutes du centre-ville
+D 6 suites • Grande piscine extérieure • Piscine intérieure chauffée • Spa • Hammam • Salle de massage • 2 bars • Rooftop avec restaurant • Jardin • Parking privé • Wi-Fi • Climatisation
+S+ Cuisinière • Ménage • Sécurité 24/24 • Personnel de 9h à 17h
+S? Chauffage de la piscine intérieure • Chauffage du hammam • Personnel après 17h
+I Accès exclusif à toute la villa
+
+== Villa Majorque | 4 | 8 | - | 260
+L Domaine Akenza • Cadre calme & résidentiel
+D 4 chambres dont 2 suites avec SDB privatives • Grand salon • Cuisine américaine ouverte • Piscine 8 × 4 m • Pataugeoire enfants • Espace détente • Coin repas • Douche extérieure avec eau chaude
+I Accès exclusif à toute la villa
+
+== Villa Aspen | 5 | 10 | - | -
+L Marrakech • Résidence privée sécurisée • Proche du centre & des golfs
+D 5 suites • Piscine privée • Jardin • Spa & hammam • Jacuzzi extérieur • Salle de massage • Salle de sport • Salon de coiffure • Ascenseur privé • Parking sécurisé
+S+ Cuisinière privée • Ménage quotidien • Sécurité 24h/24
+S? Concierge • Chef privé • Soins à domicile • Chauffeur
+I Accès exclusif à toute la villa
+
+== Villa Rodeo | 5 | 10 | 5 | 600
+L Amelkis Golf Resort • Résidence golfique prestigieuse
+D Terrain 1 200 m² • 5 suites avec SDB privatives • 3 salons dont un avec double hauteur • 1 suite au rez-de-chaussée • Piscine privée • Jardin • Climatisation & chauffage centralisés • Menuiserie haut de gamme
+X Personnel | 2 chambres dédiées au personnel • Jusqu'à 5 couchages
+I Villa d'architecte • Finitions haut de gamme • Cadre calme & exclusif
+
+== Villa Hudson | 4 | 8 | 4 | -
+L Route de Ouarzazate • Centre-ville 25 min • Aéroport 30–35 min • Résidence sécurisée • Vue Atlas • Sans vis-à-vis
+D 4 suites avec SDB privatives • Piscine à débordement chauffée hors été • Bassin enfants • Grand jardin • Ping-pong • Badminton • Cage de foot • Jacuzzi • Hammam • Cuisine équipée • Wi-Fi haut débit • Parking privé
+S+ Conciergerie • Ménage de fin de séjour
+S? Cuisinière • Petits-déjeuners • Ménage complet • Transferts aéroport • Location de voiture
+I Accès exclusif à toute la villa • Aucun visiteur extérieur • Animaux non acceptés
+
+== Villa Napa | 4 | 8 | - | -
+L Route de Ouarzazate • Centre-ville 20 min • Résidence privée • Sans vis-à-vis • Vue Atlas
+D Villa de plain-pied • Piscine privée chauffée hors été • Jardin • Terrasse • Cuisine équipée • Chambres climatisées • Espaces de vie lumineux
+S? Cuisinière • Petits-déjeuners & repas à la carte • Transferts aéroport • Location de voiture
+I Accès exclusif à toute la villa • Aucun visiteur extérieur • Animaux non acceptés
+
+== Villa Austin | 5 | 10 | 5 | -
+L Route de Ouarzazate • Centre-ville 15 min • Aéroport 25–30 min • Sans vis-à-vis • Gardien 24/7
+D 5 suites avec SDB privatives • Piscine privée • Grand jardin • Salon lumineux • Cuisine équipée • Espaces extérieurs aménagés • Jeux de jardin • Salle de sport
+I Accès exclusif à toute la villa
+
+== Villa Monroe | 5 | 10 | 3 | -
+L Route de Ouarzazate • Centre-ville 15 min • Aéroport 25–30 min • Sans vis-à-vis • Gardien 24/7
+D 5 chambres • Piscine privée chauffée hors été • Grand jardin • Terrasse • Cuisine ouverte équipée • Climatisation • Wi-Fi haut débit • Smart TV + IPTV • Parking privé
+S+ Conciergerie • Ménage de fin de séjour
+S? Cuisinière à la journée • Ménage complet • Transferts aéroport • Location de voiture
+I Accès exclusif à toute la villa • Aucun visiteur extérieur • Animaux non acceptés
+
+== Villa Soccer | 6 | 12 | - | 500
+L Route de Ouarzazate KM 7 • Centre-ville 20 min • Cadre calme & sécurisé
+D 6 suites • Piscine chauffée • Jardin • Jacuzzi • Billard • Hammam • Sauna • Salle de sport • Terrain de foot • Terrain de basket • Ping-pong • Trampoline • Cuisine ouverte
+S+ Conciergerie • Ménage de fin de séjour
+S? Ménage complet • Changement des draps & serviettes • Services de cuisine
+
+== Villa Savannah | 4 | 8 | 4 | -
+L Domaine de Tagana • M Avenue 15 min • Aéroport 8 min
+D Villa neuve • 4 suites avec SDB/WC • Vue Atlas • Résidence sécurisée 24/24 • Piscine privée • Jardin • Parking privé • Climatisation centralisée réglable • Wi-Fi • Cuisine équipée
+I Accès exclusif à toute la villa
+
+== Villa Elena | 4 | 8 | 2 | -
+L Route de l'Ourika • Centre-ville 20 min • Cadre résidentiel calme
+D Villa privée 4 chambres • Design contemporain • Piscine privée 9 × 4,5 m • Jardin • Barbecue • Espaces lounge • Espace sport
+S+ Petit-déjeuner
+S? Déjeuner & dîner • Préparation des repas sur place • Hammam traditionnel • Transport
+I Accès exclusif à toute la villa • 2 salles de bain + 1 WC invités
+
+== Villa Whiteheaven | 6 | 12 | 6 | -
+L Route d'Amizmiz • Au début de la route d'Amizmiz
+D 6 suites spacieuses avec SDB privatives • Piscine intérieure & extérieure • Espace bien-être avec sauna • Cinéma privé • Ascenseur • Architecture moderne & élégante
+S? Chauffage des piscines
+I Accès exclusif à toute la villa
+
+== Villa Madison | 6 | 12 | 6 | -
+L Marrakech • Résidence sécurisée 24/24 • Gardien & vidéosurveillance
+D 6 chambres • Piscine chauffée à débordement • Grand jardin • 2 salons avec billard • Salle de sport • Jacuzzi • Hammam • Sauna • Badminton • Basket • Football • Pétanque • Trampoline • Ping-pong • Parking privé • Wi-Fi haut débit
+S? Cuisinière à la journée • Transferts aéroport • Location de voiture
+I Accès exclusif à toute la villa • Aucun visiteur extérieur
+
+== Villa Arizona Golf | 4 | 8 | - | -
+L Argan Golf • Résidence golfique sécurisée • Centre-ville 10 min • Proche de tout
+D 4 chambres • 5 lits King Size • Vue golf • Piscine privée • Jardin luxuriant • Baby-foot • Mobilier & literie haut de gamme
+S+ Ménage quotidien
+S? Petit-déjeuner • Déjeuner • Dîner
+I Accès exclusif à toute la villa
+
+== Villa Bénédicte | 4 | 8 | - | -
+L Route de Ouarzazate • Centre-ville 20 min • Résidence privée
+D Villa de plain-pied • 4 chambres • Piscine privée chauffée hors été • Vue Atlas • Pool house • Jardin • Terrain de foot privé • Cuisine équipée • Chambres climatisées
+S? Cuisinière • Petits-déjeuners & repas à la carte • Transferts aéroport • Location de voiture
+I Accès exclusif à toute la villa • Sans vis-à-vis • Aucun visiteur extérieur
+
+== Villa Ocra | 5 | 11 | 4 | 350
+L Proche Amelkis & Al Maaden • Centre-ville & Jemaa el-Fna 15 min
+D 4 suites avec SDB, dressing & terrasse • 1 chambre enfants • Terrain 1 200 m² • Piscine 11 × 4,5 m • Jardin paysager • Table de ping-pong • Mini terrain de football
+S+ Gouvernante sur place
+S? Cuisinière • Coursier • Piscine chauffée
+I Accès exclusif à toute la villa • Capacité maximale 11 personnes
+
+== Villa Reign | 3 | 6 | 3 | -
+L Route d'Amizmiz KM 13, Dar El Ain • Proche du Fairmont Royal Palm
+D 3 suites avec dressing & SDB privatives • Piscine privée 10 × 5 m sans vis-à-vis • Jardin • Terrasse • Billard • Parking privé sécurisé sous vidéosurveillance
+I Accès réservé aux voyageurs déclarés • Aucun visiteur extérieur • Résidence calme • Accès exclusif à toute la villa • Non-fumeur • Pas de fêtes ni d'événements
+
+== Villa Palm Angels | 5 | 10 | 5 | 800
+L Marrakech • Centre-ville 15 min • Vue panoramique Atlas
+D 5 suites avec SDB privatives • Terrain 6 700 m² • Piscine extérieure chauffée • Hammam marocain • Jacuzzi • Jardin privé • Espace barbecue • Salle de sport extérieure • Espace de travail avec Wi-Fi haut débit
+S? Chef privé • Soins hammam à la villa • Transferts aéroport
+I Accès exclusif à toute la villa
+
+== Villa Melrose | 6 | 12 | 6 | -
+L Agdal • Quartier prestigieux • Proche restaurants & lieux tendances • Centre-ville & aéroport facilement accessibles
+D 6 suites avec SDB privatives • Rooftop vue Atlas • Piscine privée 16 m • Jardin paysager • Hammam • Salle de sport • Cinéma • Salle de jeux • Ascenseur • Wi-Fi haut débit • Parking privé
+S+ Ménage quotidien • Sécurité
+S? Piscine chauffée (à réserver 4 jours avant l'arrivée) • Chef privé • Massages & spa • Transferts aéroport • Excursions
+I Accès exclusif à toute la villa
+
+== Villa Bel Air | 5 | 10 | 5 | 900
+L Marrakech • Aéroport 10 min • Jemaa el-Fna 15 min • Guéliz 16 min • Gare 15 min
+D 5 suites avec dressing & SDB privatives • 2 salons • 2 jacuzzis • Hammam • Piscine • Salle de sport • Cinéma privé • Jardin • Terrasses panoramiques
+S+ 2 gouvernantes • Conciergerie • Sécurité 24h/24
+S? Cuisinière privée • Navette aéroport • Lit bébé
+I Accès exclusif à toute la villa
+
+== Villa Montecito | 4 | 8 | 4 | -
+L Marrakech • Domaine sécurisé • Centre-ville & attractions 15 min • Sans vis-à-vis
+D 4 suites avec SDB privatives • Piscine privée chauffée • Grand jardin • Barbecue • Ping-pong • Trampoline • Pétanque • Espaces repas & détente • Cuisine équipée • Wi-Fi haut débit • Climatisation
+S? Petit-déjeuner & déjeuner • Ménage et changement des draps & serviettes • Cuisinière (courses à la charge du client)
+I Accès exclusif à toute la propriété • Construction à proximité
+
+== Villa Catalina | 4 | 8 | - | -
+L Route d'Amizmiz • Environ 15 min du centre • Résidence sécurisée
+D 4 chambres • Double séjour • Cuisine équipée • Jardin • Piscine privée
+S+ Ménage
+S? Cuisinière (petit-déjeuner & déjeuner)
+I Accès exclusif à toute la villa
+
+== Villa North | 3 | 6 | 3 | -
+L Route d'Amizmiz KM 13, Dar El Ain
+D 3 suites avec dressing & SDB privatives • Piscine privée • Jardin • Terrasse • Billard • Grand parking privé sécurisé sous vidéosurveillance
+I Accès réservé aux voyageurs déclarés • Aucun visiteur extérieur • Heures calmes de 23h à 8h • Accès exclusif à toute la villa • Non-fumeur • Pas de fêtes ni d'événements
+
+== Villa Padel Penelope | 5 | 10 | 5 | -
+L Route d'Amizmiz KM 13, Dar El Ain • À proximité du Fairmont Royal Palm
+D 5 suites avec dressing & SDB privatives • Terrain de padel privé • Piscine privée sans vis-à-vis • Terrain de football • Salle de sport • Hammam • Billard • Grand parking privé sécurisé
+I Parking sous vidéosurveillance • Accès strict aux voyageurs déclarés • Accès exclusif à toute la villa • Non-fumeur • Aucun visiteur extérieur
+
+== Villa Selman | 6 | 12 | - | -
+L Marrakech • Cadre calme & privilégié
+D 6 suites avec TV • Literie haut de gamme • Piscine privée • Jardin paysager • Grands salons • Salle à manger • Espaces extérieurs aménagés • Wi-Fi haut débit
+S+ Accompagnement & assistance pendant le séjour
+I Accès exclusif à toute la villa • Intimité totale
+
+== Villa Sierra | 5 | 10 | - | 400
+L Marrakech • Aéroport 6 min • Médina & Guéliz 10 min • Golf 3 min • Résidence sécurisée 24/7
+D 5 suites • Piscine privée chauffée • Rooftop vue Atlas • Cuisine équipée • Climatisation • Parking privé
+S+ Petit-déjeuner marocain • Accueil personnalisé • Assistance locale • Accès à la salle Raptor Fitness à 2 min à pied
+I Accès exclusif à toute la villa
+
+== Villa Turtle | 4 | 8 | 4 | 550
+L Marrakech • Jemaa el-Fna 20 min • Al Mazar & Carrefour 10 min • Résidence sécurisée avec gardien • Vue Atlas
+D 4 chambres avec dressing & SDB privatives • Piscine privée chauffée sur demande • Grande terrasse • Cuisine ouverte équipée • Mobilier haut de gamme • Netflix • Prime Video • IPTV
+S+ Petit-déjeuner marocain • Ménage quotidien • Serviettes à la demande • Draps changés 1×/semaine
+S? Chauffage de la piscine • Déjeuner & dîner
+I Accès exclusif à toute la villa
+
+== Villa Verona Golf | 5 | 10 | - | -
+L Argan Golf, première ligne • Communauté sécurisée • Vue golf & Atlas
+D 5 suites avec lits King Size • Piscine privée • Jardin en bord de golf • Salon extérieur avec cheminée • Espace barbecue • Wi-Fi haut débit • Climatisation • Parking privé
+S+ Ménage quotidien • Concierge
+S? Chef privé • Chauffeur & transferts aéroport • Excursions • Massages & soins à la villa
+I Accès exclusif à toute la villa
+
+== Villa Targa | 9 | 18 | 9 | -
+L Targa • En plein cœur de Marrakech
+D 9 suites avec SDB en marbre • Piscine privée • Jardin • Hammam • Jacuzzi • Salon marocain • Cuisine équipée • Climatisation • Wi-Fi haut débit • Parking privé
+S+ Ménage • Sécurité 24/24 • Linge de maison • Consommations • Wi-Fi
+S? Chef privé • Transferts VIP • Restaurants • Visites privées • Excursions Atlas & Agafay • Montgolfière • Shopping personnalisé
+I Accès exclusif à toute la villa
+
+== Villa Amber | 6 | 12 | - | -
+L Route d'Amizmiz • Eden Andalou Aquapark à proximité • Centre-ville 15–20 min
+D 4 suites avec SDB privatives • 2 chambres supplémentaires • Piscine à débordement avec espace lounge • Jardin paysager • BBQ • Cuisine équipée • Wi-Fi • Climatisation
+S+ Ménage quotidien • Résidence sécurisée 24/7
+S? Petit-déjeuner • Piscine chauffée
+I Accès exclusif à toute la villa
+
+== Villa Palm Aurea | 6 | 12 | 6 | 600
+L Argan Golf Resort • Aéroport 10 min • Centre-ville 10 min • Vue Atlas & golf
+D 6 chambres avec SDB privatives & balcons • Terrain 2 400 m² • Piscine privée • Jardin paysager • 2 cuisines haut de gamme • Salon européen avec cheminée • Salon marocain • Salle de sport • Hammam • Salle de massage • Accès exclusif au golf
+S+ Cuisinière • Ménage quotidien • Petit-déjeuner • Transfert aéroport
+I Accès exclusif à toute la villa • Résidence sécurisée
+
+== Villa Ourika | 4 | 8 | 4 | 300
+L Route de l'Ourika • Centre-ville 15 min • Aéroport 15 min • Résidence sécurisée 24/7
+D Terrain 600 m² • 4 suites avec SDB privatives • Piscine privée sans vis-à-vis • Grand salon avec accès piscine • Cuisine équipée • Climatisation • Wi-Fi haut débit
+S+ Ménage quotidien • Linge de maison
+I Accès exclusif à toute la villa
+
+== Villa Noria | 4 | 8 | 4 | -
+L Golf Noria • Centre-ville 15 min • Quartier calme & sécurisé
+D 4 suites avec SDB privatives • 2 salons • Piscine privée chauffée • Jardin paysager • Terrasse • Barbecue • Cuisine équipée • Wi-Fi haut débit • Climatisation réversible
+S+ Ménage hebdomadaire • Linge de maison & serviettes • Accueil personnalisé
+S? Cuisinière • Chauffeur privé • Massages • Excursions
+I Accès exclusif à toute la villa
+
+== Villa Urban | 3 | 6 | - | -
+L KM 6, Route de Tahanaout • Centre-ville 10 min • Résidence fermée & sécurisée
+D Villa privée 3 chambres • Piscine privée • Jardin
+S+ Ménage
+I Accès exclusif à toute la villa • Idéale pour familles & amis
+
+== Villa Cullinan | 5 | 10 | 5 | -
+L Résidence sécurisée avec gardien • Cadre calme
+D 5 chambres avec SDB privatives, terrasses & TV • 2 dressings • 1 baignoire • Piscine privée chauffée 18 m • Jardin • Cuisine équipée • 2 lits bébé
+S? Petit-déjeuner • Déjeuner (courses non incluses)
+I Accès exclusif à toute la villa
+
+== Villa Eden | 4 | 8 | - | -
+L Route d'Amizmiz • Environ 15 min du centre • Résidence sécurisée
+D Double séjour • Cuisine équipée • Jardin • Piscine privée
+S+ Ménage
+S? Cuisinière (petit-déjeuner & déjeuner)
+I Accès exclusif à toute la villa
+
+== Villa Palm Spring | 5 | 10 | - | -
+L À 35 km du centre de Marrakech • Vue panoramique Atlas • Cadre privé & exclusif
+D 5 suites dont 1 Master Suite de 60 m² • Terrain paysager d'1 hectare • 2 piscines dont 1 chauffée • Jacuzzi • Hammam • Padel privé • Salle de sport • Cinéma privé • Jardin paysager • Cuisine équipée
+S+ Petit-déjeuner • Ménage
+S? Chef privé • Coach sportif • Massages • Coiffure • Événements • Location de voiture • Vito avec chauffeur
+I Accès exclusif à toute la villa
+
+== Villa Mya | 5 | 8 | 6 | -
+L Noria Golf Club • Aéroport & centre-ville 10 min • Morocco Mall 5 min • Vue Atlas
+D 5 suites • Piscine privée • Jardins • Terrasses • Accès direct au golf 18 trous • Bar lounge • Domaine sécurisé
+S+ Ménage quotidien
+I Accès exclusif à toute la villa • Aucun invité extérieur • Événements interdits
+
+== Villa Diamond | 5 | 10 | - | -
+L Route de l'Ourika • Marrakech 20 min • Vue montagne & jardin
+D 5 chambres dont 2 suites avec SDB privatives • Piscine chauffée • Jacuzzi • Jardin paysager • Terrasse • Espaces lounge • Villa rénovée en 2026 • Climatisation • Wi-Fi haut débit • TV chaînes internationales
+S+ Femme de ménage
+I Accès exclusif à toute la villa
+
+== Villa Ivory | 5 | 10 | 5 | -
+L Marrakech • Résidence sécurisée 24/7 • Proche aéroport & centre-ville
+D Villa d'architecte de plain-pied • Terrain 1 300 m² • 5 suites avec SDB privatives • Literie hôtelière haut standing • Piscine 16 m • Jardin paysager • Cuisine équipée • Grandes pièces de vie lumineuses
+I Accès exclusif à toute la villa • Cadre calme & intimité totale
+
+== Villa Pearl | 5 | 10 | 5 | -
+L Marrakech • Résidence sécurisée 24/7 • Proche aéroport & centre-ville
+D Villa d'architecte de plain-pied • Terrain 1 300 m² • 5 suites avec SDB privatives • Literie hôtelière haut standing • Piscine 16 m • Jardin paysager • Cuisine équipée • Grandes pièces de vie lumineuses
+I Accès exclusif à toute la villa • Cadre calme & intimité totale
+
+== Villa Blauw | 4 | 8 | 4 | 300
+L Route d'Amizmiz • À côté de l'Eden Andalou & du parc aquatique • Proche du centre-ville
+D Villa contemporaine de plain-pied • Terrain 1 300 m² • 4 suites avec SDB privatives • Piscine privée • Jardin paysager • Cuisine indépendante • Espaces lumineux
+S+ Femme de maison sur place • Ménage quotidien
+I Accès exclusif à toute la villa • Environnement calme & sécurisé
+
+== Villa Jenah | 4 | 8 | - | -
+L Marrakech • Palais Bahia 10 min • Jardin Majorelle 15 min • Quartier calme
+D 4 chambres • Vue sur le jardin • Terrasse ensoleillée • Cuisine équipée • Réfrigérateur • Bouilloire • Vaisselle • Cadre paisible
+I Accès à l'ensemble de la villa • Idéale pour familles & groupes d'amis
+
+== Villa Blanca | 5 | 10 | - | -
+L Marrakech • Centre-ville 25 min • Cadre calme & intimiste • Sans vis-à-vis
+D 5 chambres dont 2 suites parentales • Hammam beldi • Piscine privée • Jacuzzi • Immense terrasse • Cuisine extérieure équipée • BBQ • Espace repas • Salon extérieur • Jardin paysager • Magnifiques couchers de soleil
+I Accès exclusif à toute la villa • Idéale pour familles & groupes d'amis
+
+== Villa Anastasia | 4 | 9 | - | -
+L Route de l'Ourika • Centre-ville 20–25 min • Proche Café del Mar • Vue Atlas
+D 3 suites parentales • 1 chambre avec 3 lits simples • Piscine privée avec pataugeoire • Terrain de padel • Terrain de football • Demi-terrain de basket • Espace crossfit • Barbecue • Grand salon avec IPTV & Netflix • Cuisine américaine équipée
+X Espace bien-être | Piscine intérieure chauffée • Jacuzzi • Sauna • Hammam • Accès en supplément
+S? Excursions • Transferts aéroport • Chauffeur privé • Cuisinière privée • Location de voitures, motos & scooters
+I Accès exclusif à toute la villa et aux installations extérieures
+
+== Villa Anna | 7 | 14 | 7 | -
+L Marrakech • Centre-ville 25 min • Cadre calme & intimiste
+D 7 suites dont une dépendance de 2 chambres • Piscine privée • Grand jardin • Terrain de football • Terrain de basket • Espace cross-fit • Table de ping-pong • TV • Cuisine équipée • BBQ • Climatisation & chauffage • 2 lits bébé
+I Accès exclusif à toute la villa • Idéale pour familles, couples & groupes de femmes
+
+== Villa Aya | 7 | 14 | - | -
+L Marrakech • Centre-ville 15 min • Aéroport 15–20 min • Proche Amelkis, Al Maaden & Royal Golf
+D 7 suites • Piscine privée • Spa • Grand bar • Chaises longues • TV satellite • Climatisation & chauffage • Coffre-fort • Lit bébé • Accès PMR
+S+ Ménage quotidien • Conciergerie
+S? Cuisinier • Massages & soins spa • Baby-sitting • Transfert aéroport • Navette centre-ville • Organisation d'événements
+I Animaux acceptés • Accès exclusif à toute la villa • Idéale pour familles, groupes & événements privés
+
+== Villa Majestic | 10 | 20 | - | -
+L Palmeraie • Centre-ville 15 min • Cadre privé & paisible
+D 10 suites • Capacité extensible jusqu'à 40 personnes • Piscine privée avec deck immergé • Piscine annexe chauffée 6 × 3 m • Jardin • Espaces extérieurs • Cadre idéal pour événements
+S+ Gouvernante • Personnel de ménage
+S? Cuisinières • Chef cuisinier • Organisation sur mesure • Lits supplémentaires
+I Événements jusqu'à 100 personnes : mariages, anniversaires, séminaires, fêtes privées (sur devis) • Accès exclusif à toute la villa • Idéale pour séjours de groupe & événements privés
+
+== Villa Oranje | 6 | 12 | 6 | -
+L Palmeraie • Quartier prestigieux • Cadre calme & raffiné
+D 6 suites avec SDB privatives • Jardin paysager • Piscine privée chauffée sur demande • Terrasse • Salon extérieur • Transats • Barbecue • Cheminée • Climatisation & chauffage • TV satellite • Wi-Fi & fibre optique • Coffre-fort • Golf à proximité
+S? Navette centre-ville • Transfert aéroport • Transport personnalisé • Concierge • Massages & soins beauté • Animation
+I Accès exclusif à toute la villa • Idéale pour familles, groupes & séjours haut de gamme
+
+== Villa Hampton | 8 | 16 | - | 1500
+L Marrakech • Centre-ville 10 min • Cadre privé & exclusif
+D Terrain 15 000 m² • 8 chambres • Salon marocain • Salon européen • Salle de cinéma • Grande terrasse • Cuisine équipée • Bureau • Buanderie
+X Espace bien-être | Piscine intérieure chauffée à débordement • Jacuzzi • Hammam • Sauna • Vestiaire
+X Extérieurs | Jardin paysager • Palmiers centenaires • Oliviers • Piscine extérieure avec plage 30 × 10 m
+X Dépendance indépendante | 2 chambres • Grand salon avec cheminée
+I Accès exclusif à l'ensemble de la propriété • Idéale pour familles, groupes & séjours d'exception
+
+== Villa Willow | 5 | 10 | - | -
+L Domaine de Noria • À quelques minutes du centre-ville • Résidence fermée & sécurisée
+D 5 chambres • Cadre calme & résidentiel • Environnement privilégié
+I Accès exclusif à toute la villa • Idéale pour familles & groupes d'amis
+
+== Villa Argan Peace | 5 | 10 | - | -
+L Argan Golf • Résidence golfique sécurisée • À quelques minutes du centre-ville
+D 5 chambres • Hammam • Piscine privée • Jardin paysager • Cadre calme & intimiste
+I Accès exclusif à toute la villa • Idéale pour familles, couples & groupes d'amis
+
+== Villa Baby Bali | 4 | 8 | 4 | -
+L Marrakech • Vue imprenable sur l'Atlas • Sans vis-à-vis
+D 4 chambres avec SDB privatives • Piscine privée • Jardin • Terrasse • Salon extérieur • Cuisine équipée • Salon & salle à manger • Climatisation • Wi-Fi • TV
+S+ Ménage • Linge de lit & de bain • Entretien de la piscine
+I Accès exclusif à toute la villa
+
+== Villa Pilotis | 5 | 10 | - | -
+L Route de l'Ourika • À quelques minutes du centre • Cadre calme & intimiste
+D 5 suites dont 1 sur pilotis au-dessus de l'eau • Piscine privée • Jardin arboré • Grande terrasse • Design contemporain • Sans vis-à-vis • Parking privé
+S+ Ménage quotidien • Linge de maison
+S? Petit-déjeuner • Demi-pension • Dîner • Cuisine marocaine & internationale
+I Accès exclusif à toute la villa
+
+== Villa Mila | 3 | 6 | 3 | -
+L Route de Ouarzazate • À 15 km de Marrakech • Proche École Américaine • Vue sur l'Atlas • Sans vis-à-vis
+D Villa contemporaine neuve • 3 chambres avec SDB privatives • Piscine à débordement chauffée • Espace détente dans la piscine • Jardin privé • Hammam • Grand séjour • Cuisine équipée • Climatisation • Wi-Fi fibre • IPTV • Parking privé
+S? Cuisinière • Courses & service coursier • Hammam • Location de véhicule
+I Gardien 24h/24 • Vidéosurveillance • Accès exclusif à toute la villa • Idéale pour familles & groupes d'amis
+
+== Villa Strand | 4 | 8 | - | -
+L Marrakech • Villa entièrement privée • Hors résidence
+D 4 chambres • Piscine privée sans vis-à-vis • Grand espace extérieur • Jardin • Table de ping-pong • Espaces de détente • Cadre calme & intimiste
+I Accès exclusif à toute la villa et à l'ensemble des équipements • Idéale pour familles & groupes d'amis
+
+== Villa Désert | 5 | 10 | - | -
+L Marrakech • Villa entièrement privée • Aucun voisinage en résidence
+D 5 chambres • Piscine privée sans vis-à-vis • Grand espace extérieur • Jardin • Table de ping-pong • Espaces de détente • Cadre calme & intimiste
+I Accès exclusif à toute la villa et à l'ensemble des équipements • Idéale pour familles & groupes d'amis
+
+== Villa Malibu | 4 | 8 | - | -
+L À 5 min de The Oberoi • Cadre privé & sans vis-à-vis
+D 4 chambres • Piscine privée • Jardin • Daybed extérieur • Cinéma privé • Jacuzzi • Espace fitness
+S? Hammam • Repas à la carte
+I Accès exclusif à toute la villa
+
+== Villa Paloma | 6 | 12 | - | -
+L Golf Amelkis • Resort prestigieux • À proximité du centre-ville
+D 6 suites réparties sur 3 étages • Piscine à débordement • Salle de cinéma • Salle de sport • Salle de jeux • Terrasse berbère • Vue panoramique sur l'Atlas
+S? Cuisinière • Piscine chauffée • Ménage pendant le séjour
+I Accès exclusif à toute la villa • Idéale pour familles & groupes non mixtes • Pas de fêtes • Aucun invité supplémentaire sans accord préalable
+
+== Villa Garden | 6 | 12 | 6 | -
+L Marrakech • Jemaa el-Fna 11 km • Aéroport 18 km • Cadre calme & sécurisé
+D 6 chambres avec SDB privatives • 4 TV • Piscine privée • Grand jardin • Terrasse rooftop • Grand salon • Cuisine équipée • Espaces détente • Climatisation
+S+ Femme de ménage quotidienne • Assistance sur place
+S? Petit-déjeuner • Repas
+I Accès exclusif à toute la villa
+
+== Villa Nelly | 6 | 12 | 6 | -
+L Marrakech • Cadre calme & intimiste
+D 6 suites avec dressing & SDB privatives • Piscine privée • Grand jardin • Climatisation • Wi-Fi • Smart TV • Lit bébé • Hall d'accueil
+S+ Cuisinière dédiée • Femme de ménage
+I Accès exclusif à toute la villa
+
+== Villa Maria | 7 | 14 | 7 | -
+L Marrakech • Centre-ville 20 min • Domaine sécurisé • Cadre calme & intimiste
+D 7 chambres • Grande piscine privée • Jardin • Salon spacieux • Cuisine équipée • BBQ • Climatisation & chauffage • Wi-Fi • TV • Jeux de société • Coffre-fort • Lave-linge • Fer à repasser • Sèche-cheveux • Produits de douche
+X Espace bien-être | Piscine intérieure chauffée (en supplément) • Salle de massage • Hammam • Sauna
+X Équipements enfants | 4 lits bébé • 3 chaises hautes
+S? 2 lits d'appoint
+I Événements possibles sur demande • Séjour de 3 nuits minimum • Accès exclusif à toute la villa • Idéale pour familles & groupes d'amis
+
+== Villa Manor Hills | 10 | 30 | 10 | -
+L Marrakech • À quelques kilomètres du centre-ville
+D 10 suites avec SDB privatives • Piscine chauffée • Terrain de padel • Pickleball • Ping-pong • Salle de sport • Hammam • Sauna • Bain froid • Jacuzzi • Cinéma • Salle de conférence • Cuisine professionnelle • Wi-Fi fibre
+S+ Petit-déjeuner continental • Ménage quotidien • Entretien du jardin & de la piscine • Conciergerie
+S? Chef privé • Piscine chauffée • Excursions & activités
+I Accès exclusif à toute la propriété
+
+== Villa Rosa | - | - | - | -
+L Palmeraie • Vue panoramique sur l'Atlas • Cadre exclusif & raffiné
+D Villa d'exception • Volumes majestueux • Patio intérieur • Grandes terrasses • Piscine privée • Piscine intérieure chauffée • Jacuzzi 4 × 4 m • Hammam • Sauna • Salle de massage • Spa privé • Cheminée • Climatisation • Cuisine équipée • Système Hi-Fi • Parking pour 6 voitures • Un palais mêlant luxe, calme & volupté, au cœur de la Palmeraie
+I Accès exclusif à toute la villa
+
+== Villa Palmeraie | 4 | 8 | 4 | -
+L Palmeraie • Domaine prestigieux & sécurisé
+D 4 chambres avec SDB privatives • Décoration marocaine raffinée • Salon • Salle à manger • Cuisine équipée • Cadre calme & exclusif
+S+ Entretien quotidien • Sécurité 24/24
+S? Restauration • Conciergerie • Excursions • Soins & activités
+I Accès exclusif à toute la villa
+
+== Villa Maya | 5 | 10 | - | 500
+L Marrakech • Centre-ville 15 min • 3 golfs à 5 min
+D 5 chambres • Piscine privée chauffée en option • Bain à bulles • Plage de piscine • Cinéma & discothèque privée insonorisée • Billard • Ping-pong • Pétanque • Rooftop • Netflix & IPTV dans chaque chambre
+S+ Cuisinière • Ménage quotidien • Gardien & sécurité 24h/24 • Entretien de la piscine
+I Accès exclusif à toute la villa • Idéale pour familles, groupes & séjours festifs
+
+== Villa Del Cielo | 5 | 10 | 5 | -
+L Marrakech • Centre-ville 5 min • Aéroport 10 min • Guéliz 7 min • Médina & Jemaa el-Fna 10 min • Jardin Majorelle 15 min • Résidence sécurisée 24/7
+D 5 suites avec SDB privatives • Dressings privés • Terrasses avec vue dégagée • Grand salon lumineux • Smart TV avec Netflix • Wi-Fi fibre haut débit • Piscine privée • Jardin aménagé • Salle de jeux avec billard & baby-foot • Équipements haut de gamme • Literie premium
+S+ Ménage professionnel avant chaque arrivée
+S? Ménage supplémentaire
+I Accès exclusif à toute la villa • Idéale pour familles, groupes d'amis & séjours professionnels
+
+== Villa Aurora | 4 | 8 | 4 | 400
+L Route de l'Ourika • Centre-ville 15–20 min • Résidence sécurisée • Sans vis-à-vis
+D Terrain 2 200 m² • 4 suites avec SDB privatives • Piscine privée 15 × 5 m • Jardin paysager • 2 salons • Cuisine équipée • Rooftop • Patio intérieur • Parking • Gardien & jardinier
+S+ Linge de maison • Ménage quotidien
+S? Piscine chauffée • Petit-déjeuner • Demi-pension • Pension complète
+I Accès exclusif à toute la villa
+
+== Villa Isabella | 4 | 8 | 4 | 400
+L Route de l'Ourika • Marrakech 15–20 min • Résidence sécurisée • Sans vis-à-vis
+D 4 suites avec SDB privatives • Piscine 15 × 5 m • Jardin paysager • 2 salons • Cuisine américaine équipée • Suite parentale avec baignoire • Terrasse • BBQ • Parking privé
+I Accès exclusif à toute la villa • Gardien & jardinier présents
+
+== Villa Calabasas | 4 | 8 | - | -
+L Route de l'Ourika • Aéroport & centre-ville 15 min
+D 4 suites • Piscine chauffée • Jardin • Terrasses • Espaces repas • Grand salon • IPTV • 2 parkings privés ou plus • Sans vis-à-vis • Mobilier Eichholtz & finitions haut de gamme
+S+ Chef cuisinière & gouvernante pendant tout le séjour
+S? Navettes aéroport • Location de véhicules • Spa & massages à la villa • Excursions & prestations personnalisées
+I Accès exclusif à toute la villa
+
+== Villa Zaya | 5 | 10 | 5 | -
+L Résidence golfique • Centre-ville 7 min • Cadre calme & sécurisé
+D 5 suites avec SDB privatives • Dressings • Piscine privée • Pataugeoire enfants • Jardin luxuriant • Terrasse ensoleillée • Trampoline • Salon spacieux • Cuisine équipée • TV avec Netflix
+S+ Ménage quotidien
+S? Chef privé
+I Accès exclusif à toute la villa
+
+== Villa Futura | 4 | 8 | - | -
+L Route d'Amizmiz KM 8 • Aéroport 10 min • Sofitel 15 min • Chrifia 5 min • Résidence privée ultra-sécurisée
+D 4 chambres • Jardin paysager • Piscine privée chauffée 17 m • Sans vis-à-vis • Résidence de seulement 6 villas
+I Accès exclusif à toute la villa • Calme & intimité totale
+
+== Villa Solis | 3 | 6 | - | -
+L Route d'Amizmiz KM 8 • Aéroport 10 min • Sofitel 15 min • Chrifia 5 min • Résidence privée ultra-sécurisée
+D 3 chambres • Jardin paysager • Piscine privée chauffée 17 m • Sans vis-à-vis • Résidence de seulement 6 villas
+I Accès exclusif à toute la villa • Calme & intimité totale
+
+== Villa Jade | 4 | 8 | - | -
+L Route d'Amizmiz, Argan Golf Extension • Aéroport 10 min • Vue Atlas
+D 4 chambres • Piscine miroir 8 × 3,5 m • Jardin zen • Rooftop vue Atlas • Salons spacieux • Cuisine équipée • Terrasses • Garage privé • Design contemporain
+S? Petit-déjeuner • Ménage 2× pendant le séjour
+I Accès exclusif à toute la villa • Intimité totale
+
+== Villa Salomé | 5 | 10 | 5 | 420
+L RN8 • Médina 25 min • Domaine résidentiel sécurisé
+D Terrain 2 400 m² • 5 suites avec SDB privatives • Piscine chauffée • Hammam • Rooftop 250 m² • Billard • Baby-foot • Ping-pong • Home cinéma • 2 courts de tennis dans le domaine
+S+ Ménage • Personnel présent
+S? Piscine chauffée • Hammam • Service cuisine (courses à la charge du client)
+I Accès exclusif à toute la villa • Capacité maximale 10 personnes
+
+== Villa Emilia | 4 | 8 | 4 | 400
+L Route de l'Ourika • Marrakech 15–20 min • Sans vis-à-vis • Cadre calme & intimiste
+D Terrain 2 200 m² • 4 suites avec SDB privatives • Piscine privée 15 × 5 m • Jacuzzi • Cuisine équipée • Jardin paysager • Villa contemporaine
+I Accès exclusif à toute la villa
+
+== Villa California | 5 | 10 | - | -
+L À deux pas de l'hôtel Selman • Quartier calme & prestigieux
+D 5 suites • Piscine privée chauffée • Jacuzzi • Salle de sport • Hammam • Sauna • Design contemporain d'inspiration californienne
+I Accès exclusif à toute la villa
+
+== Villa Bali | 5 | 10 | 5 | 500
+L Route de l'Ourika • Centre-ville 15 min • Résidence fermée & sécurisée
+D Terrain 1 015 m² • 5 suites avec SDB privatives • Grand séjour • Salon & salle à manger • Piscine privée • Jardin • Architecture contemporaine • Finitions haut de gamme
+I Accès exclusif à toute la villa • Cadre calme & intimité
+
+== Villa Amberwood | 5 | 10 | - | -
+L Route de l'Ourika • Aéroport & centre-ville 15 min
+D 1 200 m² • 5 suites dont 2 Master Suites • Piscine chauffée • Jardin • Terrasses • Espaces repas • Grand salon • IPTV • 2 parkings privés ou plus • Sans vis-à-vis • Mobilier Eichholtz & finitions haut de gamme
+S+ Chef cuisinière & gouvernante pendant tout le séjour
+S? Navettes aéroport • Location de véhicules • Spa & massages à la villa • Excursions & prestations personnalisées
+I Accès exclusif à toute la villa
+
+== Villa Nour | 5 | 10 | - | -
+L Palmeraie • Cadre calme & exclusif
+D Villa contemporaine • 5 chambres • Suites spacieuses • Grandes SDB • Piscine privée • Grand jardin paysager • Palmiers & bananiers • Nombreuses terrasses • Espaces détente • Transats & parasols
+S? Piscine chauffée
+I Accès exclusif à toute la villa
+
+== Villa Liya | 5 | 10 | - | -
+L Route de l'Ourika • Centre-ville 10 km • Sans vis-à-vis
+D 5 chambres • Piscine privée 15 m • Jardin privé 5 000 m² • Ping-pong • Volley-ball • Badminton • Football • Cinéma privé • Cuisine équipée • Parking privé sécurisé • Wi-Fi haut débit • Climatisation & chauffage
+S+ Petit-déjeuner • Ménage quotidien • Service cuisinier
+I Accès exclusif à toute la villa
+
+== Villa Beverly | 5 | 10 | 5 | -
+L Marrakech • Résidence calme & sécurisée
+D 5 suites avec SDB privatives & dressing • 4 suites de plain-pied et 1 suite indépendante à l'étage • Piscine privée • Jardin • Parking privé • Terrain de padel dans la résidence
+S+ Femme de ménage de 9h à 17h • Accès au terrain de padel
+S? Piscine chauffée • Cuisinière • Transfert aéroport & van avec chauffeur
+I Accès exclusif à toute la villa
+
+== Villa Charleston | 5 | 10 | 6 | -
+L Proche Royal Golf Club • Golf Amelkis 1 km • Al Maaden Golf 2,9 km
+D 5 chambres • Piscine privée • Jacuzzi • Sauna • Terrasse • Jardin • Espace détente • Cuisine équipée
+I Accès exclusif à toute la villa
+
+== Villa Sunset | 5 | 10 | - | -
+L Résidence Mysk • Centre-ville 7–10 min • Vue panoramique Atlas • Résidence sécurisée
+D 5 suites dont 2 Master Suites • Piscine privée chauffable • Hammam beldi • Salle de sport • Grande terrasse • Jardin • Salle à manger extérieure • Cheminée • Cuisine haut de gamme AEG • Smart TV • Wi-Fi haut débit
+S+ Ménage quotidien • Linge de maison & serviettes
+S? Piscine chauffée • Hammam • Repas à la villa • Chauffeur • Transferts aéroport • Excursions • Blanchisserie • Location de voitures & motos
+I Accès exclusif à toute la villa
+
+== Villa Tiara | 5 | 10 | 6 | -
+L Marrakech • À quelques minutes de la Médina & des principaux sites
+D 5 chambres • Piscine à débordement 12 × 5 m • Jardin • Cinéma privé • Salle de jeux avec billard & bar • Hammam • Trampoline • Parking privé • Wi-Fi haut débit
+S+ Petit-déjeuner • 2 membres du personnel de 8h à 17h
+S? Chauffage de la piscine • Personnel après 17h • Hammam & soins • Mini-bar • Service coursier pour courses à domicile • Livreur
+I Accès exclusif à toute la villa • Accès réservé aux personnes enregistrées
+
+== Villa Zaya (Route d'Amizmiz) | 5 | 10 | - | -
+L Route d'Amizmiz • Face à l'hôtel Eden Andalou • Résidence sécurisée
+D 5 suites • Double séjour • Cuisine équipée • Jardin • Piscine privée 15 m
+S+ Ménage
+S? Cuisinière (petit-déjeuner & déjeuner)
+I Accès exclusif à toute la villa
