@@ -49,8 +49,9 @@ I Accès exclusif à toute la villa                    (autres informations)
 
 ## Photos
 
-Les photos des villas ne sont pas encore en ligne : Notion bloque leur copie et l'export est
-désactivé pour les invités de l'espace « Argan 90 ». Dès qu'un export Notion (Markdown & CSV,
-sous-pages incluses) est disponible, les photos seront triées (extérieur, salon, cuisine,
-chambres, salles de bain en dernier) et ajoutées dans `photos/`.
+Les 3 711 photos viennent de l'export Notion de la base « Propriétés » (Markdown & CSV).
+`data/photos.py` les extrait dans l'ordre des fiches et les redimensionne (1280 px) dans
+`photos/v/<villa>/`. `data/order.py` classe chaque photo par pièce avec le framework Vision
+d'Apple (macOS) puis fixe l'ordre : extérieur & piscine → salon → salle à manger → cuisine →
+autres espaces → chambres → salles de bain. `data/build_data.py` régénère les données.
 
