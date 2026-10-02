@@ -4,7 +4,7 @@
 <meta name="description" content="Villas de luxe à Marrakech de 3 à plus de 20 chambres, et services de conciergerie : spa, véhicules, excursions, événements, tables, conciergerie 24/7.">
 <meta property="og:title" content="Concierge Service by Medina First Marrakech">
 <meta property="og:description" content="Villas de luxe à Marrakech et services de conciergerie.">
-<meta property="og:image" content="https://akhimysah.github.io/villas-marrakech/photos/riad-05.jpg">
+<meta property="og:image" content="https://akhimysah.github.io/villas-marrakech/photos/v/villa-melrose/001.jpg">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="theme-color" content="#9A2A22">
@@ -119,6 +119,9 @@ h1,h2,h3{margin:0;line-height:1.2;text-wrap:balance;font-weight:700}
 .hero.svc h1{max-width:20ch}
 @media (max-width:640px){.hero{min-height:440px}.hero .wrap{padding:48px 0 24px}.search .cnt{display:none}.hero.svc{min-height:360px}}
 
+.hero-credit{position:absolute;right:16px;top:16px;z-index:2;font-size:12px;font-weight:700;color:#fff;text-decoration:none;background:rgba(0,0,0,.35);backdrop-filter:blur(6px);padding:7px 12px;border-radius:999px}
+.hero-credit:hover{background:rgba(0,0,0,.55)}
+.hero.svc>img{object-position:center 40%}
 /* Sections & cards */
 .group{padding:40px 0 8px}
 .group-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:20px}
@@ -718,7 +721,7 @@ const plural = (n,one,many) => `${n} ${n===1?one:many}`;
 const sorted = v => v._sorted || (v._sorted = (v.photos||[]).length && v.photos[0].cat
   ? v.photos.map((p,i)=>({...p,i,bed:0}))
   : sortPhotos(v.photos||[]));
-const svcPhoto = (id,i) => `photos/svc-${id}-${i}.jpg`;
+const svcPhoto = id => `photos/svc-${id}.jpg`;
 const list = (arr,l) => (arr||[]).map(x=>tx(x,l)).filter(Boolean);
 const areaOf = (v,l) => tx((v.location||[])[0],l);
 const brandPh = (v,l,big) => `<div class="ph-brand${big?" big":""}"><img src="logo.png" alt=""><b>${esc(v.name)}</b><span>${UI[l].photosSoon}</span></div>`;
@@ -757,15 +760,20 @@ function chipsHTML(l){
   return `<a class="chip" href="${linkVillas(l)}" aria-current="${!state.group}">${T.all}<small class="num">${VILLAS.length}</small></a>` +
     groups.map(g=>`<a class="chip" href="${linkVillas(l,g)}" aria-current="${state.group===g}">${T.chip(g)}<small class="num">${count(g)}</small></a>`).join("");
 }
-function heroImage(){
-  const v=ORDERED().find(v=>sorted(v)[0] && photoSrc(sorted(v)[0]));
-  return (v && photoSrc(sorted(v)[0])) || "photos/hero.jpg";
+// Photo d'accueil : une villa tirée au hasard parmi les plus belles couvertures
+const HERO_VILLAS = ["villa-melrose","villa-sierra","villa-alya","villa-bel-air","villa-hampton","villa-majestic","villa-palm-angels","villa-manor-hills"];
+let heroPick = null;
+function heroVilla(){
+  if(heroPick) return heroPick;
+  const pool = HERO_VILLAS.map(s=>VILLAS.find(v=>v.slug===s)).filter(v=>v && sorted(v)[0]);
+  const list = pool.length ? pool : VILLAS.filter(v=>sorted(v)[0]);
+  return heroPick = list[Math.floor(Math.random()*list.length)] || null;
 }
 function renderVillas(){
   const l=state.lang, T=UI[l];
   const shown = GROUPS().filter(g=>!state.group || g===state.group);
   let html = `
-  <section class="hero"><img src="${heroImage()}" alt=""><div class="wrap">
+  ${(()=>{const hv=heroVilla(); return `<section class="hero">${hv?`<img src="${photoSrc(sorted(hv)[0])}" alt="${esc(hv.name)}"><a class="hero-credit" href="${linkVilla(l,hv.slug)}">${esc(hv.name)} →</a>`:""}<div class="wrap">`;})()}
     <div class="kick">${ICONS.pin} ${T.heroKicker}</div>
     <h1>${T.heroTitle}</h1>
     <p>${T.heroSub}</p>
@@ -796,7 +804,7 @@ function servicesSection(l, exceptId){
   const T=UI[l]; const list=SERVICES.filter(s=>s.id!==exceptId);
   return `<section class="svc-sec"><div class="wrap">
     <div class="head"><h2>${exceptId?T.otherServices:T.ourServices}</h2>${exceptId?"":`<p>${T.ourServicesSub}</p>`}</div>
-    <div class="svc-grid">${list.map(s=>`<a class="svc-card" href="${linkSvc(l,s.id)}"><div class="im"><img loading="lazy" src="${svcPhoto(s.id,0)}" alt=""></div>
+    <div class="svc-grid">${list.map(s=>`<a class="svc-card" href="${linkSvc(l,s.id)}"><div class="im"><img loading="lazy" src="${svcPhoto(s.id)}" alt="${esc(tx(s.title,l))}"></div>
       <div class="tx"><h3>${ICONS[s.icon]}${esc(tx(s.title,l))}</h3><p>${esc(tx(s.tagline,l))}</p><span class="go">${T.discover} →</span></div></a>`).join("")}</div>
   </div></section>`;
 }
@@ -867,10 +875,9 @@ function renderVilla(v){
 function renderService(s){
   const l=state.lang, T=UI[l];
   const ask=waAsk(T.waAskService(tx(s.title,l)));
-  const photos=[1,2,3,4].map(i=>svcPhoto(s.id,i));
-  window.__lb=photos.map(src=>({src,cap:tx(s.title,l)}));
+  window.__lb=[{src:svcPhoto(s.id),cap:tx(s.title,l)}];
   return `
-  <section class="hero svc"><img src="${svcPhoto(s.id,0)}" alt=""><div class="wrap">
+  <section class="hero svc"><img src="${svcPhoto(s.id)}" alt="${esc(tx(s.title,l))}"><div class="wrap">
     <div class="kick">${ICONS[s.icon]} ${esc(tx(s.title,l))}</div>
     <h1>${esc(tx(s.tagline,l))}</h1>
     <p>${esc(tx(s.intro,l))}</p>
@@ -879,10 +886,9 @@ function renderService(s){
   <div class="wrap">
     <div class="svc-body">
       <div>
-        <section class="sec"><h2>${T.whatWeOffer}</h2>
+        <section class="sec" style="border-bottom:0"><h2>${T.whatWeOffer}</h2>
           <div class="offers">${s.items.map(it=>`<div class="offer"><h3>${ICONS.check}${esc(tx(it,l))}</h3></div>`).join("")}</div>
           <p class="lead" style="margin-top:18px">${esc(tx(s.closing,l))}</p></section>
-        <section class="sec" style="border-bottom:0"><div class="svc-photos">${photos.map((src,i)=>`<button data-lb="${i}" aria-label="${esc(tx(s.title,l))}"><img loading="lazy" src="${src}" alt=""></button>`).join("")}</div></section>
       </div>
       <aside class="side">
         <h3>${T.howItWorks}</h3>
