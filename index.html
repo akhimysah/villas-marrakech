@@ -1,0 +1,855 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Villas Marrakech</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+<style>
+:root{
+  --bg:#FFFFFF; --bg-2:#F7F6F3; --bg-3:#EFEDE8;
+  --text:#1B1B1B; --text-2:#585858; --text-3:#8C8C8C;
+  --border:#E7E5E0; --border-2:#D6D3CC;
+  --accent:#B8552F; --accent-bg:#FBEFE9;
+  --btn:#1B1B1B; --btn-text:#FFFFFF;
+  --wa:#1FAF5A; --wa-dark:#178A47;
+  --ok:#1E7B4B; --ok-bg:#E4F4EA; --warn:#9A6206; --warn-bg:#FBF0D6; --no:#B23A3A; --no-bg:#FBE5E5;
+  --shadow:0 1px 2px rgba(0,0,0,.05),0 8px 24px -12px rgba(0,0,0,.18);
+  --shadow-lg:0 12px 40px -12px rgba(0,0,0,.28);
+  --overlay:rgba(0,0,0,.55);
+  --font:"Manrope","Segoe UI","Helvetica Neue",Arial,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#131313; --bg-2:#1B1B1A; --bg-3:#242422;
+    --text:#F1F0EC; --text-2:#B4B2AC; --text-3:#7F7E79;
+    --border:#2A2A28; --border-2:#3A3A37;
+    --accent:#E0825E; --accent-bg:#3A231A;
+    --btn:#F1F0EC; --btn-text:#131313;
+    --ok:#7ED8A2; --ok-bg:#183626; --warn:#E6B657; --warn-bg:#3A2D12; --no:#EE9C9C; --no-bg:#3D1F1F;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -12px rgba(0,0,0,.7);
+    --shadow-lg:0 12px 40px -12px rgba(0,0,0,.8);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#131313; --bg-2:#1B1B1A; --bg-3:#242422;
+  --text:#F1F0EC; --text-2:#B4B2AC; --text-3:#7F7E79;
+  --border:#2A2A28; --border-2:#3A3A37;
+  --accent:#E0825E; --accent-bg:#3A231A;
+  --btn:#F1F0EC; --btn-text:#131313;
+  --ok:#7ED8A2; --ok-bg:#183626; --warn:#E6B657; --warn-bg:#3A2D12; --no:#EE9C9C; --no-bg:#3D1F1F;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -12px rgba(0,0,0,.7);
+  --shadow-lg:0 12px 40px -12px rgba(0,0,0,.8);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;padding:0}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+img{max-width:100%;display:block}
+h1,h2,h3{margin:0;line-height:1.2;text-wrap:balance;font-weight:700}
+.num{font-variant-numeric:tabular-nums}
+.wrap{width:min(1200px,calc(100% - 2*clamp(16px,4vw,40px)));margin:0 auto}
+.ico{width:18px;height:18px;flex:none;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+/* Header */
+.hdr{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:1px solid var(--border)}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;font-size:18px;letter-spacing:-.01em}
+.logo .mark{width:30px;height:30px;border-radius:8px;background:var(--accent);color:#fff;display:grid;place-items:center;font-size:12px;font-weight:800;letter-spacing:.02em}
+.hdr-r{display:flex;align-items:center;gap:10px}
+.seg{display:flex;border:1px solid var(--border-2);border-radius:999px;padding:3px;gap:2px}
+.seg button{font-size:12px;font-weight:700;padding:6px 10px;border-radius:999px;color:var(--text-2);transition:all .15s}
+.seg button:hover{color:var(--text)}
+.seg button[aria-pressed="true"]{background:var(--btn);color:var(--btn-text)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700;font-size:14px;padding:11px 16px;border-radius:10px;border:1px solid var(--border-2);background:var(--bg);color:var(--text);text-decoration:none;white-space:nowrap;transition:all .15s;line-height:1.2}
+.btn:hover{border-color:var(--text);background:var(--bg-2)}
+.btn.dark{background:var(--btn);color:var(--btn-text);border-color:var(--btn)}
+.btn.dark:hover{opacity:.88}
+.btn.wa{background:var(--wa);color:#fff;border-color:var(--wa)}
+.btn.wa:hover{background:var(--wa-dark);border-color:var(--wa-dark)}
+.btn.wa-o{color:var(--wa-dark);border-color:var(--wa)}
+.btn.wa-o:hover{background:var(--wa);color:#fff}
+.btn.sm{padding:8px 12px;font-size:13px}
+.btn .ico{width:16px;height:16px}
+@media (max-width:640px){.hdr .wrap{height:60px}.hdr .btn span{display:none}.hdr .btn{padding:8px 10px}.logo{font-size:16px}}
+
+/* Hero */
+.hero{position:relative;min-height:520px;display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:#333}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.72) 0%,rgba(0,0,0,.25) 50%,rgba(0,0,0,.15) 100%)}
+.hero .wrap{position:relative;z-index:1;padding:64px 0 40px}
+.hero .kick{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:rgba(255,255,255,.14);backdrop-filter:blur(6px);padding:7px 12px;border-radius:999px;margin-bottom:18px}
+.hero h1{font-size:clamp(34px,5.5vw,58px);font-weight:800;letter-spacing:-.025em;max-width:16ch;color:#fff}
+.hero p{font-size:clamp(15px,1.6vw,18px);color:rgba(255,255,255,.85);max-width:56ch;margin:14px 0 26px;font-weight:500}
+.search{background:var(--bg);color:var(--text);border-radius:16px;padding:14px 16px;display:flex;align-items:center;gap:14px;box-shadow:var(--shadow-lg);flex-wrap:wrap}
+.search .lbl{font-size:12px;font-weight:700;color:var(--text-3);text-transform:uppercase;letter-spacing:.06em;padding:0 6px}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{font-size:14px;font-weight:600;padding:9px 14px;border-radius:999px;border:1px solid var(--border-2);text-decoration:none;color:var(--text);transition:all .15s;white-space:nowrap}
+.chip:hover{border-color:var(--text)}
+.chip[aria-current="true"]{background:var(--btn);color:var(--btn-text);border-color:var(--btn)}
+.chip small{color:inherit;opacity:.6;margin-left:5px;font-weight:600}
+.search .cnt{margin-left:auto;font-size:14px;color:var(--text-2);font-weight:600;padding:0 6px}
+@media (max-width:640px){.hero{min-height:440px}.hero .wrap{padding:48px 0 24px}.search .cnt{display:none}}
+
+/* Sticky filter */
+.filt{position:sticky;top:68px;z-index:40;background:var(--bg);border-bottom:1px solid var(--border)}
+.filt .wrap{display:flex;align-items:center;gap:10px;padding:10px 0;overflow-x:auto;scrollbar-width:none}
+.filt .wrap::-webkit-scrollbar{display:none}
+.filt .lbl{font-size:13px;font-weight:700;color:var(--text-2);white-space:nowrap;margin-right:4px}
+.filt .chip{font-size:13px;padding:7px 12px}
+@media (max-width:640px){.filt{top:60px}}
+
+/* Sections & cards */
+.group{padding:40px 0 8px}
+.group-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:20px}
+.group-head h2{font-size:24px;font-weight:800;letter-spacing:-.02em}
+.group-head span{font-size:14px;color:var(--text-3);font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 24px}
+@media (max-width:980px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){.grid{grid-template-columns:1fr;gap:28px}}
+.card{display:block;text-decoration:none;color:inherit}
+.car{position:relative;border-radius:16px;overflow:hidden;background:var(--bg-3);aspect-ratio:4/3}
+.car .track{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.car .track::-webkit-scrollbar{display:none}
+.car .track img{flex:0 0 100%;width:100%;height:100%;object-fit:cover;scroll-snap-align:start}
+.car .nav{position:absolute;top:50%;transform:translateY(-50%);width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.92);color:#1b1b1b;display:grid;place-items:center;opacity:0;transition:opacity .15s;box-shadow:0 1px 4px rgba(0,0,0,.2)}
+.car .nav.l{left:10px}.car .nav.r{right:10px}
+.car:hover .nav{opacity:1}
+.car .nav .ico{width:16px;height:16px}
+.car .ctr{position:absolute;right:10px;bottom:10px;font-size:11px;font-weight:700;background:rgba(0,0,0,.55);color:#fff;padding:4px 8px;border-radius:999px}
+.badge{position:absolute;left:12px;top:12px;font-size:11px;font-weight:800;letter-spacing:.02em;padding:5px 10px;border-radius:999px;background:#fff;color:#1b1b1b;box-shadow:0 1px 3px rgba(0,0,0,.15)}
+.badge.ok{color:var(--ok)}.badge.warn{color:var(--warn)}.badge.no{color:var(--no)}
+:root[data-theme="dark"] .badge,:root:not([data-theme="light"]) .badge{background:#fff}
+.card .t{margin-top:12px;display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.card h3{font-size:16px;font-weight:700}
+.card .loc{font-size:14px;color:var(--text-2);margin-top:2px}
+.card .facts{font-size:14px;color:var(--text-2);margin-top:4px}
+.card .price{margin-top:8px;font-size:15px}
+.card .price b{font-weight:800}
+.card .price span{color:var(--text-2)}
+.card:hover h3{text-decoration:underline;text-underline-offset:3px}
+.empty{color:var(--text-3);padding:24px 0}
+
+/* Villa page */
+.crumbs{display:flex;gap:6px;align-items:center;font-size:13px;color:var(--text-2);padding:18px 0 14px;flex-wrap:wrap}
+.crumbs a{text-decoration:none}
+.crumbs a:hover{text-decoration:underline}
+.crumbs .sep{color:var(--text-3)}
+.title-row{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:18px}
+.title-row h1{font-size:clamp(26px,3.4vw,34px);font-weight:800;letter-spacing:-.025em}
+.title-row .meta{display:flex;gap:6px 14px;flex-wrap:wrap;color:var(--text-2);font-size:14px;margin-top:8px;align-items:center}
+.title-row .meta .dot{width:3px;height:3px;border-radius:50%;background:var(--text-3)}
+.title-row .acts{display:flex;gap:8px}
+.mosaic{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:230px 230px;gap:8px;border-radius:18px;overflow:hidden;position:relative;background:var(--bg-3)}
+.mosaic button{overflow:hidden;background:var(--bg-3);position:relative}
+.mosaic button:first-child{grid-row:span 2}
+.mosaic img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.mosaic button:hover img{transform:scale(1.03)}
+.mosaic .all{position:absolute;right:16px;bottom:16px;z-index:2}
+@media (max-width:760px){.mosaic{grid-template-columns:1fr;grid-template-rows:280px}.mosaic button:not(:first-child){display:none}.mosaic button:first-child{grid-row:auto}}
+.vbody{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:56px;margin-top:32px}
+@media (max-width:960px){.vbody{grid-template-columns:1fr;gap:32px}}
+.keyfacts{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:18px 0 22px;border-bottom:1px solid var(--border)}
+.keyfacts div{display:flex;align-items:center;gap:10px;font-weight:600;font-size:14px}
+.keyfacts .ico{width:22px;height:22px;color:var(--text-2)}
+.keyfacts small{display:block;font-weight:500;color:var(--text-3);font-size:12px}
+@media (max-width:640px){.keyfacts{grid-template-columns:repeat(2,1fr)}}
+.sec{padding:28px 0;border-bottom:1px solid var(--border)}
+.sec h2{font-size:21px;font-weight:800;letter-spacing:-.015em;margin-bottom:12px}
+.sec p{color:var(--text-2);margin:0 0 10px;max-width:70ch;font-size:15.5px}
+.sec p:last-child{margin-bottom:0}
+.sec .lead{font-size:17px;color:var(--text)}
+.space{display:grid;grid-template-columns:44px 1fr;gap:14px;padding:16px 0}
+.space + .space{border-top:1px solid var(--border)}
+.space .ic{width:44px;height:44px;border-radius:12px;background:var(--bg-2);display:grid;place-items:center;color:var(--text)}
+.space .ic .ico{width:22px;height:22px}
+.space h3{font-size:16px;font-weight:700;margin-bottom:4px}
+.space p{margin:0}
+.amen{display:grid;grid-template-columns:repeat(2,1fr);gap:10px 24px;list-style:none;padding:0;margin:0}
+.amen li{display:flex;align-items:center;gap:10px;font-size:15px;color:var(--text-2)}
+.amen .ico{color:var(--ok);width:18px;height:18px}
+@media (max-width:560px){.amen{grid-template-columns:1fr}}
+.tbl{border:1px solid var(--border);border-radius:14px;overflow:hidden}
+table.rates{width:100%;border-collapse:collapse;font-size:14.5px}
+table.rates th{text-align:left;font-weight:700;font-size:12px;color:var(--text-3);text-transform:uppercase;letter-spacing:.05em;padding:12px 16px;background:var(--bg-2);border-bottom:1px solid var(--border)}
+table.rates td{padding:14px 16px;border-bottom:1px solid var(--border);vertical-align:top;color:var(--text-2)}
+table.rates tr:last-child td{border-bottom:0}
+table.rates td:first-child{color:var(--text);font-weight:600}
+table.rates td.p{color:var(--text);font-weight:800;white-space:nowrap;font-size:15px}
+table.rates td.p small{display:block;font-weight:500;color:var(--text-3);font-size:12px}
+table.rates td:last-child,table.rates th:last-child{text-align:right}
+.tblx{overflow-x:auto}
+.avail{display:flex;flex-direction:column;gap:8px}
+.avail .row{display:flex;align-items:center;gap:12px;padding:12px 14px;border:1px solid var(--border);border-radius:12px}
+.avail .row .d{font-weight:600}
+.avail .row .n{color:var(--text-3);font-size:13px}
+.avail .pill{margin-left:auto}
+.pill{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:700;padding:5px 10px;border-radius:999px;white-space:nowrap}
+.pill::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.pill.ok{background:var(--ok-bg);color:var(--ok)}.pill.warn{background:var(--warn-bg);color:var(--warn)}.pill.no{background:var(--no-bg);color:var(--no)}
+.side{position:sticky;top:92px;align-self:start;border:1px solid var(--border);border-radius:18px;padding:22px;box-shadow:var(--shadow);background:var(--bg)}
+.side .from{font-size:13px;color:var(--text-2)}
+.side .price{font-size:28px;font-weight:800;letter-spacing:-.02em;margin:2px 0 0}
+.side .price span{font-size:14px;font-weight:500;color:var(--text-2);letter-spacing:0}
+.side .st{margin:12px 0 18px}
+.side .acts{display:flex;flex-direction:column;gap:8px}
+.side .acts .btn{width:100%;padding:13px 16px}
+.side .note{font-size:12.5px;color:var(--text-3);margin-top:14px;line-height:1.5}
+.side .linkbox{margin-top:16px;padding-top:14px;border-top:1px solid var(--border)}
+.side .linkbox label{font-size:12px;font-weight:700;color:var(--text-2)}
+.side .linkbox input{width:100%;font:inherit;font-size:12.5px;padding:9px 10px;border:1px solid var(--border-2);border-radius:8px;background:var(--bg-2);color:var(--text-2);margin-top:6px}
+
+/* Gallery */
+.gallery{margin-top:40px;padding-top:28px;border-top:1px solid var(--border)}
+.gallery h2{font-size:22px;font-weight:800;letter-spacing:-.015em}
+.g-cat{font-size:14px;font-weight:700;color:var(--text-2);margin:24px 0 10px;display:flex;justify-content:space-between}
+.g-cat span{color:var(--text-3);font-weight:600}
+.g-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+@media (max-width:700px){.g-grid{grid-template-columns:repeat(2,1fr)}}
+.g-grid button{aspect-ratio:4/3;overflow:hidden;background:var(--bg-3);border-radius:12px;position:relative}
+.g-grid img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.g-grid button:hover img{transform:scale(1.03)}
+.g-grid .i{position:absolute;left:8px;bottom:8px;font-size:11px;font-weight:700;background:rgba(0,0,0,.55);color:#fff;padding:3px 8px;border-radius:999px}
+.ph-empty{width:100%;height:100%;display:grid;place-items:center;color:var(--text-3);background:var(--bg-3);font-size:12px;font-weight:600;gap:6px}
+.ph-empty .ico{width:26px;height:26px}
+
+/* Prev / next */
+.pn{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:40px}
+.pn a{display:flex;gap:14px;align-items:center;text-decoration:none;border:1px solid var(--border);border-radius:14px;padding:12px;transition:all .15s}
+.pn a:hover{border-color:var(--text);box-shadow:var(--shadow)}
+.pn a.next{flex-direction:row-reverse;text-align:right}
+.pn img{width:84px;height:64px;object-fit:cover;border-radius:8px;flex:none}
+.pn small{display:block;font-size:12px;color:var(--text-3);font-weight:600}
+.pn b{font-size:15px}
+@media (max-width:560px){.pn{grid-template-columns:1fr}}
+
+/* Lightbox */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.94);display:flex;align-items:center;justify-content:center;flex-direction:column}
+.lb img{max-width:min(94vw,1400px);max-height:82vh;object-fit:contain;border-radius:8px}
+.lb .lb-cap{color:#ddd;font-size:13px;font-weight:600;margin-top:14px}
+.lb button{position:absolute;color:#fff;width:44px;height:44px;display:grid;place-items:center;border-radius:50%;background:rgba(255,255,255,.12)}
+.lb button:hover{background:rgba(255,255,255,.22)}
+.lb .x{top:16px;right:16px}.lb .prev{left:16px;top:50%;transform:translateY(-50%)}.lb .next{right:16px;top:50%;transform:translateY(-50%)}
+.lb .ico{width:20px;height:20px}
+
+/* Footer */
+footer{margin-top:64px;background:var(--bg-2);border-top:1px solid var(--border);padding:40px 0 28px;color:var(--text-2);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:flex-start}
+footer .fnote{max-width:52ch}
+footer .fl{display:flex;gap:14px;flex-wrap:wrap}
+footer .fl a{text-decoration:none;font-weight:600}
+footer .fl a:hover{text-decoration:underline}
+footer .copy{width:100%;padding-top:20px;margin-top:8px;border-top:1px solid var(--border);font-size:12.5px;color:var(--text-3)}
+
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(16px);opacity:0;background:var(--btn);color:var(--btn-text);padding:11px 18px;border-radius:10px;font-size:13px;font-weight:700;z-index:200;transition:all .25s;pointer-events:none;box-shadow:var(--shadow-lg)}
+.toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+.demo{background:var(--accent-bg);color:var(--accent);font-size:12.5px;font-weight:600;text-align:center;padding:8px 14px}
+</style>
+
+<div class="demo" id="demoBanner"></div>
+<header class="hdr">
+  <div class="wrap">
+    <a class="logo" href="#" id="brandLink"><span class="mark">VM</span><span>Villas Marrakech</span></a>
+    <div class="hdr-r">
+      <div class="seg" id="langs" role="group" aria-label="Language"></div>
+      <button class="btn wa-o sm" id="shareTop"><svg class="ico" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4M12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8m8.3-18.1A11.8 11.8 0 0 0 12 .2C5.5.2.2 5.5.2 12c0 2.1.5 4.1 1.6 5.9L0 24l6.3-1.7c1.7.9 3.7 1.4 5.7 1.4 6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.1-3.5-8.3"/></svg><span id="shareTopLbl"></span></button>
+    </div>
+  </div>
+</header>
+<main id="app"></main>
+<footer>
+  <div class="wrap">
+    <div><div class="logo" style="font-size:16px"><span class="mark">VM</span><span>Villas Marrakech</span></div><p class="fnote" id="footNote"></p></div>
+    <div class="fl" id="footLangs"></div>
+    <div class="copy" id="footCopy"></div>
+  </div>
+</footer>
+<div class="toast" id="toast"></div>
+<script>
+
+/* =====================================================================
+   1. TEXTES DE L'INTERFACE (FR / EN / NL / ES)
+   ===================================================================== */
+const LANGS = ["fr","en","nl","es"];
+const UI = {
+  fr:{ langName:"Français", heroTitle:"Villas de luxe à louer à Marrakech", heroSub:"Une sélection de villas privées avec piscine et personnel, de 3 à 9 chambres. Choisissez le nombre de chambres, ouvrez une fiche et partagez son lien sur WhatsApp.", groupTitle:g=>`Villas ${g} chambres`, catalogue:"Catalogue", spaces:"Les espaces", seeAll:n=>`Voir les ${n} photos`, enquireNote:"Réponse rapide sur WhatsApp. Tarifs indicatifs, confirmés lors de la réservation.", villa1:"villa", nights:"nuits", prevVilla:"Villa précédente", nextVilla:"Villa suivante", tagline:"Collection privée", title:"Villas <em>disponibles</em><br>à Marrakech", lead:"Une sélection de villas privées avec piscine, classées par nombre de chambres. Chaque fiche a son propre lien, à partager directement sur WhatsApp.",
+    villas:"villas", bedroomsTotal:"chambres", guestsTotal:"couchages", byBedrooms:"Chambres", all:"Toutes",
+    group:{3:"Trois chambres",4:"Quatre chambres",5:"Cinq chambres",6:"Six chambres",7:"Sept chambres","8+":"Huit chambres <em>et plus</em>"},
+    bedrooms:"chambres", bedroom:"chambre", guests:"personnes", bathrooms:"salles de bain", surface:"surface", from:"à partir de", night:"nuit", perNight:"/ nuit", minNights:"min.",
+    back:"Retour au catalogue", share:"Partager sur WhatsApp", shareCatalogue:"Partager le catalogue", copy:"Copier le lien", copied:"Lien copié", linkLabel:"Lien de cette villa",
+    description:"Description", outdoor:"Extérieur & piscine", living:"Salon", kitchen:"Cuisine", amenities:"Équipements", rates:"Tarifs", availability:"Disponibilités", gallery:"Galerie", photos:"photos",
+    season:"Saison", period:"Période", price:"Prix par nuit", onRequest:"Sur demande", available:"Disponible", booked:"Réservée", partial:"Partiellement disponible",
+    sideNote:"Tarifs indicatifs, hors taxes de séjour. Personnel inclus sauf mention contraire.", enquire:"Demander une disponibilité", notFound:"Cette villa n'existe pas ou n'est plus disponible.", noVillas:"Aucune villa dans cette catégorie pour le moment.",
+    waVilla:(v,l)=>`🏡 *${v}*\n${l}`, waCat:(l)=>`🏡 Villas disponibles à Marrakech — catalogue complet :\n${l}`,
+    footNote:"Catalogue mis à jour régulièrement. Les photos, tarifs et disponibilités sont communiqués à titre indicatif et confirmés lors de la réservation.",
+    demo:"Données d'exemple : les villas ci-dessous illustrent la présentation. Vos villas Notion prendront leur place.",
+    cats:{exterior:"Extérieur & piscine",entrance:"Entrée",living:"Salon",dining:"Salle à manger",kitchen:"Cuisine",wellness:"Bien-être",other:"Autres espaces",bedroom:"Chambre",bathroom:"Salle de bain"},
+    months:["janv.","févr.","mars","avr.","mai","juin","juil.","août","sept.","oct.","nov.","déc."] },
+  en:{ langName:"English", heroTitle:"Luxury villas to rent in Marrakech", heroSub:"A curated selection of private villas with pool and staff, from 3 to 9 bedrooms. Pick a number of bedrooms, open a villa and share its link on WhatsApp.", groupTitle:g=>`${g}-bedroom villas`, catalogue:"Catalogue", spaces:"The spaces", seeAll:n=>`See all ${n} photos`, enquireNote:"Fast reply on WhatsApp. Indicative rates, confirmed at booking.", villa1:"villa", nights:"nights", prevVilla:"Previous villa", nextVilla:"Next villa", tagline:"Private collection", title:"Villas <em>available</em><br>in Marrakech", lead:"A curated selection of private villas with pools, sorted by number of bedrooms. Every villa has its own link, ready to share on WhatsApp.",
+    villas:"villas", bedroomsTotal:"bedrooms", guestsTotal:"guests", byBedrooms:"Bedrooms", all:"All",
+    group:{3:"Three bedrooms",4:"Four bedrooms",5:"Five bedrooms",6:"Six bedrooms",7:"Seven bedrooms","8+":"Eight bedrooms <em>and more</em>"},
+    bedrooms:"bedrooms", bedroom:"bedroom", guests:"guests", bathrooms:"bathrooms", surface:"surface", from:"from", night:"night", perNight:"/ night", minNights:"min.",
+    back:"Back to catalogue", share:"Share on WhatsApp", shareCatalogue:"Share the catalogue", copy:"Copy link", copied:"Link copied", linkLabel:"Link to this villa",
+    description:"Description", outdoor:"Outdoor & pool", living:"Living room", kitchen:"Kitchen", amenities:"Amenities", rates:"Rates", availability:"Availability", gallery:"Gallery", photos:"photos",
+    season:"Season", period:"Period", price:"Price per night", onRequest:"On request", available:"Available", booked:"Booked", partial:"Partly available",
+    sideNote:"Indicative rates, excluding tourist tax. Staff included unless stated otherwise.", enquire:"Ask for availability", notFound:"This villa does not exist or is no longer available.", noVillas:"No villa in this category at the moment.",
+    waVilla:(v,l)=>`🏡 *${v}*\n${l}`, waCat:(l)=>`🏡 Villas available in Marrakech — full catalogue:\n${l}`,
+    footNote:"Catalogue updated regularly. Photos, rates and availability are indicative and confirmed at booking.",
+    demo:"Sample data: the villas below illustrate the layout. Your Notion villas will take their place.",
+    cats:{exterior:"Outdoor & pool",entrance:"Entrance",living:"Living room",dining:"Dining room",kitchen:"Kitchen",wellness:"Wellness",other:"Other spaces",bedroom:"Bedroom",bathroom:"Bathroom"},
+    months:["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"] },
+  nl:{ langName:"Nederlands", heroTitle:"Luxe villa's te huur in Marrakech", heroSub:"Een selectie privévilla's met zwembad en personeel, van 3 tot 9 slaapkamers. Kies het aantal slaapkamers, open een villa en deel de link via WhatsApp.", groupTitle:g=>`Villa's met ${g} slaapkamers`, catalogue:"Catalogus", spaces:"De ruimtes", seeAll:n=>`Alle ${n} foto's bekijken`, enquireNote:"Snel antwoord via WhatsApp. Indicatieve tarieven, bevestigd bij boeking.", villa1:"villa", nights:"nachten", prevVilla:"Vorige villa", nextVilla:"Volgende villa", tagline:"Privécollectie", title:"Villa's <em>beschikbaar</em><br>in Marrakech", lead:"Een selectie privévilla's met zwembad, gesorteerd op aantal slaapkamers. Elke villa heeft een eigen link, klaar om te delen via WhatsApp.",
+    villas:"villa's", bedroomsTotal:"slaapkamers", guestsTotal:"gasten", byBedrooms:"Slaapkamers", all:"Alle",
+    group:{3:"Drie slaapkamers",4:"Vier slaapkamers",5:"Vijf slaapkamers",6:"Zes slaapkamers",7:"Zeven slaapkamers","8+":"Acht slaapkamers <em>en meer</em>"},
+    bedrooms:"slaapkamers", bedroom:"slaapkamer", guests:"gasten", bathrooms:"badkamers", surface:"oppervlakte", from:"vanaf", night:"nacht", perNight:"/ nacht", minNights:"min.",
+    back:"Terug naar de catalogus", share:"Delen via WhatsApp", shareCatalogue:"Catalogus delen", copy:"Link kopiëren", copied:"Link gekopieerd", linkLabel:"Link naar deze villa",
+    description:"Beschrijving", outdoor:"Buiten & zwembad", living:"Woonkamer", kitchen:"Keuken", amenities:"Voorzieningen", rates:"Tarieven", availability:"Beschikbaarheid", gallery:"Galerij", photos:"foto's",
+    season:"Seizoen", period:"Periode", price:"Prijs per nacht", onRequest:"Op aanvraag", available:"Beschikbaar", booked:"Geboekt", partial:"Deels beschikbaar",
+    sideNote:"Indicatieve tarieven, exclusief toeristenbelasting. Personeel inbegrepen tenzij anders vermeld.", enquire:"Beschikbaarheid aanvragen", notFound:"Deze villa bestaat niet of is niet meer beschikbaar.", noVillas:"Momenteel geen villa in deze categorie.",
+    waVilla:(v,l)=>`🏡 *${v}*\n${l}`, waCat:(l)=>`🏡 Villa's beschikbaar in Marrakech — volledige catalogus:\n${l}`,
+    footNote:"Catalogus wordt regelmatig bijgewerkt. Foto's, tarieven en beschikbaarheid zijn indicatief en worden bij boeking bevestigd.",
+    demo:"Voorbeeldgegevens: de villa's hieronder tonen de opmaak. Uw Notion-villa's nemen hun plaats in.",
+    cats:{exterior:"Buiten & zwembad",entrance:"Entree",living:"Woonkamer",dining:"Eetkamer",kitchen:"Keuken",wellness:"Wellness",other:"Overige ruimtes",bedroom:"Slaapkamer",bathroom:"Badkamer"},
+    months:["jan","feb","mrt","apr","mei","jun","jul","aug","sep","okt","nov","dec"] },
+  es:{ langName:"Español", heroTitle:"Villas de lujo en alquiler en Marrakech", heroSub:"Una selección de villas privadas con piscina y personal, de 3 a 9 dormitorios. Elija el número de dormitorios, abra una villa y comparta su enlace por WhatsApp.", groupTitle:g=>`Villas de ${g} dormitorios`, catalogue:"Catálogo", spaces:"Los espacios", seeAll:n=>`Ver las ${n} fotos`, enquireNote:"Respuesta rápida por WhatsApp. Tarifas orientativas, confirmadas al reservar.", villa1:"villa", nights:"noches", prevVilla:"Villa anterior", nextVilla:"Villa siguiente", tagline:"Colección privada", title:"Villas <em>disponibles</em><br>en Marrakech", lead:"Una selección de villas privadas con piscina, ordenadas por número de dormitorios. Cada villa tiene su propio enlace, listo para compartir por WhatsApp.",
+    villas:"villas", bedroomsTotal:"dormitorios", guestsTotal:"huéspedes", byBedrooms:"Dormitorios", all:"Todas",
+    group:{3:"Tres dormitorios",4:"Cuatro dormitorios",5:"Cinco dormitorios",6:"Seis dormitorios",7:"Siete dormitorios","8+":"Ocho dormitorios <em>o más</em>"},
+    bedrooms:"dormitorios", bedroom:"dormitorio", guests:"personas", bathrooms:"baños", surface:"superficie", from:"desde", night:"noche", perNight:"/ noche", minNights:"mín.",
+    back:"Volver al catálogo", share:"Compartir por WhatsApp", shareCatalogue:"Compartir el catálogo", copy:"Copiar enlace", copied:"Enlace copiado", linkLabel:"Enlace de esta villa",
+    description:"Descripción", outdoor:"Exterior y piscina", living:"Salón", kitchen:"Cocina", amenities:"Equipamiento", rates:"Tarifas", availability:"Disponibilidad", gallery:"Galería", photos:"fotos",
+    season:"Temporada", period:"Periodo", price:"Precio por noche", onRequest:"Bajo petición", available:"Disponible", booked:"Reservada", partial:"Parcialmente disponible",
+    sideNote:"Tarifas orientativas, sin tasa turística. Personal incluido salvo indicación contraria.", enquire:"Consultar disponibilidad", notFound:"Esta villa no existe o ya no está disponible.", noVillas:"Ninguna villa en esta categoría por el momento.",
+    waVilla:(v,l)=>`🏡 *${v}*\n${l}`, waCat:(l)=>`🏡 Villas disponibles en Marrakech — catálogo completo:\n${l}`,
+    footNote:"Catálogo actualizado con regularidad. Fotos, tarifas y disponibilidad son orientativas y se confirman al reservar.",
+    demo:"Datos de ejemplo: las villas siguientes ilustran la presentación. Sus villas de Notion ocuparán su lugar.",
+    cats:{exterior:"Exterior y piscina",entrance:"Entrada",living:"Salón",dining:"Comedor",kitchen:"Cocina",wellness:"Bienestar",other:"Otros espacios",bedroom:"Dormitorio",bathroom:"Baño"},
+    months:["ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic"] }
+};
+
+/* Équipements : clé -> libellé dans les 4 langues */
+const AMENITIES = {
+  pool_heated:{fr:"Piscine chauffée",en:"Heated pool",nl:"Verwarmd zwembad",es:"Piscina climatizada"},
+  pool:{fr:"Piscine privée",en:"Private pool",nl:"Privézwembad",es:"Piscina privada"},
+  staff:{fr:"Personnel de maison",en:"House staff",nl:"Huispersoneel",es:"Personal de servicio"},
+  chef:{fr:"Chef / cuisinière",en:"Private chef",nl:"Privékok",es:"Chef privado"},
+  breakfast:{fr:"Petit-déjeuner inclus",en:"Breakfast included",nl:"Ontbijt inbegrepen",es:"Desayuno incluido"},
+  ac:{fr:"Climatisation",en:"Air conditioning",nl:"Airconditioning",es:"Aire acondicionado"},
+  heating:{fr:"Chauffage",en:"Heating",nl:"Verwarming",es:"Calefacción"},
+  wifi:{fr:"Wi-Fi fibre",en:"Fibre Wi-Fi",nl:"Glasvezel wifi",es:"Wi-Fi fibra"},
+  hammam:{fr:"Hammam",en:"Hammam",nl:"Hammam",es:"Hammam"},
+  spa:{fr:"Spa & massages",en:"Spa & massages",nl:"Spa & massages",es:"Spa y masajes"},
+  gym:{fr:"Salle de sport",en:"Gym",nl:"Fitnessruimte",es:"Gimnasio"},
+  tennis:{fr:"Court de tennis",en:"Tennis court",nl:"Tennisbaan",es:"Pista de tenis"},
+  cinema:{fr:"Salle de cinéma",en:"Cinema room",nl:"Bioscoopzaal",es:"Sala de cine"},
+  bbq:{fr:"Barbecue",en:"Barbecue",nl:"Barbecue",es:"Barbacoa"},
+  fireplace:{fr:"Cheminée",en:"Fireplace",nl:"Open haard",es:"Chimenea"},
+  parking:{fr:"Parking privé",en:"Private parking",nl:"Privéparkeerplaats",es:"Aparcamiento privado"},
+  security:{fr:"Gardiennage 24h/24",en:"24h security",nl:"24u bewaking",es:"Seguridad 24h"},
+  transfer:{fr:"Transferts aéroport",en:"Airport transfers",nl:"Luchthaventransfers",es:"Traslados al aeropuerto"},
+  kids:{fr:"Adapté aux enfants",en:"Child-friendly",nl:"Kindvriendelijk",es:"Apto para niños"},
+  rooftop:{fr:"Rooftop",en:"Rooftop",nl:"Dakterras",es:"Azotea"},
+  petanque:{fr:"Terrain de pétanque",en:"Pétanque court",nl:"Jeu-de-boulesbaan",es:"Pista de petanca"},
+  events:{fr:"Événements possibles",en:"Events possible",nl:"Evenementen mogelijk",es:"Eventos posibles"},
+  ev:{fr:"Borne de recharge",en:"EV charger",nl:"Laadpaal",es:"Cargador eléctrico"}
+};
+
+/* =====================================================================
+   2. TRI AUTOMATIQUE DES PHOTOS
+   Analyse le nom de fichier (ou la légende) en FR / EN / NL / ES.
+   Ordre : extérieur & piscine -> entrée -> salon -> salle à manger -> cuisine
+           -> bien-être -> autres -> chambres (regroupées par numéro)
+           -> salles de bain (toujours en dernier, dans l'ordre des chambres)
+   ===================================================================== */
+const RX = {
+  bathroom:/(\bsdb\b|s\.d\.b|salle[\s_-]*d[e']?[\s_-]*(bain|eau)|bathroom|bath\b|shower|douche|badkamer|\bbad\b|ba[ñn]o|toilet|toilette|\bwc\b|en[\s_-]?suite)/i,
+  bedroom:/(chambre|\bch[\s_-]?\d|bedroom|\bbed\b|suite|master|parentale|slaapkamer|\bkamer|dormitorio|habitaci[oó]n)/i,
+  exterior:/(ext[ée]rieur|exterior|fa[çc]ade|jardin|garden|tuin|jard[ií]n|piscine|pool|zwembad|piscina|terrasse|terrace|terras|terraza|patio|\bvue\b|view|uitzicht|vista|drone|a[ée]rien|aerial|rooftop|toit|\bdak\b|azotea|pergola|bassin|palmeraie|olivier|olive|sunset|coucher|pool[\s_-]?house|outdoor|buiten|fuera|all[ée]e|jeux|playground|speeltuin|juegos|parking|tennis|p[ée]tanque|football)/i,
+  entrance:/(entr[ée]e|entrance|ingang|entrada|hall|porte|door|deur|puerta|couloir|corridor|gang|pasillo)/i,
+  living:/(salon|living|lounge|woonkamer|zitkamer|sal[oó]n|\bsala\b|s[ée]jour|chemin[ée]e|fireplace|\btv\b|biblioth|library|cin[ée]ma|bureau|office|kantoor|despacho)/i,
+  dining:/(salle[\s_-]*[àa][\s_-]*manger|dining|eetkamer|comedor|\bsam\b)/i,
+  kitchen:/(cuisine|kitchen|keuken|cocina)/i,
+  wellness:/(spa|hammam|sauna|gym|fitness|massage|jacuzzi|yoga|wellness|bien[\s_-]?[êe]tre)/i
+};
+const CAT_ORDER = ["exterior","entrance","living","dining","kitchen","wellness","other","bedroom","bathroom"];
+const BEDNUM = /(?:chambre|\bch|bedroom|\bbed|suite|slaapkamer|kamer|dormitorio|habitaci[oó]n)[\s_.-]*#?\s*(\d{1,2})/i;
+
+function classifyPhoto(p){
+  const name = (p.file||"")+" "+(p.caption||"");
+  const isBath = RX.bathroom.test(name);
+  const isBed  = RX.bedroom.test(name);
+  let cat = "other", bed = 0;
+  if(isBath) cat = "bathroom";
+  else if(isBed) cat = "bedroom";
+  else if(RX.exterior.test(name)) cat = "exterior";
+  else if(RX.kitchen.test(name)) cat = "kitchen";
+  else if(RX.dining.test(name)) cat = "dining";
+  else if(RX.living.test(name)) cat = "living";
+  else if(RX.entrance.test(name)) cat = "entrance";
+  else if(RX.wellness.test(name)) cat = "wellness";
+  let rest = name;
+  if(cat==="bedroom"||cat==="bathroom"){
+    const m = name.match(BEDNUM);
+    if(m){ bed = parseInt(m[1],10); rest = name.replace(m[0]," "); }
+    else if(/master|parentale|principal|hoofd/i.test(name)) bed = 1;
+    else { const n = name.match(/(?<!\d)(\d{1,2})(?!\d)/); if(n){ bed = parseInt(n[1],10); rest = name.replace(n[0]," "); } else bed = 99; } // sans numéro : après les chambres numérotées
+  }
+  // numéro de séquence : dernier nombre restant dans le nom (hors numéro de chambre)
+  const nums = rest.replace(/\.[a-z0-9]+$/i,"").match(/\d+/g)||[];
+  const seq = nums.length ? parseInt(nums[nums.length-1],10) : 0;
+  return {cat, bed, seq};
+}
+function sortPhotos(photos){
+  return photos.map((p,i)=>({...p,i,...classifyPhoto(p)}))
+    .sort((a,b)=> (CAT_ORDER.indexOf(a.cat)-CAT_ORDER.indexOf(b.cat)) || (a.bed-b.bed) || (a.seq-b.seq) || (a.file||"").localeCompare(b.file||"",undefined,{numeric:true,sensitivity:"base"}) || (a.i-b.i));
+}
+
+/* =====================================================================
+   3. SOURCE DES PHOTOS
+   p.src (URL ou data URI) > p.img (clé de PHOTO_SRC) > visuel vide
+   ===================================================================== */
+const ICONS = {
+  bed:'<svg class="ico" viewBox="0 0 24 24"><path d="M3 18v-7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v7"/><path d="M3 18h18M5 9V6a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v3"/><path d="M8 9v0m8 0v0"/></svg>',
+  users:'<svg class="ico" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
+  bath:'<svg class="ico" viewBox="0 0 24 24"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4v-3z"/><path d="M6 12V5a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2"/><path d="M6 19l-1 2M18 19l1 2"/></svg>',
+  ruler:'<svg class="ico" viewBox="0 0 24 24"><path d="M3 8h18v8H3z"/><path d="M7 8v3M11 8v3M15 8v3M19 8v3"/></svg>',
+  pool:'<svg class="ico" viewBox="0 0 24 24"><path d="M2 17c2 0 2 1.5 4 1.5s2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5 2 1.5 4 1.5"/><path d="M6 15V6a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v9M13 15V6a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v9"/><path d="M6 10h5M13 10h5"/></svg>',
+  sofa:'<svg class="ico" viewBox="0 0 24 24"><path d="M4 11V8a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v3"/><path d="M2 13a2 2 0 0 1 2-2 2 2 0 0 1 2 2v2h12v-2a2 2 0 0 1 2-2 2 2 0 0 1 2 2v5H2v-5z"/><path d="M4 18v2M20 18v2"/></svg>',
+  chef:'<svg class="ico" viewBox="0 0 24 24"><path d="M6 13.5A4 4 0 0 1 7 6a5 5 0 0 1 10 0 4 4 0 0 1 1 7.5V20H6v-6.5z"/><path d="M6 17h12"/></svg>',
+  check:'<svg class="ico" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>',
+  copy:'<svg class="ico" viewBox="0 0 24 24"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>',
+  left:'<svg class="ico" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg>',
+  right:'<svg class="ico" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>',
+  x:'<svg class="ico" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg>',
+  grid:'<svg class="ico" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>',
+  pin:'<svg class="ico" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>',
+  camera:'<svg class="ico" viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>',
+  wa:'<svg class="ico" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4M12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8m8.3-18.1A11.8 11.8 0 0 0 12 .2C5.5.2.2 5.5.2 12c0 2.1.5 4.1 1.6 5.9L0 24l6.3-1.7c1.7.9 3.7 1.4 5.7 1.4 6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.1-3.5-8.3"/></svg>'
+};
+function photoLabel(p, lang){ const T = UI[lang].cats; return (p.cat==="bedroom"||p.cat==="bathroom") ? `${T[p.cat]}${p.bed&&p.bed<99?" "+p.bed:""}` : T[p.cat]; }
+function photoSrc(p){ return p.src || (p.img && typeof PHOTO_SRC!=="undefined" && PHOTO_SRC[p.img]) || ""; }
+function imgTag(p, lang, attrs=""){ const s=photoSrc(p); return s ? `<img ${attrs} src="${s}" alt="${photoLabel(p,lang)}">` : `<div class="ph-empty">${ICONS.camera}<span>${photoLabel(p,lang)}</span></div>`; }
+</script>
+<script>
+/* Photos d'exemple (Unsplash, licence libre) encodées dans le fichier */
+/* Photos d'exemple (Unsplash, licence libre) dans le dossier photos/ */
+const PHOTO_SRC = Object.fromEntries(["bath-01", "bath-02", "bath-03", "bath-05", "bath-06", "bath-07", "bath-09", "bath-10", "bath-11", "bath-13", "bath-14", "bath-15", "bath-17", "bath-18", "bath-19", "bedroom-00", "bedroom-01", "bedroom-02", "bedroom-03", "bedroom-04", "bedroom-05", "bedroom-07", "bedroom-08", "bedroom-09", "bedroom-11", "bedroom-12", "bedroom-13", "bedroom-15", "bedroom-16", "bedroom-17", "bedroom-19", "court-01", "court-02", "court-09", "court-10", "court-13", "court-14", "court-16", "court-17", "kitchen-00", "kitchen-02", "kitchen-03", "kitchen-04", "kitchen-05", "kitchen-12", "kitchen-13", "kitchen-15", "living-00", "living-04", "living-05", "living-07", "living-08", "living-09", "living-11", "living-12", "living-13", "living-15", "living-16", "living-17", "living-19", "pool-01", "pool-02", "pool-03", "pool-06", "pool-07", "pool-09", "pool-10", "pool-11", "pool-13", "pool-15", "pool-17", "pool-18", "pool-19", "riad-00", "riad-01", "riad-02", "riad-05", "riad-06", "terrace-01", "terrace-02", "terrace-05", "terrace-06", "terrace-09", "terrace-10", "terrace-11", "terrace-13", "terrace-14", "terrace-15", "terrace-17", "terrace-19"].map(k=>[k,`photos/${k}.jpg`]));
+</script>
+<script>
+
+/* =====================================================================
+   4. DONNÉES DES VILLAS
+   Chaque villa : slug (lien), nom, localisation, chambres, capacité,
+   textes (description / extérieur / salon / cuisine) en 4 langues,
+   équipements (clés de AMENITIES), tarifs, disponibilités, photos.
+   `photos[].file` sert au tri automatique ; `src` = URL ou data: URI.
+   Les villas ci-dessous sont des EXEMPLES en attendant les données Notion.
+   ===================================================================== */
+const DEMO = true;
+const VILLAS = [
+{ slug:"dar-zitoune", name:"Dar Zitoune", area:{fr:"Palmeraie",en:"Palmeraie",nl:"Palmeraie",es:"Palmeraie"},
+  location:{fr:"Palmeraie, à 15 min de la médina",en:"Palmeraie, 15 min from the medina",nl:"Palmeraie, 15 min van de medina",es:"Palmeraie, a 15 min de la medina"},
+  bedrooms:3, bathrooms:3, capacity:6, surface:380,
+  description:{fr:"Une maison d'hôtes intime au cœur d'une oliveraie centenaire. Volumes ouverts, tadelakt clair et bois de cèdre : Dar Zitoune est pensée pour des séjours calmes en couple ou en famille.",
+    en:"An intimate house set in a century-old olive grove. Open volumes, pale tadelakt and cedar wood: Dar Zitoune is designed for quiet stays as a couple or a family.",
+    nl:"Een intiem huis in een eeuwenoude olijfgaard. Open ruimtes, licht tadelakt en cederhout: Dar Zitoune is gemaakt voor rustige verblijven met partner of gezin.",
+    es:"Una casa íntima en el corazón de un olivar centenario. Volúmenes abiertos, tadelakt claro y madera de cedro: Dar Zitoune está pensada para estancias tranquilas en pareja o en familia."},
+  outdoor:{fr:"Piscine de 12 × 5 m chauffée d'octobre à avril, entourée de dalles de pierre de Taza. Pergola avec salon d'été, cuisine extérieure et terrasse déjeuner sous les oliviers.",
+    en:"12 × 5 m pool heated from October to April, surrounded by Taza stone paving. Pergola with summer lounge, outdoor kitchen and lunch terrace under the olive trees.",
+    nl:"Zwembad van 12 × 5 m, verwarmd van oktober tot april, omringd door Taza-natuursteen. Pergola met zomerlounge, buitenkeuken en lunchterras onder de olijfbomen.",
+    es:"Piscina de 12 × 5 m climatizada de octubre a abril, rodeada de piedra de Taza. Pérgola con salón de verano, cocina exterior y terraza para almorzar bajo los olivos."},
+  living:{fr:"Grand salon traversant avec cheminée, canapés en lin et hauteur sous plafond de 4 m. Salon de lecture attenant.",
+    en:"Large through-lounge with fireplace, linen sofas and 4 m ceilings. Adjoining reading room.",
+    nl:"Grote doorzonwoonkamer met open haard, linnen banken en 4 m hoge plafonds. Aangrenzende leeskamer.",
+    es:"Gran salón pasante con chimenea, sofás de lino y techos de 4 m. Sala de lectura contigua."},
+  kitchen:{fr:"Cuisine ouverte entièrement équipée (four, plaques induction, lave-vaisselle, machine à espresso). Cuisinière sur demande.",
+    en:"Fully equipped open kitchen (oven, induction hob, dishwasher, espresso machine). Cook available on request.",
+    nl:"Volledig uitgeruste open keuken (oven, inductiekookplaat, vaatwasser, espressomachine). Kok op aanvraag.",
+    es:"Cocina abierta totalmente equipada (horno, inducción, lavavajillas, cafetera espresso). Cocinera bajo petición."},
+  amenities:["pool_heated","staff","breakfast","ac","heating","wifi","fireplace","bbq","parking","security","transfer"],
+  rates:[{season:{fr:"Basse saison",en:"Low season",nl:"Laagseizoen",es:"Temporada baja"},from:"2026-11-01",to:"2027-02-28",night:650,min:3},
+         {season:{fr:"Haute saison",en:"High season",nl:"Hoogseizoen",es:"Temporada alta"},from:"2027-03-01",to:"2027-06-15",night:890,min:4},
+         {season:{fr:"Fêtes de fin d'année",en:"Festive season",nl:"Feestdagen",es:"Navidad y Año Nuevo"},from:"2026-12-20",to:"2027-01-05",night:1250,min:7}],
+  currency:"EUR", status:"available",
+  availability:[{from:"2026-10-05",to:"2026-12-19"},{from:"2027-01-06",to:"2027-03-28"},{from:"2027-04-12",to:"2027-06-30"}],
+  photos:[{file:"Piscine vue Atlas.jpg",img:"riad-05"},{file:"Piscine 2.jpg",img:"pool-18"},{file:"Terrasse dejeuner.jpg",img:"terrace-13"},{file:"Vue jardin.jpg",img:"terrace-19"},{file:"Entree.jpg",img:"court-16"},{file:"Salon 1.jpg",img:"living-15"},{file:"Salon 2.jpg",img:"living-19"},{file:"Cuisine.jpg",img:"kitchen-12"},{file:"Chambre 1 (a).jpg",img:"bedroom-05"},{file:"Chambre 1 (b).jpg",img:"bedroom-09"},{file:"Chambre 2.jpg",img:"bedroom-02"},{file:"Chambre 3.jpg",img:"bedroom-07"},{file:"SDB chambre 1.jpg",img:"bath-17"},{file:"SDB chambre 2.jpg",img:"bath-18"},{file:"SDB chambre 3.jpg",img:"bath-07"}] },
+
+{ slug:"villa-amandine", name:"Villa Amandine", area:{fr:"Route de Fès",en:"Route de Fès",nl:"Route de Fès",es:"Route de Fès"},
+  location:{fr:"Route de Fès, domaine privé sécurisé",en:"Route de Fès, gated private estate",nl:"Route de Fès, beveiligd privédomein",es:"Route de Fès, urbanización privada vigilada"},
+  bedrooms:4, bathrooms:4, capacity:8, surface:520,
+  description:{fr:"Villa contemporaine aux lignes épurées, ouverte sur un jardin d'un hectare. Chaque chambre est une suite avec accès direct au jardin ou à la terrasse.",
+    en:"Contemporary villa with clean lines, opening onto a one-hectare garden. Every bedroom is a suite with direct access to the garden or terrace.",
+    nl:"Eigentijdse villa met strakke lijnen, uitkijkend op een tuin van één hectare. Elke slaapkamer is een suite met directe toegang tot tuin of terras.",
+    es:"Villa contemporánea de líneas puras, abierta a un jardín de una hectárea. Cada dormitorio es una suite con acceso directo al jardín o a la terraza."},
+  outdoor:{fr:"Piscine à débordement de 15 m face à l'Atlas, pool house avec bar, hammam extérieur et terrain de pétanque sous les palmiers.",
+    en:"15 m infinity pool facing the Atlas, pool house with bar, outdoor hammam and pétanque court under the palms.",
+    nl:"15 m infinity pool met zicht op de Atlas, poolhouse met bar, buitenhammam en jeu-de-boulesbaan onder de palmen.",
+    es:"Piscina infinity de 15 m frente al Atlas, pool house con bar, hammam exterior y pista de petanca bajo las palmeras."},
+  living:{fr:"Double salon de 90 m² avec baies vitrées coulissantes, cheminée centrale et coin télévision séparé.",
+    en:"90 m² double lounge with sliding glass walls, central fireplace and separate TV corner.",
+    nl:"Dubbele woonkamer van 90 m² met schuifpuien, centrale open haard en aparte tv-hoek.",
+    es:"Doble salón de 90 m² con cristaleras correderas, chimenea central y rincón de televisión independiente."},
+  kitchen:{fr:"Cuisine professionnelle séparée avec office, réservée au personnel ; cuisine d'été ouverte pour les hôtes.",
+    en:"Separate professional kitchen with pantry for staff; open summer kitchen for guests.",
+    nl:"Aparte professionele keuken met bijkeuken voor het personeel; open zomerkeuken voor de gasten.",
+    es:"Cocina profesional independiente con office para el personal; cocina de verano abierta para los huéspedes."},
+  amenities:["pool_heated","staff","chef","breakfast","ac","heating","wifi","hammam","petanque","fireplace","parking","security","transfer","kids"],
+  rates:[{season:{fr:"Basse saison",en:"Low season",nl:"Laagseizoen",es:"Temporada baja"},from:"2026-11-01",to:"2027-02-28",night:1100,min:3},
+         {season:{fr:"Haute saison",en:"High season",nl:"Hoogseizoen",es:"Temporada alta"},from:"2027-03-01",to:"2027-06-15",night:1450,min:4},
+         {season:{fr:"Fêtes de fin d'année",en:"Festive season",nl:"Feestdagen",es:"Navidad y Año Nuevo"},from:"2026-12-20",to:"2027-01-05",night:2100,min:7}],
+  currency:"EUR", status:"partial",
+  availability:[{from:"2026-10-01",to:"2026-11-14"},{from:"2027-01-10",to:"2027-02-20"},{from:"2027-05-02",to:"2027-06-30"}],
+  photos:[{file:"Pool infinity Atlas.jpg",img:"pool-10"},{file:"Exterior facade.jpg",img:"terrace-05"},{file:"Pool terrace.jpg",img:"terrace-14"},{file:"Garden.jpg",img:"pool-19"},{file:"Living room 1.jpg",img:"living-04"},{file:"Living room 2.jpg",img:"living-09"},{file:"Dining.jpg",img:"terrace-17"},{file:"Kitchen.jpg",img:"kitchen-02"},{file:"Hammam.jpg",img:"bath-19"},{file:"Bedroom 1 - master.jpg",img:"bedroom-01"},{file:"Bedroom 2.jpg",img:"bedroom-13"},{file:"Bedroom 3.jpg",img:"bedroom-15"},{file:"Bedroom 4.jpg",img:"bedroom-12"},{file:"Bathroom master.jpg",img:"bath-02"},{file:"Bathroom 2.jpg",img:"bath-14"},{file:"Bathroom 3.jpg",img:"bath-13"},{file:"Bathroom 4.jpg",img:"bath-03"}] },
+
+{ slug:"riad-al-hamra", name:"Riad Al Hamra", area:{fr:"Médina",en:"Medina",nl:"Medina",es:"Medina"},
+  location:{fr:"Médina, quartier Bab Doukkala",en:"Medina, Bab Doukkala district",nl:"Medina, wijk Bab Doukkala",es:"Medina, barrio de Bab Doukkala"},
+  bedrooms:4, bathrooms:4, capacity:8, surface:300,
+  description:{fr:"Riad du XIXe siècle restauré avec des artisans de la médina : zelliges anciens, plafonds peints, patio à fontaine. Rooftop avec vue sur la Koutoubia.",
+    en:"19th-century riad restored with medina craftsmen: antique zellige, painted ceilings, fountain courtyard. Rooftop with Koutoubia views.",
+    nl:"19e-eeuwse riad gerestaureerd door ambachtslieden uit de medina: antieke zellige, beschilderde plafonds, patio met fontein. Dakterras met zicht op de Koutoubia.",
+    es:"Riad del siglo XIX restaurado con artesanos de la medina: zellige antiguo, techos pintados, patio con fuente. Azotea con vistas a la Kutubía."},
+  outdoor:{fr:"Patio central avec bassin de 6 × 3 m, orangers et salon bhou. Rooftop de 120 m² avec solarium, pergola et coin repas.",
+    en:"Central courtyard with 6 × 3 m plunge pool, orange trees and bhou lounge. 120 m² rooftop with solarium, pergola and dining corner.",
+    nl:"Centrale patio met plonsbad van 6 × 3 m, sinaasappelbomen en bhou-lounge. Dakterras van 120 m² met solarium, pergola en eethoek.",
+    es:"Patio central con piscina de 6 × 3 m, naranjos y salón bhou. Azotea de 120 m² con solárium, pérgola y rincón comedor."},
+  living:{fr:"Deux salons marocains autour du patio, cheminée d'hiver et bibliothèque.",
+    en:"Two Moroccan lounges around the courtyard, winter fireplace and library.",
+    nl:"Twee Marokkaanse salons rond de patio, winterhaard en bibliotheek.",
+    es:"Dos salones marroquíes alrededor del patio, chimenea de invierno y biblioteca."},
+  kitchen:{fr:"Cuisine équipée réservée au personnel. Petit-déjeuner et dîners préparés par la cuisinière du riad.",
+    en:"Equipped staff kitchen. Breakfast and dinners prepared by the riad's cook.",
+    nl:"Uitgeruste personeelskeuken. Ontbijt en diners bereid door de kok van de riad.",
+    es:"Cocina equipada para el personal. Desayuno y cenas preparados por la cocinera del riad."},
+  amenities:["pool","staff","chef","breakfast","ac","heating","wifi","rooftop","fireplace","transfer"],
+  rates:[{season:{fr:"Toute l'année",en:"All year",nl:"Hele jaar",es:"Todo el año"},from:"2026-10-01",to:"2027-09-30",night:780,min:2},
+         {season:{fr:"Fêtes de fin d'année",en:"Festive season",nl:"Feestdagen",es:"Navidad y Año Nuevo"},from:"2026-12-20",to:"2027-01-05",night:1400,min:5}],
+  currency:"EUR", status:"available",
+  availability:[{from:"2026-10-01",to:"2027-06-30",note:{fr:"hors 24–31 déc.",en:"except 24–31 Dec",nl:"behalve 24–31 dec",es:"salvo 24–31 dic"}}],
+  photos:[{file:"Patio bassin.jpg",img:"riad-00"},{file:"Bassin vue haute.jpg",img:"riad-06"},{file:"Patio zellige.jpg",img:"riad-02"},{file:"Porte patio.jpg",img:"riad-01"},{file:"Rooftop.jpg",img:"court-17"},{file:"Entree porte.jpg",img:"court-13"},{file:"Salon marocain.jpg",img:"court-09"},{file:"Salle a manger patio.jpg",img:"court-10"},{file:"Chambre 1.jpg",img:"bedroom-16"},{file:"Chambre 2.jpg",img:"bedroom-11"},{file:"Chambre 3.jpg",img:"bedroom-08"},{file:"Chambre 4.jpg",img:"bedroom-04"},{file:"SDB 1.jpg",img:"bath-10"},{file:"SDB 2.jpg",img:"bath-11"},{file:"SDB 3.jpg",img:"bath-05"},{file:"SDB 4.jpg",img:"bath-01"}] },
+
+{ slug:"villa-ourika", name:"Villa Ourika", area:{fr:"Route de l'Ourika",en:"Ourika road",nl:"Ourika-weg",es:"Carretera de Ourika"},
+  location:{fr:"Route de l'Ourika, km 12",en:"Ourika road, km 12",nl:"Ourika-weg, km 12",es:"Carretera de Ourika, km 12"},
+  bedrooms:5, bathrooms:5, capacity:10, surface:640,
+  description:{fr:"Grande maison de campagne au pied de l'Atlas, entourée d'un jardin d'un hectare et demi. Idéale pour deux familles ou un groupe d'amis.",
+    en:"Large country house at the foot of the Atlas, set in a garden of one and a half hectares. Ideal for two families or a group of friends.",
+    nl:"Groot landhuis aan de voet van de Atlas, in een tuin van anderhalve hectare. Ideaal voor twee gezinnen of een vriendengroep.",
+    es:"Gran casa de campo al pie del Atlas, rodeada de un jardín de hectárea y media. Ideal para dos familias o un grupo de amigos."},
+  outdoor:{fr:"Piscine chauffée de 18 × 6 m avec plage en bois, jardin potager, verger et vue dégagée sur les sommets enneigés en hiver.",
+    en:"18 × 6 m heated pool with timber deck, kitchen garden, orchard and open views of the snow-capped peaks in winter.",
+    nl:"Verwarmd zwembad van 18 × 6 m met houten terras, moestuin, boomgaard en vrij zicht op de besneeuwde toppen in de winter.",
+    es:"Piscina climatizada de 18 × 6 m con solárium de madera, huerto, frutales y vistas despejadas a las cumbres nevadas en invierno."},
+  living:{fr:"Salon cathédrale de 110 m² avec cheminée monumentale, coin télévision et salle de jeux pour les enfants.",
+    en:"110 m² vaulted lounge with monumental fireplace, TV corner and children's playroom.",
+    nl:"Woonkamer van 110 m² met kathedraalplafond, monumentale haard, tv-hoek en speelkamer voor kinderen.",
+    es:"Salón catedral de 110 m² con chimenea monumental, rincón de televisión y sala de juegos para niños."},
+  kitchen:{fr:"Cuisine familiale ouverte sur la salle à manger, îlot central, plus office pour le personnel.",
+    en:"Family kitchen opening onto the dining room, central island, plus staff pantry.",
+    nl:"Familiekeuken die uitkomt op de eetkamer, kookeiland, plus bijkeuken voor het personeel.",
+    es:"Cocina familiar abierta al comedor, isla central y office para el personal."},
+  amenities:["pool_heated","staff","chef","breakfast","ac","heating","wifi","fireplace","bbq","kids","parking","security","transfer","petanque"],
+  rates:[{season:{fr:"Basse saison",en:"Low season",nl:"Laagseizoen",es:"Temporada baja"},from:"2026-11-01",to:"2027-02-28",night:1350,min:3},
+         {season:{fr:"Haute saison",en:"High season",nl:"Hoogseizoen",es:"Temporada alta"},from:"2027-03-01",to:"2027-06-15",night:1750,min:4},
+         {season:{fr:"Fêtes de fin d'année",en:"Festive season",nl:"Feestdagen",es:"Navidad y Año Nuevo"},from:"2026-12-20",to:"2027-01-05",night:2600,min:7}],
+  currency:"EUR", status:"available",
+  availability:[{from:"2026-10-10",to:"2026-12-18"},{from:"2027-01-08",to:"2027-06-30"}],
+  photos:[{file:"Zwembad Atlas.jpg",img:"pool-13"},{file:"Terras.jpg",img:"terrace-11"},{file:"Tuin.jpg",img:"terrace-10"},{file:"Terras ontbijt.jpg",img:"terrace-15"},{file:"Drone.jpg",img:"pool-07"},{file:"Woonkamer haard.jpg",img:"living-16"},{file:"Woonkamer 2.jpg",img:"living-17"},{file:"Eetkamer.jpg",img:"terrace-02"},{file:"Keuken.jpg",img:"kitchen-03"},{file:"Slaapkamer 1.jpg",img:"bedroom-00"},{file:"Slaapkamer 2.jpg",img:"bedroom-03"},{file:"Slaapkamer 3.jpg",img:"bedroom-05"},{file:"Slaapkamer 4.jpg",img:"bedroom-09"},{file:"Slaapkamer 5.jpg",img:"bedroom-19"},{file:"Badkamer 1.jpg",img:"bath-03"},{file:"Badkamer 2.jpg",img:"bath-07"},{file:"Badkamer 3.jpg",img:"bath-17"},{file:"Badkamer 4.jpg",img:"bath-14"},{file:"Badkamer 5.jpg",img:"bath-02"}] },
+
+{ slug:"villa-menara", name:"Villa Menara", area:{fr:"Route d'Amizmiz",en:"Amizmiz road",nl:"Amizmiz-weg",es:"Carretera de Amizmiz"},
+  location:{fr:"Route d'Amizmiz, à 20 min de l'aéroport",en:"Amizmiz road, 20 min from the airport",nl:"Amizmiz-weg, 20 min van de luchthaven",es:"Carretera de Amizmiz, a 20 min del aeropuerto"},
+  bedrooms:5, bathrooms:6, capacity:11, surface:700,
+  description:{fr:"Architecture d'inspiration berbère en pisé et pierre, toits terrasses et patios successifs. Une villa de caractère, sobre et chaleureuse.",
+    en:"Berber-inspired architecture in rammed earth and stone, roof terraces and successive courtyards. A villa of character, sober and warm.",
+    nl:"Berbers geïnspireerde architectuur in stampaarde en steen, dakterrassen en opeenvolgende patio's. Een karaktervolle villa, sober en warm.",
+    es:"Arquitectura de inspiración bereber en tapial y piedra, azoteas y patios sucesivos. Una villa con carácter, sobria y cálida."},
+  outdoor:{fr:"Piscine de 20 m en pierre noire, bassin pour enfants séparé, salon d'été sous tente caïdale et jardin de cactus.",
+    en:"20 m black-stone pool, separate children's pool, summer lounge under a caidal tent and cactus garden.",
+    nl:"Zwembad van 20 m in zwarte steen, apart kinderbad, zomerlounge onder een caidal-tent en cactustuin.",
+    es:"Piscina de 20 m en piedra negra, piscina infantil independiente, salón de verano bajo jaima caidal y jardín de cactus."},
+  living:{fr:"Salon principal sous coupole, second salon télévision, bibliothèque et salle de musique.",
+    en:"Main lounge under a dome, second TV lounge, library and music room.",
+    nl:"Hoofdsalon onder een koepel, tweede tv-salon, bibliotheek en muziekkamer.",
+    es:"Salón principal bajo cúpula, segundo salón de televisión, biblioteca y sala de música."},
+  kitchen:{fr:"Grande cuisine équipée avec cave à vin et cuisine extérieure au bord de la piscine.",
+    en:"Large equipped kitchen with wine cellar and outdoor kitchen by the pool.",
+    nl:"Grote uitgeruste keuken met wijnkelder en buitenkeuken bij het zwembad.",
+    es:"Gran cocina equipada con bodega y cocina exterior junto a la piscina."},
+  amenities:["pool_heated","staff","chef","breakfast","ac","heating","wifi","hammam","gym","fireplace","bbq","kids","parking","security","transfer","ev"],
+  rates:[{season:{fr:"Basse saison",en:"Low season",nl:"Laagseizoen",es:"Temporada baja"},from:"2026-11-01",to:"2027-02-28",night:1500,min:3},
+         {season:{fr:"Haute saison",en:"High season",nl:"Hoogseizoen",es:"Temporada alta"},from:"2027-03-01",to:"2027-06-15",night:1950,min:4}],
+  currency:"EUR", status:"booked",
+  availability:[{from:"2027-03-15",to:"2027-06-30"}],
+  photos:[{file:"Fachada ocre.jpg",img:"court-16"},{file:"Piscina.jpg",img:"pool-01"},{file:"Piscina 2.jpg",img:"pool-02"},{file:"Jardin cactus.jpg",img:"court-14"},{file:"Entrada.jpg",img:"court-13"},{file:"Salon cupula.jpg",img:"living-00"},{file:"Salon 2.jpg",img:"living-08"},{file:"Comedor.jpg",img:"kitchen-05"},{file:"Cocina.jpg",img:"kitchen-15"},{file:"Hammam.jpg",img:"bath-06"},{file:"Dormitorio 1 principal.jpg",img:"bedroom-07"},{file:"Dormitorio 2.jpg",img:"bedroom-02"},{file:"Dormitorio 3.jpg",img:"bedroom-08"},{file:"Dormitorio 4.jpg",img:"bedroom-11"},{file:"Dormitorio 5.jpg",img:"bedroom-16"},{file:"Bano 1.jpg",img:"bath-09"},{file:"Bano 2.jpg",img:"bath-15"},{file:"Bano 3.jpg",img:"bath-19"},{file:"Bano 4.jpg",img:"bath-18"},{file:"Bano 5.jpg",img:"bath-10"}] },
+
+{ slug:"palais-nour", name:"Palais Nour", area:{fr:"Palmeraie",en:"Palmeraie",nl:"Palmeraie",es:"Palmeraie"},
+  location:{fr:"Palmeraie, circuit de la Palmeraie",en:"Palmeraie, Palmeraie circuit",nl:"Palmeraie, Palmeraie-circuit",es:"Palmeraie, circuito de la Palmeraie"},
+  bedrooms:6, bathrooms:6, capacity:12, surface:1100,
+  description:{fr:"Palais contemporain sur deux hectares de palmiers, conçu pour recevoir : six suites indépendantes, salons de réception et personnel de dix personnes.",
+    en:"Contemporary palace on two hectares of palm grove, designed for entertaining: six independent suites, reception rooms and a staff of ten.",
+    nl:"Eigentijds paleis op twee hectare palmbos, ontworpen om te ontvangen: zes onafhankelijke suites, ontvangstsalons en tien personeelsleden.",
+    es:"Palacio contemporáneo en dos hectáreas de palmeral, concebido para recibir: seis suites independientes, salones de recepción y personal de diez personas."},
+  outdoor:{fr:"Piscine chauffée de 25 m bordée de daybeds, bassin de nage secondaire, spa avec hammam, jacuzzi et salle de massage, court de tennis éclairé.",
+    en:"25 m heated pool lined with daybeds, secondary lap pool, spa with hammam, jacuzzi and massage room, floodlit tennis court.",
+    nl:"Verwarmd zwembad van 25 m met daybeds, tweede baantjeszwembad, spa met hammam, jacuzzi en massageruimte, verlichte tennisbaan.",
+    es:"Piscina climatizada de 25 m con daybeds, piscina secundaria, spa con hammam, jacuzzi y sala de masajes, pista de tenis iluminada."},
+  living:{fr:"Trois salons dont un salon de réception de 160 m², salle de cinéma et salon fumoir.",
+    en:"Three lounges including a 160 m² reception room, cinema room and smoking lounge.",
+    nl:"Drie salons waaronder een ontvangstsalon van 160 m², bioscoopzaal en rooksalon.",
+    es:"Tres salones, incluido uno de recepción de 160 m², sala de cine y salón fumador."},
+  kitchen:{fr:"Cuisine professionnelle avec brigade dédiée, chef à demeure, cave à vin climatisée.",
+    en:"Professional kitchen with dedicated brigade, resident chef, temperature-controlled wine cellar.",
+    nl:"Professionele keuken met eigen brigade, inwonende chef, geklimatiseerde wijnkelder.",
+    es:"Cocina profesional con brigada dedicada, chef residente y bodega climatizada."},
+  amenities:["pool_heated","staff","chef","breakfast","ac","heating","wifi","hammam","spa","gym","tennis","cinema","fireplace","parking","security","transfer","events","ev"],
+  rates:[{season:{fr:"Basse saison",en:"Low season",nl:"Laagseizoen",es:"Temporada baja"},from:"2026-11-01",to:"2027-02-28",night:3200,min:3},
+         {season:{fr:"Haute saison",en:"High season",nl:"Hoogseizoen",es:"Temporada alta"},from:"2027-03-01",to:"2027-06-15",night:4200,min:4},
+         {season:{fr:"Fêtes de fin d'année",en:"Festive season",nl:"Feestdagen",es:"Navidad y Año Nuevo"},from:"2026-12-20",to:"2027-01-05",night:6500,min:7}],
+  currency:"EUR", status:"available",
+  availability:[{from:"2026-10-01",to:"2026-12-19"},{from:"2027-01-06",to:"2027-06-30"}],
+  photos:[{file:"Piscine daybeds.jpg",img:"pool-15"},{file:"Drone palmeraie.jpg",img:"pool-11"},{file:"Piscine 2.jpg",img:"pool-03"},{file:"Terrasse.jpg",img:"terrace-09"},{file:"Fontaine.jpg",img:"court-01"},{file:"Entree hall.jpg",img:"court-02"},{file:"Salon reception.jpg",img:"living-13"},{file:"Salon 2.jpg",img:"living-05"},{file:"Salon 3.jpg",img:"living-11"},{file:"Cinema.jpg",img:"living-12"},{file:"Salle a manger.jpg",img:"living-07"},{file:"Cuisine pro.jpg",img:"kitchen-13"},{file:"Spa hammam.jpg",img:"bath-06"},{file:"Suite 1 (a).jpg",img:"bedroom-01"},{file:"Suite 1 (b).jpg",img:"bedroom-15"},{file:"Suite 2.jpg",img:"bedroom-03"},{file:"Suite 3.jpg",img:"bedroom-04"},{file:"Suite 4.jpg",img:"bedroom-12"},{file:"Suite 5.jpg",img:"bedroom-13"},{file:"Suite 6.jpg",img:"bedroom-02"},{file:"Suite 1 sdb.jpg",img:"bath-02"},{file:"Suite 2 sdb.jpg",img:"bath-03"},{file:"Suite 3 sdb.jpg",img:"bath-11"},{file:"Suite 4 sdb.jpg",img:"bath-13"},{file:"Suite 5 sdb.jpg",img:"bath-14"},{file:"Suite 6 sdb.jpg",img:"bath-01"}] },
+
+{ slug:"villa-tamarisk", name:"Villa Tamarisk", area:{fr:"Route de Fès",en:"Route de Fès",nl:"Route de Fès",es:"Route de Fès"},
+  location:{fr:"Route de Fès, km 9",en:"Route de Fès, km 9",nl:"Route de Fès, km 9",es:"Route de Fès, km 9"},
+  bedrooms:7, bathrooms:7, capacity:14, surface:1250,
+  description:{fr:"Domaine composé d'une villa principale et de deux pavillons, reliés par des allées de tamaris. Parfait pour un grand groupe qui souhaite se retrouver tout en gardant son intimité.",
+    en:"Estate made up of a main villa and two pavilions, linked by tamarisk-lined paths. Perfect for a large group wanting to gather while keeping privacy.",
+    nl:"Domein met een hoofdvilla en twee paviljoenen, verbonden door paden met tamarisken. Perfect voor een grote groep die samen wil zijn en toch privacy houdt.",
+    es:"Finca compuesta por una villa principal y dos pabellones, unidos por senderos de tamariscos. Perfecta para un grupo grande que quiere reunirse conservando su intimidad."},
+  outdoor:{fr:"Piscine principale de 22 m chauffée, piscine du pavillon, jardin paysager de 2,5 hectares, terrain de football réduit et aire de jeux.",
+    en:"22 m heated main pool, pavilion pool, 2.5-hectare landscaped garden, mini football pitch and playground.",
+    nl:"Verwarmd hoofdzwembad van 22 m, paviljoenzwembad, aangelegde tuin van 2,5 hectare, mini-voetbalveld en speeltuin.",
+    es:"Piscina principal climatizada de 22 m, piscina del pabellón, jardín paisajístico de 2,5 hectáreas, mini campo de fútbol y zona de juegos."},
+  living:{fr:"Salon principal de 140 m², salon de télévision, salon d'été couvert et salon privé dans chaque pavillon.",
+    en:"140 m² main lounge, TV lounge, covered summer lounge and private lounge in each pavilion.",
+    nl:"Hoofdsalon van 140 m², tv-salon, overdekte zomerlounge en privésalon in elk paviljoen.",
+    es:"Salón principal de 140 m², salón de televisión, salón de verano cubierto y salón privado en cada pabellón."},
+  kitchen:{fr:"Cuisine principale équipée et kitchenettes dans les pavillons. Chef et deux cuisinières à demeure.",
+    en:"Equipped main kitchen and kitchenettes in the pavilions. Chef and two cooks on site.",
+    nl:"Uitgeruste hoofdkeuken en kitchenettes in de paviljoenen. Chef en twee koks ter plaatse.",
+    es:"Cocina principal equipada y kitchenettes en los pabellones. Chef y dos cocineras residentes."},
+  amenities:["pool_heated","staff","chef","breakfast","ac","heating","wifi","hammam","gym","fireplace","bbq","kids","petanque","parking","security","transfer","events"],
+  rates:[{season:{fr:"Basse saison",en:"Low season",nl:"Laagseizoen",es:"Temporada baja"},from:"2026-11-01",to:"2027-02-28",night:2800,min:3},
+         {season:{fr:"Haute saison",en:"High season",nl:"Hoogseizoen",es:"Temporada alta"},from:"2027-03-01",to:"2027-06-15",night:3600,min:5}],
+  currency:"EUR", status:"partial",
+  availability:[{from:"2026-10-01",to:"2026-10-28"},{from:"2026-11-20",to:"2026-12-19"},{from:"2027-02-01",to:"2027-04-10"}],
+  photos:[{file:"Drone domaine.jpg",img:"pool-09"},{file:"Piscine principale.jpg",img:"pool-17"},{file:"Pavillon piscine.jpg",img:"pool-06"},{file:"Terrasse.jpg",img:"terrace-14"},{file:"Pavillon salon ete.jpg",img:"terrace-01"},{file:"Allee tamaris.jpg",img:"terrace-06"},{file:"Salon principal.jpg",img:"living-09"},{file:"Salon TV.jpg",img:"living-19"},{file:"Salle a manger.jpg",img:"terrace-17"},{file:"Cuisine.jpg",img:"kitchen-04"},{file:"Chambre 1.jpg",img:"bedroom-00"},{file:"Chambre 2.jpg",img:"bedroom-02"},{file:"Chambre 3.jpg",img:"bedroom-05"},{file:"Chambre 4.jpg",img:"bedroom-09"},{file:"Chambre 5.jpg",img:"bedroom-16"},{file:"Chambre 6 pavillon.jpg",img:"bedroom-17"},{file:"Chambre 7 pavillon.jpg",img:"bedroom-19"},{file:"Chambre 1 sdb.jpg",img:"bath-05"},{file:"Chambre 2 sdb.jpg",img:"bath-07"},{file:"Chambre 3 sdb.jpg",img:"bath-09"},{file:"Chambre 4 sdb.jpg",img:"bath-15"},{file:"Chambre 5 sdb.jpg",img:"bath-17"},{file:"Chambre 6 sdb.jpg",img:"bath-18"},{file:"Chambre 7 sdb.jpg",img:"bath-03"}] },
+
+{ slug:"domaine-agafay", name:"Domaine Agafay", area:{fr:"Désert d'Agafay",en:"Agafay desert",nl:"Agafay-woestijn",es:"Desierto de Agafay"},
+  location:{fr:"Désert d'Agafay, à 35 min de Marrakech",en:"Agafay desert, 35 min from Marrakech",nl:"Agafay-woestijn, 35 min van Marrakech",es:"Desierto de Agafay, a 35 min de Marrakech"},
+  bedrooms:9, bathrooms:9, capacity:18, surface:1600,
+  description:{fr:"Domaine privé posé sur les collines d'Agafay, face à l'Atlas. Neuf suites réparties entre la maison principale et quatre lodges, pour des retraites, mariages et grandes réunions de famille.",
+    en:"Private estate set on the Agafay hills, facing the Atlas. Nine suites spread between the main house and four lodges, for retreats, weddings and large family gatherings.",
+    nl:"Privédomein op de heuvels van Agafay, met zicht op de Atlas. Negen suites verdeeld over het hoofdhuis en vier lodges, voor retraites, bruiloften en grote familiebijeenkomsten.",
+    es:"Finca privada sobre las colinas de Agafay, frente al Atlas. Nueve suites repartidas entre la casa principal y cuatro lodges, para retiros, bodas y grandes reuniones familiares."},
+  outdoor:{fr:"Piscine à débordement de 30 m suspendue au-dessus du désert, second bassin chauffé, spa complet, terrasses panoramiques et tente berbère pour les dîners sous les étoiles.",
+    en:"30 m infinity pool suspended above the desert, second heated pool, full spa, panoramic terraces and Berber tent for dinners under the stars.",
+    nl:"Infinity pool van 30 m boven de woestijn, tweede verwarmd bad, complete spa, panoramische terrassen en Berbertent voor diners onder de sterren.",
+    es:"Piscina infinity de 30 m suspendida sobre el desierto, segunda piscina climatizada, spa completo, terrazas panorámicas y jaima bereber para cenas bajo las estrellas."},
+  living:{fr:"Salon panoramique de 200 m², salon de lecture, salle de cinéma, salon de jeux et lounge de chaque lodge.",
+    en:"200 m² panoramic lounge, reading room, cinema room, games room and a lounge in every lodge.",
+    nl:"Panoramische salon van 200 m², leeskamer, bioscoopzaal, spelkamer en een lounge in elke lodge.",
+    es:"Salón panorámico de 200 m², sala de lectura, sala de cine, sala de juegos y lounge en cada lodge."},
+  kitchen:{fr:"Cuisine professionnelle avec chef et brigade, cuisine extérieure au feu de bois, service traiteur pour les événements.",
+    en:"Professional kitchen with chef and brigade, wood-fired outdoor kitchen, catering service for events.",
+    nl:"Professionele keuken met chef en brigade, houtgestookte buitenkeuken, cateringservice voor evenementen.",
+    es:"Cocina profesional con chef y brigada, cocina exterior de leña, servicio de catering para eventos."},
+  amenities:["pool_heated","staff","chef","breakfast","ac","heating","wifi","hammam","spa","gym","cinema","fireplace","bbq","kids","parking","security","transfer","events","ev"],
+  rates:[{season:{fr:"Basse saison",en:"Low season",nl:"Laagseizoen",es:"Temporada baja"},from:"2026-11-01",to:"2027-02-28",night:5500,min:3},
+         {season:{fr:"Haute saison",en:"High season",nl:"Hoogseizoen",es:"Temporada alta"},from:"2027-03-01",to:"2027-06-15",night:7200,min:4},
+         {season:{fr:"Événements",en:"Events",nl:"Evenementen",es:"Eventos"},from:null,to:null,night:null,min:2}],
+  currency:"EUR", status:"available",
+  availability:[{from:"2026-10-01",to:"2027-06-30",note:{fr:"sur demande pour les événements",en:"on request for events",nl:"op aanvraag voor evenementen",es:"bajo petición para eventos"}}],
+  photos:[{file:"Piscine debordement.jpg",img:"pool-10"},{file:"Vue Atlas.jpg",img:"terrace-19"},{file:"Piscine palmiers.jpg",img:"pool-13"},{file:"Facade.jpg",img:"terrace-05"},{file:"Allee ocre.jpg",img:"court-16"},{file:"Tente diner.jpg",img:"terrace-02"},{file:"Terrasse coucher de soleil.jpg",img:"terrace-13"},{file:"Salon panoramique.jpg",img:"living-04"},{file:"Salon lecture.jpg",img:"living-00"},{file:"Cinema.jpg",img:"living-12"},{file:"Cuisine feu de bois.jpg",img:"kitchen-00"},{file:"Spa.jpg",img:"bath-19"},{file:"Suite 1.jpg",img:"bedroom-01"},{file:"Suite 2.jpg",img:"bedroom-03"},{file:"Suite 3.jpg",img:"bedroom-04"},{file:"Suite 4.jpg",img:"bedroom-07"},{file:"Suite 5.jpg",img:"bedroom-08"},{file:"Suite 6 lodge.jpg",img:"bedroom-11"},{file:"Suite 7 lodge.jpg",img:"bedroom-12"},{file:"Suite 8 lodge.jpg",img:"bedroom-13"},{file:"Suite 9 lodge.jpg",img:"bedroom-15"},{file:"Suite 1 bathroom.jpg",img:"bath-01"},{file:"Suite 2 bathroom.jpg",img:"bath-02"},{file:"Suite 3 bathroom.jpg",img:"bath-03"},{file:"Suite 4 bathroom.jpg",img:"bath-05"},{file:"Suite 5 bathroom.jpg",img:"bath-09"},{file:"Suite 6 bathroom.jpg",img:"bath-10"},{file:"Suite 7 bathroom.jpg",img:"bath-11"},{file:"Suite 8 bathroom.jpg",img:"bath-14"},{file:"Suite 9 bathroom.jpg",img:"bath-17"}] }
+];
+</script>
+<script>
+/* =====================================================================
+   5. APPLICATION : routes, rendu, partage
+   Liens : #/fr            -> catalogue en français
+           #/fr/chambres/5 -> catégorie 5 chambres
+           #/en/villa/slug -> fiche d'une villa en anglais
+   ===================================================================== */
+const GROUPS = ["3","4","5","6","7","8+"];
+const $ = s => document.querySelector(s);
+const esc = s => String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const tx = (o,l) => typeof o==="string" ? o : (o?.[l] ?? o?.fr ?? o?.en ?? "");
+const groupOf = v => v.bedrooms>=8 ? "8+" : String(v.bedrooms);
+const LOCALE = {fr:"fr-FR",en:"en-GB",nl:"nl-NL",es:"es-ES"};
+const fmtMoney = (n,cur,l) => n==null ? null : new Intl.NumberFormat(LOCALE[l],{style:"currency",currency:cur||"EUR",maximumFractionDigits:0}).format(n);
+function fmtDate(iso,l){ if(!iso) return ""; const [y,m,d]=iso.split("-").map(Number); return `${d} ${UI[l].months[m-1]} ${y}`; }
+const minRate = v => Math.min(...v.rates.filter(r=>r.night!=null).map(r=>r.night));
+const statusCls = s => ({available:"ok",partial:"warn",booked:"no"}[s]||"warn");
+const statusTxt = (s,l) => ({available:UI[l].available,partial:UI[l].partial,booked:UI[l].booked}[s]||UI[l].onRequest);
+const ORDERED = () => [...VILLAS].sort((a,b)=>a.bedrooms-b.bedrooms||minRate(a)-minRate(b)||a.name.localeCompare(b.name));
+const plural = (n,one,many) => `${n} ${n===1?one:many}`;
+
+let state = {lang:"fr", view:"catalogue", slug:null, group:null};
+function parseHash(){
+  const parts = location.hash.replace(/^#\/?/,"").split("/").filter(Boolean);
+  let lang = LANGS.includes(parts[0]) ? parts.shift() : null;
+  if(!lang){ const nav=(navigator.language||"fr").slice(0,2).toLowerCase(); lang = LANGS.includes(nav)?nav:"fr"; }
+  if(parts[0]==="villa" && parts[1]) return {lang, view:"villa", slug:parts[1], group:null};
+  if(parts[0]==="chambres" && parts[1]) return {lang, view:"catalogue", slug:null, group:decodeURIComponent(parts[1])};
+  return {lang, view:"catalogue", slug:null, group:null};
+}
+const linkCat = (l,g) => `#/${l}` + (g?`/chambres/${encodeURIComponent(g)}`:"");
+const linkVilla = (l,slug) => `#/${l}/villa/${slug}`;
+const absolute = h => location.href.split("#")[0] + h;
+const waUrl = text => "https://wa.me/?text=" + encodeURIComponent(text);
+const sorted = v => v._sorted || (v._sorted = sortPhotos(v.photos));
+
+/* ---------- Catalogue ---------- */
+function chipsHTML(l, counts, cls="chip"){
+  const T=UI[l];
+  return `<a class="${cls}" href="${linkCat(l)}" aria-current="${!state.group}">${T.all}<small class="num">${VILLAS.length}</small></a>` +
+    GROUPS.map(g=>`<a class="${cls}" href="${linkCat(l,g)}" aria-current="${state.group===g}">${g} ${T.bedrooms}<small class="num">${counts[g]}</small></a>`).join("");
+}
+function renderCatalogue(){
+  const l = state.lang, T = UI[l];
+  const counts = Object.fromEntries(GROUPS.map(g=>[g,VILLAS.filter(v=>groupOf(v)===g).length]));
+  const shown = GROUPS.filter(g=> !state.group || g===state.group);
+  const heroSrc = (typeof PHOTO_SRC!=="undefined" && PHOTO_SRC["riad-05"]) || photoSrc(sorted(VILLAS[0])[0]);
+  let html = `
+  <section class="hero"><img src="${heroSrc}" alt=""><div class="wrap">
+    <div class="kick">${ICONS.pin} Marrakech · ${T.tagline}</div>
+    <h1>${T.heroTitle}</h1>
+    <p>${T.heroSub}</p>
+    <div class="search"><span class="lbl">${T.byBedrooms}</span><div class="chips">${chipsHTML(l,counts)}</div><span class="cnt num">${plural(VILLAS.length,T.villa1,T.villas)}</span></div>
+  </div></section>
+  <nav class="filt" aria-label="${T.byBedrooms}"><div class="wrap"><span class="lbl">${T.byBedrooms}</span>${chipsHTML(l,counts)}</div></nav>`;
+  for(const g of shown){
+    const vs = ORDERED().filter(v=>groupOf(v)===g);
+    html += `<section class="group" id="g-${g.replace("+","plus")}"><div class="wrap">
+      <div class="group-head"><h2>${T.groupTitle(g)}</h2><span class="num">${plural(vs.length,T.villa1,T.villas)}</span></div>
+      ${vs.length ? `<div class="grid">${vs.map(v=>cardHTML(v,l)).join("")}</div>` : `<p class="empty">${T.noVillas}</p>`}
+    </div></section>`;
+  }
+  return html;
+}
+function cardHTML(v,l){
+  const T=UI[l]; const ph = sorted(v).slice(0,6);
+  return `<a class="card" href="${linkVilla(l,v.slug)}">
+    <div class="car"><div class="track" data-n="${ph.length}">${ph.map(p=>imgTag(p,l,'loading="lazy"')).join("")}</div>
+      <span class="badge ${statusCls(v.status)}">${statusTxt(v.status,l)}</span>
+      <button class="nav l" data-car="-1" aria-label="Previous">${ICONS.left}</button><button class="nav r" data-car="1" aria-label="Next">${ICONS.right}</button>
+      <span class="ctr num">1 / ${sorted(v).length}</span></div>
+    <div class="t"><h3>${esc(v.name)}</h3></div>
+    <div class="loc">${esc(tx(v.location,l))}</div>
+    <div class="facts num">${v.bedrooms} ${T.bedrooms} · ${v.capacity} ${T.guests}${v.surface?` · ${v.surface} m²`:""}</div>
+    <div class="price num"><span>${T.from}</span> <b>${fmtMoney(minRate(v),v.currency,l)}</b> <span>${T.perNight}</span></div></a>`;
+}
+
+/* ---------- Fiche villa ---------- */
+function renderVilla(v){
+  const l = state.lang, T = UI[l];
+  const photos = sorted(v);
+  const link = absolute(linkVilla(l,v.slug));
+  const wa = waUrl(T.waVilla(`${v.name} · ${tx(v.location,l)} · ${v.bedrooms} ${T.bedrooms} · ${v.capacity} ${T.guests}`, link));
+  const groupsG = []; for(const p of photos){ let g = groupsG.find(x=>x.cat===p.cat); if(!g){ g={cat:p.cat, label: p.cat==="bedroom"?T.bedrooms : p.cat==="bathroom"?T.bathrooms : T.cats[p.cat], items:[]}; groupsG.push(g);} g.items.push(p); }
+  let idx=0;
+  const galleryHTML = groupsG.map(g=>`<div class="g-cat"><span style="color:var(--text)">${esc(g.label)}</span><span class="num">${g.items.length}</span></div><div class="g-grid">${g.items.map(p=>{const i=idx++;return `<button data-lb="${i}" aria-label="${esc(photoLabel(p,l))}">${imgTag(p,l,'loading="lazy"')}<span class="i">${(p.cat==="bedroom"||p.cat==="bathroom")?esc(photoLabel(p,l))+" · ":""}<span class="num">${i+1}/${photos.length}</span></span></button>`;}).join("")}</div>`).join("");
+  window.__lb = photos.map(p=>({src:photoSrc(p), cap:photoLabel(p,l)}));
+  const mosaic = photos.slice(0,5);
+  const ratesHTML = v.rates.map(r=>`<tr><td>${esc(tx(r.season,l))}</td><td class="num">${r.from?`${fmtDate(r.from,l)} – ${fmtDate(r.to,l)}`:"—"}</td><td class="p num">${r.night!=null?fmtMoney(r.night,v.currency,l)+` ${T.perNight}`:T.onRequest}${r.min?`<small class="num">${r.min} ${r.min>1?T.nights:T.night} ${T.minNights}</small>`:""}</td></tr>`).join("");
+  const availHTML = v.availability.length ? v.availability.map(a=>`<div class="row"><div><div class="d num">${fmtDate(a.from,l)} – ${fmtDate(a.to,l)}</div>${a.note?`<div class="n">${esc(tx(a.note,l))}</div>`:""}</div><span class="pill ok">${T.available}</span></div>`).join("") : `<div class="row"><div class="d">${T.onRequest}</div><span class="pill warn">${T.onRequest}</span></div>`;
+  const ord = ORDERED(); const i = ord.findIndex(x=>x.slug===v.slug); const prev = ord[(i-1+ord.length)%ord.length], next = ord[(i+1)%ord.length];
+  const spaces = [["pool",T.outdoor,v.outdoor],["sofa",T.living,v.living],["chef",T.kitchen,v.kitchen]];
+  return `
+  <div class="wrap">
+    <nav class="crumbs"><a href="${linkCat(l)}">${T.catalogue}</a><span class="sep">›</span><a href="${linkCat(l,groupOf(v))}">${T.groupTitle(groupOf(v))}</a><span class="sep">›</span><span>${esc(v.name)}</span></nav>
+    <div class="title-row">
+      <div><h1>${esc(v.name)}</h1>
+        <div class="meta"><span>${esc(tx(v.location,l))}</span><i class="dot"></i><span class="num">${v.bedrooms} ${T.bedrooms}</span><i class="dot"></i><span class="num">${v.capacity} ${T.guests}</span><i class="dot"></i><span class="pill ${statusCls(v.status)}">${statusTxt(v.status,l)}</span></div></div>
+      <div class="acts"><a class="btn wa-o sm" href="${wa}" target="_blank" rel="noopener">${ICONS.wa}<span>${T.share}</span></a><button class="btn sm" data-copy="${esc(link)}">${ICONS.copy}<span>${T.copy}</span></button></div>
+    </div>
+    <div class="mosaic">${mosaic.map((p,k)=>`<button data-lb="${k}" aria-label="${esc(photoLabel(p,l))}">${imgTag(p,l)}</button>`).join("")}<button class="btn sm all" data-lb="0">${ICONS.grid}<span>${T.seeAll(photos.length)}</span></button></div>
+    <div class="vbody">
+      <div>
+        <div class="keyfacts">
+          <div>${ICONS.bed}<span class="num">${v.bedrooms} ${T.bedrooms}</span></div>
+          <div>${ICONS.users}<span class="num">${v.capacity} ${T.guests}</span></div>
+          <div>${ICONS.bath}<span class="num">${v.bathrooms??"—"} ${T.bathrooms}</span></div>
+          <div>${ICONS.ruler}<span class="num">${v.surface?v.surface+" m²":"—"}</span></div>
+        </div>
+        <section class="sec"><h2>${T.description}</h2><p class="lead">${esc(tx(v.description,l))}</p></section>
+        <section class="sec"><h2>${T.spaces}</h2>${spaces.map(([ic,h,t])=>`<div class="space"><div class="ic">${ICONS[ic]}</div><div><h3>${h}</h3><p>${esc(tx(t,l))}</p></div></div>`).join("")}</section>
+        <section class="sec"><h2>${T.amenities}</h2><ul class="amen">${v.amenities.map(k=>`<li>${ICONS.check}${esc(tx(AMENITIES[k]||{fr:k},l))}</li>`).join("")}</ul></section>
+        <section class="sec"><h2>${T.rates}</h2><div class="tbl tblx"><table class="rates"><thead><tr><th>${T.season}</th><th>${T.period}</th><th>${T.price}</th></tr></thead><tbody>${ratesHTML}</tbody></table></div><p style="font-size:13px;color:var(--text-3);margin-top:10px">${T.sideNote}</p></section>
+        <section class="sec" style="border-bottom:0"><h2>${T.availability}</h2><div class="avail">${availHTML}</div></section>
+      </div>
+      <aside class="side">
+        <div class="from">${T.from}</div>
+        <div class="price num">${fmtMoney(minRate(v),v.currency,l)} <span>${T.perNight}</span></div>
+        <div class="st"><span class="pill ${statusCls(v.status)}">${statusTxt(v.status,l)}</span></div>
+        <div class="acts">
+          <a class="btn wa" href="${wa}" target="_blank" rel="noopener">${ICONS.wa}${T.share}</a>
+          <button class="btn" data-copy="${esc(link)}">${ICONS.copy}${T.copy}</button>
+        </div>
+        <div class="note">${T.enquireNote}</div>
+        <div class="linkbox"><label>${T.linkLabel}</label><input readonly value="${esc(link)}" onclick="this.select()"></div>
+      </aside>
+    </div>
+    <section class="gallery"><h2>${T.gallery} <span class="num" style="color:var(--text-3);font-weight:600">(${photos.length})</span></h2>${galleryHTML}</section>
+    <nav class="pn">
+      <a class="prev" href="${linkVilla(l,prev.slug)}">${imgTag(sorted(prev)[0],l)}<div><small>← ${T.prevVilla}</small><b>${esc(prev.name)}</b></div></a>
+      <a class="next" href="${linkVilla(l,next.slug)}">${imgTag(sorted(next)[0],l)}<div><small>${T.nextVilla} →</small><b>${esc(next.name)}</b></div></a>
+    </nav>
+  </div>`;
+}
+
+/* ---------- Carrousel des cartes ---------- */
+document.addEventListener("click",e=>{
+  const b=e.target.closest("[data-car]"); if(!b) return;
+  e.preventDefault(); e.stopPropagation();
+  const track=b.parentElement.querySelector(".track"); const w=track.clientWidth; const n=+track.dataset.n;
+  let i=Math.round(track.scrollLeft/w)+(+b.dataset.car); i=(i+n)%n; track.scrollTo({left:i*w,behavior:"smooth"});
+},true);
+document.addEventListener("scroll",e=>{ const t=e.target; if(!(t instanceof Element)||!t.classList.contains("track")) return; const i=Math.round(t.scrollLeft/t.clientWidth)+1; const c=t.parentElement.querySelector(".ctr"); if(c) c.textContent=`${i} / ${c.textContent.split("/")[1].trim()}`; },true);
+
+/* ---------- Lightbox ---------- */
+let lbIndex = 0;
+function openLb(i){ lbIndex=i; let el=$("#lb"); if(!el){ el=document.createElement("div"); el.id="lb"; el.className="lb"; el.innerHTML=`<button class="x" aria-label="Close">${ICONS.x}</button><button class="prev" aria-label="Previous">${ICONS.left}</button><img alt=""><button class="next" aria-label="Next">${ICONS.right}</button><div class="lb-cap"></div>`; document.body.appendChild(el);
+    el.querySelector(".x").onclick=closeLb; el.querySelector(".prev").onclick=()=>stepLb(-1); el.querySelector(".next").onclick=()=>stepLb(1); el.addEventListener("click",e=>{if(e.target===el)closeLb();}); }
+  updateLb(); document.body.style.overflow="hidden"; }
+function updateLb(){ const el=$("#lb"); const it=window.__lb[lbIndex]; el.querySelector("img").src=it.src; el.querySelector(".lb-cap").textContent=`${it.cap} · ${lbIndex+1} / ${window.__lb.length}`; }
+function stepLb(d){ lbIndex=(lbIndex+d+window.__lb.length)%window.__lb.length; updateLb(); }
+function closeLb(){ const el=$("#lb"); if(el) el.remove(); document.body.style.overflow=""; }
+document.addEventListener("keydown",e=>{ if(!$("#lb")) return; if(e.key==="Escape")closeLb(); if(e.key==="ArrowLeft")stepLb(-1); if(e.key==="ArrowRight")stepLb(1); });
+
+/* ---------- Actions ---------- */
+function toast(msg){ const t=$("#toast"); t.textContent=msg; t.classList.add("on"); clearTimeout(t._h); t._h=setTimeout(()=>t.classList.remove("on"),1800); }
+async function copyText(s){ try{ await navigator.clipboard.writeText(s); toast(UI[state.lang].copied); }catch(e){ const i=document.createElement("input"); i.value=s; document.body.appendChild(i); i.select(); try{document.execCommand("copy"); toast(UI[state.lang].copied);}catch(_){ prompt("", s); } i.remove(); } }
+document.addEventListener("click",e=>{
+  const c=e.target.closest("[data-copy]"); if(c){ copyText(c.dataset.copy); return; }
+  const b=e.target.closest("[data-lb]"); if(b){ openLb(+b.dataset.lb); return; }
+});
+
+/* ---------- Rendu global ---------- */
+function render(){
+  state = parseHash(); closeLb();
+  const l = state.lang, T = UI[l];
+  document.documentElement.lang = l;
+  $("#langs").innerHTML = LANGS.map(x=>`<button aria-pressed="${x===l}" data-lang="${x}">${x.toUpperCase()}</button>`).join("");
+  $("#langs").querySelectorAll("button").forEach(b=>b.onclick=()=>{ const nl=b.dataset.lang; location.hash = state.view==="villa" ? linkVilla(nl,state.slug) : linkCat(nl,state.group); });
+  $("#brandLink").setAttribute("href",linkCat(l)); $("#footNote").textContent=T.footNote; $("#footCopy").textContent=`© ${new Date().getFullYear()} Villas Marrakech · ${T.tagline}`;
+  $("#footLangs").innerHTML = LANGS.map(x=>`<a href="${state.view==="villa"?linkVilla(x,state.slug):linkCat(x,state.group)}">${UI[x].langName}</a>`).join("");
+  const banner=$("#demoBanner"); banner.hidden=!DEMO; banner.textContent=T.demo;
+  const app=$("#app");
+  let shareText;
+  if(state.view==="villa"){
+    const v = VILLAS.find(x=>x.slug===state.slug);
+    if(!v){ app.innerHTML=`<div class="wrap" style="padding:80px 0"><p class="empty">${T.notFound}</p><p><a class="btn dark" href="${linkCat(l)}">${T.back}</a></p></div>`; document.title="Villas Marrakech"; shareText=T.waCat(absolute(linkCat(l))); }
+    else { app.innerHTML=renderVilla(v); document.title=`${v.name} · Villas Marrakech`; shareText=T.waVilla(v.name, absolute(linkVilla(l,v.slug))); }
+    $("#shareTopLbl").textContent=T.share;
+  } else {
+    app.innerHTML=renderCatalogue(); document.title="Villas Marrakech";
+    shareText=T.waCat(absolute(linkCat(l))); $("#shareTopLbl").textContent=T.shareCatalogue;
+  }
+  $("#shareTop").onclick=()=>window.open(waUrl(shareText),"_blank","noopener");
+  window.scrollTo({top:0,behavior:"instant"});
+}
+window.addEventListener("hashchange",render);
+render();
+</script>
