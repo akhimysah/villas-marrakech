@@ -1,7 +1,16 @@
-# Villas Marrakech — catalogue digital
+# Concierge Service by Medina First Marrakech
 
-Catalogue de villas de luxe à Marrakech, classées par nombre de chambres (3 à 8+),
-en français, anglais, néerlandais et espagnol, avec un lien WhatsApp par villa.
+Site de villas de luxe à Marrakech (de 3 à plus de 20 chambres) et de services de
+conciergerie, en français, anglais, néerlandais et espagnol, avec un lien WhatsApp par
+villa et par service.
+
+Onglets : Villas · Spa & Beauté à la villa · Location de véhicules · Activités &
+Excursions · Événements privés · Tables & Adresses exclusives · Conciergerie 24/7.
+
+Chaque fiche villa suit la même structure : 1. Nom · 2. Localisation · 3. Description ·
+4. Services & équipements · 5. Autres informations importantes.
+
+Numéro WhatsApp des demandes : à renseigner dans `BRAND.whatsapp` en haut du script.
 
 **Site en ligne :** https://akhimysah.github.io/villas-marrakech/
 
