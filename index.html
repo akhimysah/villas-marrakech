@@ -4,7 +4,7 @@
 <meta name="description" content="Villas de luxe à Marrakech de 3 à plus de 20 chambres, et services de conciergerie : spa, véhicules, excursions, événements, tables, conciergerie 24/7.">
 <meta property="og:title" content="Concierge Service by Medina First Marrakech">
 <meta property="og:description" content="Villas de luxe à Marrakech et services de conciergerie.">
-<meta property="og:image" content="https://akhimysah.github.io/villas-marrakech/photos/v/villa-melrose/001.jpg">
+<meta property="og:image" content="https://akhimysah.github.io/villas-marrakech/photos/hero.jpg">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="theme-color" content="#9A2A22">
@@ -122,6 +122,9 @@ h1,h2,h3{margin:0;line-height:1.2;text-wrap:balance;font-weight:700}
 .hero-credit{position:absolute;right:16px;top:16px;z-index:2;font-size:12px;font-weight:700;color:#fff;text-decoration:none;background:rgba(0,0,0,.35);backdrop-filter:blur(6px);padding:7px 12px;border-radius:999px}
 .hero-credit:hover{background:rgba(0,0,0,.55)}
 .hero.svc>img{object-position:center 40%}
+.hero.home{min-height:620px}
+.hero.home>img{object-position:center 72%}
+@media (max-width:640px){.hero.home{min-height:440px}.hero.home>img{object-position:center 60%}}
 /* Sections & cards */
 .group{padding:40px 0 8px}
 .group-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:20px}
@@ -773,7 +776,7 @@ function renderVillas(){
   const l=state.lang, T=UI[l];
   const shown = GROUPS().filter(g=>!state.group || g===state.group);
   let html = `
-  ${(()=>{const hv=heroVilla(); return `<section class="hero">${hv?`<img src="${photoSrc(sorted(hv)[0])}" alt="${esc(hv.name)}"><a class="hero-credit" href="${linkVilla(l,hv.slug)}">${esc(hv.name)} →</a>`:""}<div class="wrap">`;})()}
+  <section class="hero home"><img src="photos/hero.jpg" alt="Villa à Marrakech"><div class="wrap">
     <div class="kick">${ICONS.pin} ${T.heroKicker}</div>
     <h1>${T.heroTitle}</h1>
     <p>${T.heroSub}</p>
